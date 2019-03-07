@@ -14,3 +14,5 @@ Temp Instructions for testing:
 5. Set the Project SDK
 
 6. Set the IDE Profile (Maven Projects -> Profiles)
+
+7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
