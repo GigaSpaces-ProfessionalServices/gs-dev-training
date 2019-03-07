@@ -7,9 +7,9 @@ Temp Instructions for testing:
 
 2. create new project from existing Version Control. Git Repository URL:https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
 
-3. open terminal and navigate to the project directory
+3. Make it maven project by clicking the parent pom.xml
 
-4. run: mvn xap:intellij
+4. from the project directory run "mvn xap:intellij"
 
 5. Set the Project SDK
 
