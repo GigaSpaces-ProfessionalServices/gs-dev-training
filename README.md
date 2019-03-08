@@ -1,7 +1,7 @@
-# xap-dev-training
+# xap-dev-training - lab6-solution
 
 
-Temp Instructions for testing:
+Temp Instructions for testing
 
 1. open Intelij
 
@@ -16,3 +16,5 @@ Temp Instructions for testing:
 6. Set the IDE Profile (Maven Projects -> Profiles)
 
 7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
+
+8. test for lab6-solution branch
