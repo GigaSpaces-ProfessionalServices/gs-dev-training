@@ -23,7 +23,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>Lab5-solution-BillBuddyPaymentFeeder</finalName>
+        <finalName>BillBuddyPaymentFeeder</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>

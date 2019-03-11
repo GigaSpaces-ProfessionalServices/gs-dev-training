@@ -15,7 +15,7 @@
         <gsType>PU</gsType>
     </properties>
     <build>
-        <finalName>Lab5-solution-BillBuddyModel</finalName>
+        <finalName>BillBuddyModel</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
