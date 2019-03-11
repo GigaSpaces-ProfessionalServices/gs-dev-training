@@ -23,7 +23,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>Lab5-solution-BillBuddy_Space</finalName>
+        <finalName>BillBuddy_Space</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
