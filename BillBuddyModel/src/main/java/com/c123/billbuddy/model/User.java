@@ -1,10 +1,5 @@
 package com.c123.billbuddy.model;
 
-import java.io.Serializable;
-
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -19,15 +14,11 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 * @author 123Completed
 */
 
-@Entity
-@SuppressWarnings("serial")
 @SpaceClass
-public class User implements Serializable{
-	@Id
+public class User {
+
 	private Integer userAccountId;
     private String name;
-    @Embedded
-    private Address address;
     private Double balance;
     private Double creditLimit;
     private AccountStatus status;
@@ -83,11 +74,4 @@ public class User implements Serializable{
 		return status;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
 }
