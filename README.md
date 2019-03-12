@@ -1,7 +1,7 @@
-# xap-dev-training - lab5-solution
+# xap-dev-training - lab6-solution
 
 
-Temp Instructions for testing:
+Temp Instructions for testing
 
 1. open Intelij
 
@@ -17,5 +17,4 @@ Temp Instructions for testing:
 
 7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
 
-8. Install BillBuddyCurrentProfit.jar in your local repository by running this command (change <your_user>):
-mvn install:install-file -Dfile=/Users/<your_user>/_XAPDevTraining/labs/Lab_5-BillBuddy_Application/solution/BillBuddyWebApplication/webapp/WEB-INF/lib/BillBuddyCurrentProfit.jar -DgroupId=com.gigaspaces.dev.training -DartifactId=BillBuddyCurrentProfit -Dversion=1.0-SNAPSHOT -Dpackaging=compile
+8. test for lab6-solution branch
