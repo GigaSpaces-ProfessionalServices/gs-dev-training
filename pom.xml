@@ -32,6 +32,7 @@
         <module>BillBuddyAccountFeeder</module>
         <module>BillBuddyWebApplication</module>
         <module>BillBuddyPaymentFeeder</module>
+        <module>BillBuddyCurrentProfitDistributedExecutor</module>
     </modules>
     <dependencies>
         <dependency>

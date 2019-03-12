@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>com.gigaspaces.dev.training</groupId>
-            <artifactId>BillBuddyCurrentProfit</artifactId>
+            <artifactId>BillBuddyCurrentProfitDistributedExecutor</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
