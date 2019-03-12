@@ -14,32 +14,20 @@
        http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/11.0/remoting/openspaces-remoting.xsd">
 
 	<!-- ANNOTATION AND COMPONENT SCAN CONFIGURATION -->
-	<!-- Enable scan for OpenSpaces and Spring components -->
-	<context:component-scan base-package="com.c123.billbuddy.events" />
-	<context:component-scan base-package="com.c123.billbuddy.remoting" />
+
 
 	<!-- Enables the usage of @GigaSpaceContext annotation based injection. -->
 	<os-core:giga-space-context />
 	<!-- Enables Spring Annotation configuration -->
 	<context:annotation-config />
-	<!-- Enables using @Polling and @Notify annotations -->
-	<os-events:annotation-support />
-	<!-- Enables using @RemotingService as well as @ExecutorProxy (and others) 
-		annotations -->
-	<os-remoting:annotation-support />
 	<!-- Enables using @PreBackup, @PostBackup and other annotations -->
 	<os-core:annotation-support />
-	<!-- Transaction annotation support -->
-	<tx:annotation-driven transaction-manager="transactionManager" />
-	<!-- SPACE CONFIGURATION -->
+
+	<!-- SPACE AND SLA CONFIGURATION -->
 	<!-- A bean representing a space (an IJSpace implementation). -->
+
 	<os-core:embedded-space id="space" name="BillBuddy-space"/>
 	<!-- OpenSpaces simplified space API built on top of IJSpace/JavaSpace. -->
-	<os-core:giga-space id="gigaSpace" space="space"
-		tx-manager="transactionManager"/>
+	<os-core:giga-space id="gigaSpace" space="space" />
 
-	<!-- Defines a local Jini transaction manager. -->
-	<os-core:distributed-tx-manager id="transactionManager" />
-	<!-- Service exporter for exporting remote services -->
-	<os-remoting:service-exporter id="serviceExporter" />
 </beans>

@@ -1,10 +1,5 @@
 package com.c123.billbuddy.model;
 
-import java.io.Serializable;
-
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -19,18 +14,19 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 * @author 123Completed
 */
 
-@Entity
-@SuppressWarnings("serial")
+//TODO: Add missing space class annotations per the exercise.
+
 @SpaceClass
-public class User implements Serializable{
-	@Id
+public class User {
+
 	private Integer userAccountId;
     private String name;
-    @Embedded
-    private Address address;
+    
     private Double balance;
     private Double creditLimit;
     private AccountStatus status;
+    
+    // TODO: Add Address class as data member + getter & setter methods.
     
     public User(Integer userAccountId) {
         this.userAccountId = userAccountId;
@@ -39,8 +35,7 @@ public class User implements Serializable{
     public User() {
     }
 
-    @SpaceId(autoGenerate = false)
-    @SpaceRouting
+
     public Integer getUserAccountId() {
         return userAccountId;
     }
@@ -53,7 +48,7 @@ public class User implements Serializable{
 		this.name = name;
 	}
 	
-	@SpaceIndex(type=SpaceIndexType.BASIC)
+
 	public String getName() {
 		return name;
 	}
@@ -70,7 +65,7 @@ public class User implements Serializable{
 		this.creditLimit = creditLimit;
 	}
 
-	@SpaceIndex(type=SpaceIndexType.EXTENDED)
+
 	public Double getCreditLimit() {
 		return creditLimit;
 	}
@@ -83,11 +78,5 @@ public class User implements Serializable{
 		return status;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
-	public Address getAddress() {
-		return address;
-	}
+	
 }

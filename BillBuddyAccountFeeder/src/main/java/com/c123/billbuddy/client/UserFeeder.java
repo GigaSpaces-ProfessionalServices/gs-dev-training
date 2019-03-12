@@ -1,11 +1,7 @@
 package com.c123.billbuddy.client;
 import java.util.ArrayList;
-import java.util.Random;
-
 import org.openspaces.core.GigaSpace;
 import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.Address;
-import com.c123.billbuddy.model.CountryNames;
 import com.c123.billbuddy.model.User;
 
 /** 
@@ -64,18 +60,9 @@ public class UserFeeder {
                 user.setStatus(AccountStatus.ACTIVE);
                 user.setUserAccountId(userAccountId);
                 
-                // Create User Address
+                // TODO: Create Address object and add it to the User
                 
-                Address tempAddress = new Address();
-            	tempAddress.setCountry(CountryNames.values()[new Random().nextInt(CountryNames.values().length)]);
-            	tempAddress.setCity("123Completed.com");
-            	tempAddress.setState("GIGASPACES");
-            	tempAddress.setStreet("Here and There");
-            	tempAddress.setZipCode(new Random().nextInt());
-            	
-            	user.setAddress(tempAddress);
-                
-                // Write user to the space
+                // TODO: Write user to the space
                 
                 gigaSpace.write(user);
                 

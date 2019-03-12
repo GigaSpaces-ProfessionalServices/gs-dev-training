@@ -1,9 +1,5 @@
 package com.c123.billbuddy.model;
 
-import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -17,11 +13,11 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 * @author 123Completed
 */
 
-@Entity
-@SuppressWarnings("serial")
+//TODO: Add missing space class annotations per the exercise.
+
 @SpaceClass
-public class Merchant implements Serializable{
-	@Id
+public class Merchant {
+
 	private Integer merchantAccountId;
     private String name;
     private Double receipts;
@@ -37,8 +33,7 @@ public class Merchant implements Serializable{
     public Merchant() {
     }
 
-    @SpaceId(autoGenerate = false)
-    @SpaceRouting
+
     public Integer getMerchantAccountId() {
         return merchantAccountId;
     }
@@ -51,10 +46,11 @@ public class Merchant implements Serializable{
 		this.name = name;
 	}
 	
-	@SpaceIndex(type=SpaceIndexType.BASIC)
+	
 	public String getName() {
 		return name;
 	}
+	
 
 	public CategoryType getCategory() {
 		
