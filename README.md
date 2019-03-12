@@ -1,4 +1,4 @@
-# xap-dev-training - lab6-solution
+# xap-dev-training - lab6-exercise
 
 
 Temp Instructions for testing
@@ -17,4 +17,4 @@ Temp Instructions for testing
 
 7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
 
-8. test for lab6-solution branch
+8. test for lab6-exercise branch
