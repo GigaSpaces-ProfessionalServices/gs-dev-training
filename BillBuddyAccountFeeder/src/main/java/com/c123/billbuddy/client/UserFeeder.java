@@ -1,11 +1,7 @@
 package com.c123.billbuddy.client;
 import java.util.ArrayList;
-import java.util.Random;
-
 import org.openspaces.core.GigaSpace;
 import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.Address;
-import com.c123.billbuddy.model.CountryNames;
 import com.c123.billbuddy.model.User;
 
 /** 
@@ -64,28 +60,60 @@ public class UserFeeder {
                 user.setStatus(AccountStatus.ACTIVE);
                 user.setUserAccountId(userAccountId);
                 
-                // Create User Address
-                
-                Address tempAddress = new Address();
-            	tempAddress.setCountry(CountryNames.values()[new Random().nextInt(CountryNames.values().length)]);
-            	tempAddress.setCity("123Completed.com");
-            	tempAddress.setState("GIGASPACES");
-            	tempAddress.setStreet("Here and There");
-            	tempAddress.setZipCode(new Random().nextInt());
-            	
-            	user.setAddress(tempAddress);
-                
                 // Write user to the space
                 
                 gigaSpace.write(user);
-                
-                System.out.println("Added User object with name: " + user.getName());
             }
             userAccountId++;
         }
 
         System.out.println("Stopping User Feeder writing process");
+        System.out.println("Start User reader");
         
+        //Creating a template for query (And Equal conditions)
+       
+        User templateUser = new User();
+        
+        //Reading first 100 user objects that meet the template
+        
+        User userList []  = gigaSpace.readMultiple(templateUser,100);
+      
+        // Display users read from the space to the console
+        
+        for (User user : userList){
+        	System.out.print(" User ID: " + user.getUserAccountId());
+        	System.out.print(" User Name: " + user.getName());
+        	System.out.print(" User Balance: " + user.getBalance());
+        	System.out.print(" User Status: " + user.getStatus());
+        	System.out.println();
+        }
     }
 
+	// The method writes one static user into the space using a GigaSpace space proxy as an input.
+	// It reads users from the space & displays them into the console.
+	
+	public static void createUser(GigaSpace aGigaSpace) throws Exception {
+		System.out.println("Starting User Feeder");
+		System.out.println("Method: createUser");
+		
+		// Create and write a User to the Space    	
+    	
+		User user = new User();
+    	user.setUserAccountId(151273);
+    	user.setBalance(120000.87);
+    	user.setCreditLimit(20000.00);
+    	user.setName("GigaSpaces");
+    	user.setStatus(AccountStatus.BLOCKED);
+    	
+    	aGigaSpace.write(user);
+    	
+    	// Read a User from the Space       	
+    	
+    	User result = aGigaSpace.readById(User.class, 151273);
+    	
+    	System.out.println("User ID: " + result.getUserAccountId());
+    	System.out.println("User Name: " + result.getName());
+    	System.out.println("User Balance: " + result.getBalance());
+    	System.out.println("User Status: " + result.getStatus());
+	}
 }

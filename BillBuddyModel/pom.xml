@@ -8,7 +8,7 @@
     <name>BillBuddyModel</name>
     <parent>
         <groupId>com.gigaspaces.dev.training</groupId>
-        <artifactId>Lab5-solution</artifactId>
+        <artifactId>Lab7-solution</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <properties>
