@@ -19,6 +19,6 @@ public enum CountryNames {USA,
     PORTUGAL,
     AUSTRIA,
     GERMAN,
-    POLIN
+    POLAND
     ;
 }

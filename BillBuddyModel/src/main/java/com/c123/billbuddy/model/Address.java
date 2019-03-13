@@ -2,20 +2,16 @@ package com.c123.billbuddy.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Embeddable;
-
-
-
-
 /** 
 * Address class is a POJO which has user address information 
 * 
 * @author 123Completed
 */ 
-@Embeddable
-@SuppressWarnings("serial")
-public class Address implements Serializable{
+
+public class Address implements Serializable {
 	 
+
+	private static final long serialVersionUID = 1L;
 	private String street;
 	private String city;
 	private String state;
@@ -52,5 +48,9 @@ public class Address implements Serializable{
 	public void setZipCode(Integer zipCode) {
 		this.zipCode = zipCode;
 	}
-	
+	@Override
+	public String toString() {
+		return "Address [street=" + street + ", city=" + city + ", state="
+				+ state + ", country=" + country + ", zipCode=" + zipCode + "]";
+	}
 }

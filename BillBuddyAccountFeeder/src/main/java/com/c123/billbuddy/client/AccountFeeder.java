@@ -5,7 +5,6 @@ import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
 
 
-
 /** 
  * UserFeederActivator class create a standalone proxy connection to the space using configurer.
  * The class then activates the UserFeeder to write all user into the space.
@@ -36,7 +35,8 @@ public class AccountFeeder {
     		MerchantFeeder.loadData(gigaSpace);
     	
     	} catch (Exception ex){
-    		ex.printStackTrace();
+    		System.out.println(ex.getMessage());
+    		System.out.println(ex.getStackTrace());
     	}
     	
 	}

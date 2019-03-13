@@ -1,4 +1,4 @@
-# xap-dev-training - lab5-solution
+# xap-dev-training - lab8-exercise
 
 
 Temp Instructions for testing:
