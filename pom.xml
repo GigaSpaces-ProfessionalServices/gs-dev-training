@@ -89,44 +89,4 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile>
-            <id>IDE</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.gigaspaces</groupId>
-                    <artifactId>xap-openspaces</artifactId>
-                    <version>${gsVersion}</version>
-                    <scope>compile</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-orm</artifactId>
-                    <version>${spring.version}</version>
-                    <scope>compile</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>Default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <!-- Align spring versions for all projects using openspaces -->
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.gigaspaces</groupId>
-                        <artifactId>xap-openspaces</artifactId>
-                        <version>${gsVersion}</version>
-                        <type>pom</type>
-                        <scope>import</scope>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-    </profiles> 
 </project>
