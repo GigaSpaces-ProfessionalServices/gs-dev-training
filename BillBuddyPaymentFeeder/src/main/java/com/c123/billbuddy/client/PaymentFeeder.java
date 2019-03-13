@@ -117,12 +117,9 @@ public class PaymentFeeder  {
 		log.info("TransactionWriterTask withdraw " + paymentAmount + 
     			" from user: " + user.getName());
 
-    	// Subtract paymentAmount from user balance and save using write API   	
+    	// TODO: Subtract paymentAmount from user balance using Change API   	
     	
-    	double currentBalance = user.getBalance();
-    	currentBalance -= paymentAmount;
-    	user.setBalance(currentBalance);
-    	gigaSpace.write(user);
+
     	
     }
     
@@ -131,12 +128,9 @@ public class PaymentFeeder  {
     	log.info("TransactionWriterTask deposit " + paymentAmount + 
     			" to merchant: " + merchant.getName());
     	   	
-    	// Add paymentAmount to Merchant receipts and save using write API
+    	// TODO: Add paymentAmount to Merchant receipts using Change API
     	
-    	double currentReceipts = merchant.getReceipts();
-    	currentReceipts += paymentAmount;
-    	merchant.setReceipts(currentReceipts);
-    	gigaSpace.write(merchant);
+
 		
     }
 }
