@@ -1,4 +1,4 @@
-# xap-dev-training - lab9-exercise
+# xap-dev-training - lab10-solution
 
 
 Temp Instructions for testing:
