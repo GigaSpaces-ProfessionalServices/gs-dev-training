@@ -2,7 +2,6 @@ package com.c123.billbuddy.client;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.concurrent.ScheduledFuture;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
@@ -11,6 +10,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.SpaceInterruptedException;
 import org.springframework.stereotype.Component;
+
 import com.c123.billbuddy.model.AccountStatus;
 import com.c123.billbuddy.model.Merchant;
 import com.c123.billbuddy.model.Payment;
@@ -48,7 +48,7 @@ public class LeasePaymentFeeder {
 			System.exit(-1);
 		}
 
-       Thread t = new Thread(new PaymentCreatorExecuter());
+        Thread t = new Thread(new PaymentCreatorExecuter());
         t.start();
 	}
 
@@ -127,7 +127,8 @@ public class LeasePaymentFeeder {
 				}
 			}
 
-			//TODO: use writeMultiple to write the payments make sure Payments will stay only 20 seconds in the space (Hint: Lease time)
+			// Write the payment object
+			gigaSpace.writeMultiple(payments, 20000);
 
 		} catch (SpaceInterruptedException e) {
 			// ignore, we are being shutdown
@@ -164,8 +165,7 @@ public class LeasePaymentFeeder {
 	}
 	
 	private class PaymentCreatorExecuter implements Runnable {
-		
-	    public void run() {
+		public void run() {
 	        try {
 	        	log.info("PaymentFeeder.PaymentCreatorExecuter thread has start");
 	        	while (true){

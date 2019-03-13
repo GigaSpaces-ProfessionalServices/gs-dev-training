@@ -117,9 +117,10 @@ public class PaymentFeeder  {
 		log.info("TransactionWriterTask withdraw " + paymentAmount + 
     			" from user: " + user.getName());
 
-    	// TODO: Subtract paymentAmount from user balance using Change API   	
+    	// Subtract paymentAmount from user balance using Change API   	
     	
-
+    	IdQuery<User> idQuery = new IdQuery<User>(User.class, user.getUserAccountId(), user.getUserAccountId());
+    	gigaSpace.change(idQuery, new ChangeSet().decrement("balance", paymentAmount));
     	
     }
     
@@ -128,9 +129,10 @@ public class PaymentFeeder  {
     	log.info("TransactionWriterTask deposit " + paymentAmount + 
     			" to merchant: " + merchant.getName());
     	   	
-    	// TODO: Add paymentAmount to Merchant receipts using Change API
+    	// Add paymentAmount to Merchant receipts using Change API
     	
-
+    	IdQuery<Merchant> idQuery = new IdQuery<Merchant>(Merchant.class, merchant.getMerchantAccountId(), merchant.getMerchantAccountId());
+    	gigaSpace.change(idQuery, new ChangeSet().increment("receipts", paymentAmount));
 		
     }
 }
