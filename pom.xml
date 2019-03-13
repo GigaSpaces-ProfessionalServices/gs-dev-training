@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gigaspaces.dev.training</groupId>
-    <artifactId>Lab9-exercise</artifactId>
+    <artifactId>Lab10-exercise</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Lab9-exercise</name>
+    <name>Lab5-solution</name>
     <packaging>pom</packaging>
     <repositories>
         <repository>
@@ -27,9 +27,11 @@
         <spring.version>4.3.19.RELEASE</spring.version>
     </properties>
     <modules>
-       <module>Spring_Annotations</module>
-        <module>Spring_XML</module>
-        <module>Traditional_Java</module>
+       <module>BillBuddyModel</module>
+        <module>BillBuddy_Space</module>
+        <module>BillBuddyAccountFeeder</module>
+        <module>BillBuddyPaymentFeeder</module>
+        <module>merchantsOfTop5Payments</module>
     </modules>
     <dependencies>
         <dependency>
