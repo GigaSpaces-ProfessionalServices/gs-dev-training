@@ -20,34 +20,22 @@ public class AggregationPaymentInformation {
 
 	@PostConstruct
 	public void init() {
-		
-		//TODO: 1. Create SQL query to retrieve all payments
-		
 
-		//TODO: 2. Use aggregation to retrieve the maximum payment
+		SQLQuery<Payment> query = new SQLQuery<Payment>(Payment.class,"");
+
 		// retrieve the maximum value stored in the field "paymentAmount"
-		Number maxPayment=0; 
-		
-		//TODO: 3. Use aggregation to retrieve the minimum payment
+		Number maxPayment = max(gigaSpace, query, "paymentAmount");
 		/// retrieve the minimum value stored in the field "paymentAmount"
-		Number minPayment=0;
-		
-		//TODO: 4. Use aggregation to retrieve the sum of all payment
+		Number minPayment = min(gigaSpace, query, "paymentAmount");
 		// Sum the "paymentAmount" field on all Payment objects.
-		Number sumPayment=0;
-		
-		//TODO: 5. Use aggregation to retrieve the average of all payment
+		Number sumPayment = sum(gigaSpace, query, "paymentAmount");
 		// Sum's the "paymentAmount" field on all Payment objects then divides by the number of Payment objects.
-		Double averagePayment=0d;
-		
-		//TODO: 6. Use aggregation to retrieve the Payment object with maximum paymentAmount value.
+		Double averagePayment = average(gigaSpace, query, "paymentAmount");
 		// Retrieve the Payment object with the highest value for the field "paymentAmount".
-		Payment paymentWithMaxAmount=null;
-		
-		//TODO: 7. Use aggregation to retrieve the Payment object with minimum paymentAmount value.
-		// Retrieve the Payment object with the lowest value for the field "paymentAmount".
-		Payment paymentWithMinAmount=null;
-		
+		Payment paymentWithMaxAmount = maxEntry(gigaSpace, query, "paymentAmount");
+		/// Retrieve the Payment object with the lowest value for the field "paymentAmount".
+		Payment paymentWithMinAmount = minEntry(gigaSpace, query, "paymentAmount");
+
 		log.info("Max payment is: "+ maxPayment.doubleValue() + " Payment was made at:" + paymentWithMaxAmount.getCreatedDate());
 		log.info("Min payment is: "+ minPayment.doubleValue() + " Payment was made at:" + paymentWithMinAmount.getCreatedDate());
 		log.info("Sum of all payments is: "+ sumPayment.doubleValue());
