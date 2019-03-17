@@ -1,4 +1,4 @@
-# xap-dev-training - lab17-exercise
+# xap-dev-training - lab17-solution
 
 
 Temp Instructions for testing:
