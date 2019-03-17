@@ -1,5 +1,7 @@
 package com.c123.billbuddy.model;
 
+import java.io.Serializable;
+
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -14,8 +16,9 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 */
 
 @SpaceClass
-public class Merchant {
+public class Merchant implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private Integer merchantAccountId;
     private String name;
     private Double receipts;

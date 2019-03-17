@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gigaspaces.dev.training</groupId>
-    <artifactId>Lab15-solution</artifactId>
+    <artifactId>Lab16-exercise</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Lab15-solution</name>
+    <name>Lab16-exercise</name>
     <packaging>pom</packaging>
     <repositories>
         <repository>
@@ -32,8 +32,8 @@
         <module>BillBuddyAccountFeeder</module>
         <module>BillBuddyPaymentFeeder</module>
         <module>BillBuddyCountPaymentsByCategoryDistributedExecutor</module>
-        <module>BillBuddyCurrentProfitDistributedExecutor</module>
-        <module>BillBuddyMerchantGetUserIdTaskExecutor</module>
+        <module>BillBuddyCountPaymentByCategoryRemoteService</module>
+        <module>BillBuddyCategoryTop5PaymentRemoteService</module>
     </modules>
     <dependencies>
         <dependency>

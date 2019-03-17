@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gigaspaces.dev.training</groupId>
-    <artifactId>BillBuddyPaymentFeeder</artifactId>
+    <artifactId>BillBuddyCountPaymentByCategoryRemoteService</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>BillBuddyPaymentFeeder</name>
+    <name>BillBuddyCountPaymentByCategoryRemoteService</name>
     <parent>
         <groupId>com.gigaspaces.dev.training</groupId>
         <artifactId>Lab16-exercise</artifactId>
@@ -23,7 +23,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>BillBuddyPaymentFeeder</finalName>
+        <finalName>BillBuddyCountPaymentByCategoryRemoteService</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>

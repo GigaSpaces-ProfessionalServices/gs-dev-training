@@ -6,6 +6,7 @@ import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /** 
@@ -15,8 +16,10 @@ import java.util.Date;
 */
 
 @SpaceClass
-public class Payment {
-    private String paymentId;
+public class Payment implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private String paymentId;
     private Integer payingAccountId;
     private Integer receivingMerchantId;
     private String description;
