@@ -8,7 +8,7 @@
     <name>BillBuddy_Space</name>
     <parent>
         <groupId>com.gigaspaces.dev.training</groupId>
-        <artifactId>Lab14-solution</artifactId>
+        <artifactId>Lab15-solution</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <properties>
