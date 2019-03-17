@@ -13,6 +13,5 @@ import com.c123.billbuddy.model.CategoryType;
 
 public interface ICountPaymentsByCategoryService{
   
-	// TODO: add method returning Payments count per a specific Category type over the space.
-
+    int findPaymentCountByCategory(CategoryType categoryType);
 }

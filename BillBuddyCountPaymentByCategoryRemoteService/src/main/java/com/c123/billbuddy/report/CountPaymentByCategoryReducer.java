@@ -26,10 +26,19 @@ public class CountPaymentByCategoryReducer implements RemoteResultReducer<Intege
     	log.info("Starting CountPaymentByCategoryReducer");
     	int totalCountOfPayments=0;
     	
-        // Each result is an array of events. Each result is from a single partition.        
-     	
-    	//TODO: Sum all results to a single score that sums them all into totalCountOfPayments
+        // Each result is an array of events. Each result is from a single partition. 
+    	
+        for (SpaceRemotingResult<Integer> result : results) {
+            if (result.getException() != null) {
+            	
+                // just log the fact that there was an exception
+            	
+                log.error("Executor Remoting Exception [" + result.getException() + "]");
 
+                continue;
+            }
+            totalCountOfPayments+=result.getResult();
+        }
 
     	return totalCountOfPayments;       
       

@@ -24,21 +24,20 @@ import com.c123.billbuddy.remoting.ICountPaymentsByCategoryService;
 public class CountPaymentByCategoryReport {
     private final Log log = LogFactory.getLog(CountPaymentByCategoryReport.class);
     
-    //TODO Annotate the remote proxy - @ExecutorProxy with all relevant attributes
-
+    @ExecutorProxy(gigaSpace="gigaSpace",
+    	    broadcast=true,
+    	    remoteResultReducerType=CountPaymentByCategoryReducer.class)
     private ICountPaymentsByCategoryService iCategoryTransactionVolumeService;
 
     @PostConstruct
     public void construct() throws Exception {
     	log.info("Starting CountPaymentByCategoryReport");
-    	int result=0;	
     	    	
     	CategoryType[] categoryTypes = CategoryType.values();
     	CategoryType categoryType = categoryTypes[(int) ((categoryTypes.length - 1) * Math.random())];
     	log.info("Search for Payment Count for the following category: " + categoryType.name());
     	
-    	//TODO: use the remote service to retrieve Payment count in a specific Category
-
+    	int result = iCategoryTransactionVolumeService.findPaymentCountByCategory(categoryType);
     	log.info("Payment Count for the following category: " + categoryType.name() + " is: " + result);
     	
     	log.info("Finished CountPaymentByCategoryReport");

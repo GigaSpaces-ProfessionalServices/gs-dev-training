@@ -16,4 +16,5 @@ public interface IMerchantProfitService{
 	// Other option for Routing on remoting call  
 	Double getMerchantProfit(@Routing Integer merchantAccountId);
 
+	
 }

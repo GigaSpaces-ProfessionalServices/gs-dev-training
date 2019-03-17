@@ -6,14 +6,13 @@ import com.c123.billbuddy.model.Payment;
 /** 
 * IPaymentService Interface. 
 *  
-* Define method which will be executed by remoting on top of the space
+* Define method which will be executed by remoting on top of the space & will be returning Payments
 * 
 * @author 123Completed
 */
 
 public interface IPaymentService {
   
-	// Payment[] findTop10Payments();
 	public Payment[] findTop5PaymentsPerCategory(CategoryType categoryType);
  
 }
