@@ -9,5 +9,11 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-<!-- TODO add missing listener configuration -->
+  <listener>
+    <listener-class>org.openspaces.pu.container.jee.context.ProcessingUnitContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/META-INF/spring/pu.xml</param-value>
+  </context-param>
 </web-app>
