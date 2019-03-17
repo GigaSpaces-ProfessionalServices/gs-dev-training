@@ -70,6 +70,7 @@ public class PaymentFeeder  {
         	paymentAmount = Math.round(paymentAmount*100.0)/100.0;
         	
         	// Check If user valid and have credit limit
+        	
         	if (user.getStatus() != AccountStatus.ACTIVE){
         		log.info("User: " + user.getName() + " status is " + user.getStatus());
         	}
@@ -88,12 +89,15 @@ public class PaymentFeeder  {
         	else { 
         		
         		 // Withdraw payment amount from user account
-                updateUserBalance(user, paymentAmount);
+                
+        		updateUserBalance(user, paymentAmount);
 
                 // Deposit payment amount to merchant account                    
-                updateMerchantReceipts(merchant, paymentAmount);
+                
+        		updateMerchantReceipts(merchant, paymentAmount);
                 
                 // Create a Payment POJO and set it up.  
+        		
         		Payment payment = new Payment();
                 
                 payment.setPayingAccountId(user.getUserAccountId());
@@ -104,6 +108,7 @@ public class PaymentFeeder  {
                 payment.setStatus(TransactionStatus.NEW);
                 
                 // Write the payment object
+                
                 gigaSpace.write(payment);
                 
                 log.info("TransactionWriterTask wrote new transaction between user: " + user.getName() + 
