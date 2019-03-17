@@ -31,7 +31,7 @@
         <module>BillBuddy_Space</module>
         <module>BillBuddyAccountFeeder</module>
         <module>BillBuddyPaymentFeeder</module>
-        <module>BillBuddyMultiplePaymentFeeder</module>
+        <module>BillBuddyAggregationPayment</module>
     </modules>
     <dependencies>
         <dependency>
