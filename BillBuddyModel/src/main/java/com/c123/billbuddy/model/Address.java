@@ -2,6 +2,9 @@ package com.c123.billbuddy.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Embeddable;
+
+
 
 
 /** 
@@ -9,11 +12,10 @@ import java.io.Serializable;
 * 
 * @author 123Completed
 */ 
-
+@Embeddable
+@SuppressWarnings("serial")
 public class Address implements Serializable{
 	 
-	
-	private static final long serialVersionUID = 1L;
 	private String street;
 	private String city;
 	private String state;

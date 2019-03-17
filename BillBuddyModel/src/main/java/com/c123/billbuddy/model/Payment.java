@@ -6,7 +6,12 @@ import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
 
+import java.io.Serializable;
 import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /** 
 * Payment class is a POJO which has transaction information between user and merchant 
@@ -14,8 +19,12 @@ import java.util.Date;
 * @author 123Completed
 */
 
+@Entity
+@Table
+@SuppressWarnings("serial")
 @SpaceClass
-public class Payment {
+public class Payment implements Serializable{
+	@Id
     private String paymentId;
     private Integer payingAccountId;
     private Integer receivingMerchantId;

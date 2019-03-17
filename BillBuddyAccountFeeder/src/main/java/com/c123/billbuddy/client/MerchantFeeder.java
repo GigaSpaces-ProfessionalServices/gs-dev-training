@@ -121,5 +121,5 @@ public class MerchantFeeder {
         System.out.println(String.format("Added MerchantContract object with id '%s' with transaction fee of %.2f%n", contract.getId(), contract.getTransactionPrecentFee()));
 		
 	}
-    	
+    
 }

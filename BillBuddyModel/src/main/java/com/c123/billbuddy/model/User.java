@@ -1,5 +1,15 @@
 package com.c123.billbuddy.model;
 
+import java.io.Serializable;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
@@ -14,11 +24,22 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 * @author 123Completed
 */
 
+@Entity
+@Table
+@SuppressWarnings("serial")
 @SpaceClass
-public class User {
-
+public class User implements Serializable{
+	@Id
 	private Integer userAccountId;
     private String name;
+    @Embedded
+    @AttributeOverrides( {
+    	@AttributeOverride(name="street", column = @Column(name="Address_street") ),
+    	@AttributeOverride(name="city", column = @Column(name="Address_city") ),
+    	@AttributeOverride(name="state", column = @Column(name="Address_state") ),
+    	@AttributeOverride(name="country", column = @Column(name="Address_country") ),
+    	@AttributeOverride(name="zipCode", column = @Column(name="Address_zipCode") )
+    	} )
     private Address address;
     private Double balance;
     private Double creditLimit;
