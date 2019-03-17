@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import org.openspaces.core.GigaSpace;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.c123.billbuddy.model.AccountStatus;
 import com.c123.billbuddy.model.CategoryType;
@@ -49,50 +50,58 @@ public class MerchantFeeder {
         // merchantAccountId will serve as the Unique Identifier value
         
 		Integer merchantAccountId = 1;
-        
-        CategoryType[] categoryTypes = CategoryType.values();        
 
         // for each merchant in the merchantList do:
         
         for (String merchantName : MerchantFeeder.merchants) {
         	
-        	 // Check the merchant does not exist in the space already by trying to read it
-			
-        	Merchant foundMerchant = gigaSpace.readById(Merchant.class,merchantAccountId);
-        	
-        	// If Merchant was not found then create the Merchant and write it to the space
-            
-        	if (foundMerchant == null) {
-            	Merchant merchant = new Merchant();
-            	
-            	merchant.setName(merchantName);
-                merchant.setReceipts(0d);
-                merchant.setFeeAmount(0d);
-            
-                // Select Random Category
- 
-                merchant.setCategory(categoryTypes[(int) ((categoryTypes.length - 1) * Math.random())]);
-                merchant.setStatus(AccountStatus.ACTIVE);
-                merchant.setMerchantAccountId(merchantAccountId);
-                
-                // Write Merchant to the space.
-                
-                gigaSpace.write(merchant);
-                System.out.println("Added Merchant object with name: " + merchant.getName());
-                
-                createMerchantContract(merchant.getMerchantAccountId(),gigaSpace);
-                
-            }
-            
-            merchantAccountId++;
+        	createMerchant(merchantAccountId, merchantName,gigaSpace);
+            merchantAccountId++;               
         }
         	
         System.out.println("Stopping Merchant Feeder");
+        
     }
 
+	   @Transactional
+	    private static void createMerchant(Integer merchantAccountId, String merchantName,GigaSpace gigaSpace) {
+	    	Merchant templateMerchant = new Merchant();
+	        templateMerchant.setMerchantAccountId(merchantAccountId);
+	        
+	        Merchant foundMerchant = gigaSpace.read(templateMerchant);
+
+	        
+	        if (foundMerchant == null) {
+	         	
+	        	Merchant merchant = new Merchant();
+	        	
+	        	merchant.setName(merchantName);
+	            merchant.setReceipts(0d);
+	            merchant.setFeeAmount(0d);
+	            
+	            // Select Random Category
+	            
+	            CategoryType[] categoryTypes = CategoryType.values();
+	            merchant.setCategory(categoryTypes[(int) ((categoryTypes.length - 1) * Math.random())]);
+	            merchant.setStatus(AccountStatus.ACTIVE);
+	            merchant.setMerchantAccountId(merchantAccountId);
+	            
+	            // Merchant is not found, let's add it.
+	            
+	            gigaSpace.write(merchant);
+	            
+	            System.out.println(String.format("Added Merchant object with name '%s'", merchant.getName()));
+	            
+	            createMerchantContract(merchantAccountId,gigaSpace);
+	        }
+			
+		}
+
+	
+	
 	
     /** 
-     * Creates SpaceDocument with the terms between Merchant and BillBuddy 
+     * Creates Contract with the terms between Merchant and BillBuddy 
      */ 
     private static void createMerchantContract(Integer merchantId, GigaSpace gigaSpace) {
     	
