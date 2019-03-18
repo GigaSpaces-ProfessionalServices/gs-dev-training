@@ -34,3 +34,4 @@ f. Deploy BillBuddy_Space. e.g:
     ![Screenshot](Picture1.png)
     ![Optional Text](http://Picture1.png)
     ![stack Overflow](http://lmsotfy.com/so.png)
+    <img src="Picture1.png" alt="My cool logo"/>
