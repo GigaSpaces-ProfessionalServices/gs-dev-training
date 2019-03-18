@@ -32,4 +32,4 @@ f. Deploy BillBuddy_Space. e.g:
     6. Run BillBuddyAccountFeeder from your Intellij.
 
     ![Screenshot](Picture1.png)
-    ![Optional Text](../master/Picture1.png)
+    ![Optional Text](http://Picture1.png)
