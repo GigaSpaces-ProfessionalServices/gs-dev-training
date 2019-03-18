@@ -1,21 +1,34 @@
 # xap-dev-training - lab5-solution
 
 
-Temp Instructions for testing:
+## 5.1	Deploy BillBuddy-Space using cli.
 
-1. open Intelij
 
-2. create new project from existing Version Control. Git Repository URL:https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
+a. Find your host name by running hostname command.
+b. Go to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/
+c. Edit setenv-overrides.sh and put your host name as a value to XAP_MANAGER_SERVERS parameter. e.g:
 
-3. Make it maven project by clicking the parent pom.xml
+## Here are some environment variables which are commonly modified:
+## export JAVA_HOME=...
+## export XAP_LOOKUP_GROUPS=...
+## export XAP_LOOKUP_LOCATORS=...
+export XAP_MANAGER_SERVERS=<your host name>
+## export XAP_NIC_ADDRESS=...
+## export XAP_PUBLIC_HOST=...
+## export XAP_CLASSPATH_EXT=...
+## export EXT_JAVA_OPTIONS=...
 
-4. from the project directory run "mvn xap:intellij"
+d. Start gs-agent with one GSM, one LUS and 2 GSCs. e.g:
+./xap host run-agent --manager --gsc=2
+e.	Start gs-ui. e.g: ./gs-ui.sh
+f. Deploy BillBuddy_Space. e.g:
+    1. Clone lab5-solution repository by creating dir: %XAP_TRAINING_HOME%/labs/lab5-solution and typing: git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
+        xap-dev-training project will be created.
+    2. Open xap-dev-training project with intellij
+    3. Run mvn install
+    4. Run mvn xap:intellij. This will add the predefined Run Configuration Application to your Intellij IDE.
+    5. Open a new Terminal and go to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/
+    5. Deploy BillBuddy_Space by running ./xap pu deploy BillBuddy-Space %XAP_TRAINING_HOME%/labs/lab5-solution/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar
+    6. Run BillBuddyAccountFeeder from your Intellij.
 
-5. Set the Project SDK
-
-6. Set the IDE Profile (Maven Projects -> Profiles)
-
-7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
-
-8. Install BillBuddyCurrentProfit.jar in your local repository by running this command (change <your_user>):
-mvn install:install-file -Dfile=/Users/<your_user>/_XAPDevTraining/labs/Lab_5-BillBuddy_Application/solution/BillBuddyWebApplication/webapp/WEB-INF/lib/BillBuddyCurrentProfit.jar -DgroupId=com.gigaspaces.dev.training -DartifactId=BillBuddyCurrentProfit -Dversion=1.0-SNAPSHOT -Dpackaging=compile
+    ![Screenshot](Picture1.png)
