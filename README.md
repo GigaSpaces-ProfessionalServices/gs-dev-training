@@ -4,8 +4,8 @@
 ## 5.1	Deploy BillBuddy-Space using cli.
 
 
-a. Find your host name by running hostname command.
-b. Go to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/
+a. Find your host name by running hostname command. <br />
+b. Go to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
 c. Edit setenv-overrides.sh and put your host name as a value to XAP_MANAGER_SERVERS parameter. e.g: <br />
     export XAP_MANAGER_SERVERS=<your host name>
 
