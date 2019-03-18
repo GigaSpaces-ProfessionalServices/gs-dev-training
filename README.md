@@ -28,5 +28,5 @@ xap-dev-training project will be created. <br />
 
     ![Screenshot](Picture1.png)
     ![Optional Text](http://Picture1.png)
-    ![stack Overflow](http://lmsotfy.com/so.png)
+    ![stack Overflow](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
     <img src="Picture1.png" alt="My cool logo"/>
