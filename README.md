@@ -83,7 +83,7 @@
 ###### This application writes Users and Merchants to the Space
  
 5.3.2 Validate Users and Merchants were written to the space using gs-ui. <br />
- Go to: Space Browser Tab  Clusters  Operations Data Types. <br />
+ Go to: Space Browser Tab -> Clusters -> Operations -> Data Types. <br />
  Examine the list of classes from which objects were written to the space.
  
 ![Screenshot](./Pictures/Picture1.png)
