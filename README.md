@@ -126,7 +126,7 @@ You might be required to modify the sample rate and start the automatic refresh.
     ./xap pu deploy BillBuddyWebApplication /Users/yuval/Downloads/lab5-solution/xap-dev-training/BillBuddyWebApplication/target/BillBuddyWebApplication.war
 
 5.5.3 Validate the application is deployed. 
-Go to Deployed Processing Units tab and expand theBillBuddyWebApplication PU.
+Go to Deployed Processing Units tab and expand the BillBuddyWebApplication PU.
 
 ![Screenshot](./Pictures/Picture4.png)
 
