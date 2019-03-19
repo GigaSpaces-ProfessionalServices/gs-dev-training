@@ -1,32 +1,25 @@
 # xap-dev-training - lab5-solution
 
 
-## 5.1	Start gs-agent and gs-ui 
+Temp Instructions for testing:
 
-5.1.1 Find your host name by running hostname command. <br />
-5.1.2 Go to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
-5.1.3 Edit setenv-overrides.sh and put your host name as a value to XAP_MANAGER_SERVERS parameter. e.g: <br />
-    export XAP_MANAGER_SERVERS=<your host name> <br />
-5.1.4 Start gs-agent with one GSM, one LUS and 2 GSCs. e.g: <br />
-./xap host run-agent --manager --gsc=2 <br />
-5.1.5 Start gs-ui. e.g: ./gs-ui.sh <br />
+1. open Intelij
+
+2. create new project from existing Version Control. Git Repository URL:https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
+
+3. Make it maven project by clicking the parent pom.xml
+
+4. from the project directory run "mvn xap:intellij"
+
+5. Set the Project SDK
+
+6. Set the IDE Profile (Maven Projects -> Profiles)
+
+7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
+
+8. Install BillBuddyCurrentProfit.jar in your local repository by running this command (change <your_user>):
+mvn install:install-file -Dfile=/Users/<your_user>/_XAPDevTraining/labs/Lab_5-BillBuddy_Application/solution/BillBuddyWebApplication/webapp/WEB-INF/lib/BillBuddyCurrentProfit.jar -DgroupId=com.gigaspaces.dev.training -DartifactId=BillBuddyCurrentProfit -Dversion=1.0-SNAPSHOT -Dpackaging=compile
+
+
+![A test image](image.png)
     
-## 5.2	Deploy BillBuddy_Space
-
-5.2.1 Clone lab5-solution repository by creating dir: %XAP_TRAINING_HOME%/labs/lab5-solution and typing: git clone <br /> https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git <br />
-xap-dev-training project will be created. <br />
-5.2.2 Open xap-dev-training project with intellij <br />
-5.2.3 Run mvn install <br />
-5.2.4 Run mvn xap:intellij. This will add the predefined Run Configuration Application to your Intellij IDE. <br />
-5.2.5 Open a new Terminal and go to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
-5.2.6 Execute ./xap pu deploy BillBuddy-Space %XAP_TRAINING_HOME%/labs/lab5-solution/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar <br />
-
-## 5.3	Run BillBuddyAccountFeeder from Intellij
-
-5.3.1 From the Intellij run configuration select BillBuddyAccountFeeder
- 
-
-    ![Screenshot](Picture1.png)
-    ![Optional Text](http://Picture1.png)
-    ![stack Overflow](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
-    <img src="Picture1.png" alt="My cool logo"/>
