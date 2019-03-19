@@ -79,7 +79,8 @@
 ## 5.3	Run BillBuddyAccountFeeder from Intellij
 
 5.3.1 From the Intellij run configuration select BillBuddyAccountFeeder and run it.
-######This application writes Users and Merchants to the Space
+
+###### This application writes Users and Merchants to the Space
  
 5.3.2 Validate Users and Merchants were written to the space using gs-ui. <br />
  Go to: Space Browser Tab  Clusters  Operations Data Types. <br />
@@ -91,7 +92,7 @@
 Choose the query option and copy the following SQL command to the SQL area: <br />
 
     SELECT * FROM com.c123.billbuddy.model.User
-######Note: Fully qualified class name is required. (You can use copy paste in the gs-ui)
+###### Note: Fully qualified class name is required. (You can use copy paste in the gs-ui)
 
 ![Screenshot](./Pictures/Picture2.png)
 
