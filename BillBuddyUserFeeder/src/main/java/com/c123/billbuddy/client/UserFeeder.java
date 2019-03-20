@@ -88,5 +88,4 @@ public class UserFeeder {
         	System.out.println();
         }
     }
-
 }

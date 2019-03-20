@@ -44,7 +44,7 @@ public class User {
 		this.name = name;
 	}
 	
-	@SpaceIndex(type=SpaceIndexType.BASIC)
+	@SpaceIndex(type=SpaceIndexType.EQUAL)
 	public String getName() {
 		return name;
 	}
@@ -61,7 +61,7 @@ public class User {
 		this.creditLimit = creditLimit;
 	}
 
-	@SpaceIndex(type=SpaceIndexType.EXTENDED)
+	@SpaceIndex(type=SpaceIndexType.EQUAL_AND_ORDERED)
 	public Double getCreditLimit() {
 		return creditLimit;
 	}
