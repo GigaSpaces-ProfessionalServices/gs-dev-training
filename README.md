@@ -1,4 +1,4 @@
-# xap-dev-training - lab11-exercise
+# xap-dev-training - lab12-exercise
 
 ## 12   Aggregations
 
