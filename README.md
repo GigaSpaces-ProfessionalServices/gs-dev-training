@@ -18,7 +18,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
     mkdir /Users/yuval/XAPDevTraining/labs/lab7-exercise
 
-7.1.2 Navigate to lab6-exercise dir
+7.1.2 Navigate to lab7-exercise dir
 
     cd /Users/yuval/XAPDevTraining/labs/lab7-exercise
 
