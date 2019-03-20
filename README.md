@@ -69,13 +69,13 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
      [INFO] ------------------------------------------------------------------------
      [INFO] BUILD SUCCESS
 
-## 12.3	Aggregation Functions (Only if time permits)
-12.3.1	Open project BillBuddyAggregationPayment and modify 
+## 12.2	Aggregation Functions (Only if time permits)
+12.2.1	Open project BillBuddyAggregationPayment and modify 
         AggregationPaymentInformation class to retrieve aggregated information 
         like: Maximum, Minimum, Sum, Avarage 
         (search for the TODO: remarks & follow the instructions). <br />
-12.3.2	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
-12.3.3	Run BillBuddyAccountFeeder. <br />
-12.3.4	Run BillBuddyPaymentFeeder (let it run for about 20 second). <br />
-12.3.5	Run your new AggregationPaymentInformation client. <br />
-12.3.6	Examine your results. <br />
+12.2.2	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
+12.2.3	Run BillBuddyAccountFeeder. <br />
+12.2.4	Run BillBuddyPaymentFeeder (let it run for about 20 second). <br />
+12.2.5	Run your new AggregationPaymentInformation client. <br />
+12.2.6	Examine your results. <br />
