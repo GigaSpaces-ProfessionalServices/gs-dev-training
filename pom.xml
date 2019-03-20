@@ -4,7 +4,7 @@
     <groupId>com.gigaspaces.dev.training</groupId>
     <artifactId>Lab10-exercise</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Lab5-solution</name>
+    <name>Lab10-exercise</name>
     <packaging>pom</packaging>
     <repositories>
         <repository>
