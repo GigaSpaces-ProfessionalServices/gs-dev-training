@@ -16,7 +16,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab17-exercise
 
 17.1.2 Navigate to lab17-exercise dir
-    cd /Users/yuval/XAPDevTraining/labs/lab16-exercise
+    cd /Users/yuval/XAPDevTraining/labs/lab17-exercise
 
 17.1.3 Clone the git project
 
@@ -254,7 +254,7 @@ b.	Select the content of any table by issuing the following command:
 
 ![snapshot](./Pictures/Picture6.png)
 
-17.1.16	Compare the number of mirror total operations against the overall number of POJOs you have. Count only POJOs you persist. Can you explain why there are many more mirror operations than POJOs?
+17.2.16	Compare the number of mirror total operations against the overall number of POJOs you have. Count only POJOs you persist. Can you explain why there are many more mirror operations than POJOs?
 
 
 
