@@ -92,9 +92,10 @@ Search for comments <br />
 a.	Enable transactional support for PaymentFeeder <br />
 1.	Add Support for Spring Annotations  (pu.xml)
 2.	Add a transaction manager to your space (pu.xml) <br />
+
 b.	Make sure every single payment being created and initially 
     processed is done under a transaction. <br />
-Search for //TO DO comments <br />
+Search for //TO DO comments. <br />
 Hints:
 Not much editing is required. Find the method you need to annotate. 
 
