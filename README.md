@@ -95,7 +95,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 ![Screenshot](./Pictures/Picture1.png)
 
-# 11.3	Bulk operations (Only if time permits)
+## 11.3	Bulk operations (Only if time permits)
 11.3.1	Open project BillBuddyMultiplePaymentFeeder and modify LeasePaymentFeeder 
         class to write all 5 Payments in a single writeMultiple command (search for the TODO: ). <br />
 11.3.2	In order to demonstrate objects automatic eviction from the space, 
