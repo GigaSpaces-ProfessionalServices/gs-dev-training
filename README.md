@@ -107,7 +107,7 @@ a.	Expand the BillBuddyCountPaymentByCategoryRemoteService project. <br />
 b.	Locate the com.c123.billbuddy.report.CountPaymentByCategoryReducer. <br />
 c.	Follow the //TO DO comments in the file. 
 You only have to add all results to a single list. 
-The reducer class is almost fully implemented. ,br />
+The reducer class is almost fully implemented. <br />
 16.2.6	 Implement the Client as follows: <br />
 a.	Expand the BillBuddyCountPaymentByCategoryRemoteService project. <br />
 b.	Locate the com.c123.billbuddy.report.CountPaymentByCategoryReport. <br />
