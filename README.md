@@ -8,18 +8,18 @@
     yuval-pc:~ yuval$ hostname
     yuval-pc
 
-5.1.2 Navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
+5.1.2 Navigate to %XAP_HOME/bin <br />
 5.1.3 Edit setenv-overrides.sh and put your host name as a value for XAP_MANAGER_SERVERS parameter.
 
     export XAP_MANAGER_SERVERS=yuval-pc
         
 5.1.4 Start gs-agent with one GSM, one LUS and 2 GSCs.
 
-    ./xap host run-agent --manager --gsc=2
+    ./xap host run-agent --auto --gsc=2
     
 5.1.5 Start gs-ui.
 
-    ./gs-ui.sh <br />
+    ./gs-ui.sh
     
 ## 5.2	Deploy BillBuddy_Space
 
