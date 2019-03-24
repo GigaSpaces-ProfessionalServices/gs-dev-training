@@ -55,7 +55,8 @@
     [INFO] BUILD SUCCESS
 
 5.2.6 Run mvn xap:intellij.
-######This will add the predefined Run Configuration Application to your Intellij IDE.
+
+###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
     
