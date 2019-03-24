@@ -72,9 +72,9 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
     cd /Users/yuval/XAPDevTraining/gigaspaces-xap/bin
     
-6.2.2 Use XAP CLI to deploy BillBuddy_Space
+6.2.2 Use XAP CLI to deploy BillBuddy_space
 
-    ./xap pu deploy BillBuddy-Space /Users/yuval/XAPDevTraining/labs/lab6-exercise/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar
+    ./xap space deploy --partitions=2 --ha=true BillBuddy-space
 
 ## 6.3	Run User Feeder Using Configurer
 6.2.1 Examine and run the com.c123.billbuddy.client.SingleUserFeeder file. <br /> 
