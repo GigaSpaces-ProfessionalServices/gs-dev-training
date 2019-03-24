@@ -92,6 +92,7 @@
 Choose the query option and copy the following SQL command to the SQL area: <br />
 
     SELECT * FROM com.c123.billbuddy.model.User
+    
 ###### Note: Fully qualified class name is required. (You can use copy paste in the gs-ui)
 
 ![Screenshot](./Pictures/Picture2.png)
