@@ -53,7 +53,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] BUILD SUCCESS
 
 
-7.1.8 Run mvn xap:intellij.
+7.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
