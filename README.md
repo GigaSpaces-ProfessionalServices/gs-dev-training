@@ -58,7 +58,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-8.1.8 Run mvn xap:intellij.
+8.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -179,7 +179,7 @@ c.	The RandomTransactionFee is already implemented. <br />
 a.	Make sure you set the merchantAccountId property with a proper value <br />
     (Hint: search for an increment variable named merchantAccountId 
     in the MerchantFeeder class. <br /> 
-b.	Deploy BillBuddy_Space to the Integrated Processing Unit Container 
+b.	Run BillBuddy_Space as Integrated Processing Unit Container 
     using intellij run configuration. <br />
 c.	Run BillBuddyAccountFeeder. <br />
 d.	Validate that Users, Merchant and Contract are being written into the space 
