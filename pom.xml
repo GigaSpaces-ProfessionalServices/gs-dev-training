@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gigaspaces.dev.training</groupId>
-    <artifactId>Lab6-solution</artifactId>
+    <artifactId>Lab6-exercise</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Lab6-solution</name>
+    <name>Lab6-exercise</name>
     <packaging>pom</packaging>
     <repositories>
         <repository>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.gigaspaces</groupId>
             <artifactId>xap-openspaces</artifactId>
-            <version>14.0.1</version>
+            <version>${gsVersion}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -79,7 +79,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>xap-maven-plugin</artifactId>
-                <version>14.0.1</version>
+                <version>${gsVersion}</version>
             </plugin>
         </plugins>
     </build>

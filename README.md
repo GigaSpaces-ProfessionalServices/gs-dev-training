@@ -49,12 +49,12 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
     [INFO] 
-    [INFO] Lab6-solution 1.0-SNAPSHOT ......................... SUCCESS [  1.033 s]
+    [INFO] Lab6-exercise 1.0-SNAPSHOT ......................... SUCCESS [  1.033 s]
     [INFO] BillBuddyUserFeeder 1.0-SNAPSHOT ................... SUCCESS [  7.597 s]
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
 
-6.1.8 Run mvn xap:intellij.
+6.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -70,11 +70,11 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 6.2.1 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
 
-    cd cd /Users/yuval/XAPDevTraining/gigaspaces-xap/bin
+    cd /Users/yuval/XAPDevTraining/gigaspaces-xap/bin
     
 6.2.2 Use XAP CLI to deploy BillBuddy_Space
 
-    ./xap pu deploy BillBuddy-Space /Users/yuval/XAPDevTraining/labs/lab5-solution/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar
+    ./xap pu deploy BillBuddy-Space /Users/yuval/XAPDevTraining/labs/lab6-exercise/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar
 
 ## 6.3	Run User Feeder Using Configurer
 6.2.1 Examine and run the com.c123.billbuddy.client.SingleUserFeeder file. <br /> 
