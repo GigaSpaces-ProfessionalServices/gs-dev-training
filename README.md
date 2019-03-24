@@ -18,27 +18,27 @@ and read all of them in a single readMultiple command.
 ###### Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
-6.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab6-exercise
+6.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab6-solution
 
-    mkdir /Users/yuval/XAPDevTraining/labs/lab6-exercise
+    mkdir /Users/yuval/XAPDevTraining/labs/lab6-solution
 
-6.1.2 Navigate to lab6-exercise dir
+6.1.2 Navigate to lab6-solution dir
 
-    cd /Users/yuval/XAPDevTraining/labs/lab6-exercise
+    cd /Users/yuval/XAPDevTraining/labs/lab6-solution
 
 6.1.3 Clone the git project
 
     git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
 
-6.1.4 Checkout lab6-exercise
+6.1.4 Checkout lab6-solution
 
     cd xap-dev-training
-    git checkout lab6-exercise
+    git checkout lab6-solution
     
 6.1.5 Verify that the branch has been checked out.
 
     yuval-pc:xap-dev-training yuval$ git branch
-    * lab6-exercise
+    * lab6-solution
       master
                
 6.1.6 Open xap-dev-training project with intellij <br />
@@ -49,7 +49,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
     [INFO] 
-    [INFO] Lab6-exercise 1.0-SNAPSHOT ......................... SUCCESS [  1.033 s]
+    [INFO] Lab6-solution 1.0-SNAPSHOT ......................... SUCCESS [  1.033 s]
     [INFO] BillBuddyUserFeeder 1.0-SNAPSHOT ................... SUCCESS [  7.597 s]
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
