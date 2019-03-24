@@ -52,7 +52,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
       [INFO] ------------------------------------------------------------------------
       [INFO] BUILD SUCCESS
 
-10.1.8 Run mvn xap:intellij.
+10.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -112,15 +112,14 @@ Hints:
     (This means you have to jar your PaymentFeeder project together with the BillBuddyModel project 
     like you did for the BillBuddySpace). <br />
     Follow these steps: <br />
-        *   Stop all Integrated PU Container in your IDE.
-        *   Restart gs-agent.
-        *   Restart gs-ui.
-        *   Deploy BillBuddy-space to the service grid (if not already deployed).
-        *   Run AccountFeeder from your IDE.
-        *   Jar PaymentFeeder to a PU.
-        *   Deploy PaymentFeeder to the service grid.
-        *   Check payments are created.
-        *   Press on the Deployed Processing Units tab.
+        *   Stop all Integrated PU Container in your IDE.<br />
+        *   Restart gs-agent.<br />
+        *   Restart gs-ui.<br />
+        *   Deploy BillBuddy-space to the service grid (if not already deployed).<br />
+        *   Run AccountFeeder from your IDE.<br />
+        *   Deploy PaymentFeeder jar to the service grid.<br />
+        *   Check payments are created.<br />
+        *   Press on the Deployed Processing Units tab.<br />
  
 ![Screenshot](./Pictures/Picture2.png) 
 
