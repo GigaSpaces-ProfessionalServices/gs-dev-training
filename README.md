@@ -54,7 +54,12 @@
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
 
-5.2.6 Run mvn xap:intellij.
+5.2.6 IntelliJ path Variables
+
+###### Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS
+
+
+5.2.7 Run mvn xap:intellij
 
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
@@ -72,8 +77,8 @@
 
 
 
-5.2.7 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
-5.2.8 Use XAP CLI to deploy BillBuddy_Space
+5.2.8 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
+5.2.9 Use XAP CLI to deploy BillBuddy_Space
  
     ./xap pu deploy BillBuddy-Space /Users/yuval/XAPDevTraining/labs/lab5-solution/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar
 
