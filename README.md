@@ -23,6 +23,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab14-exercise
 
 14.1.2 Navigate to lab14-exercise dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab14-exercise
 
 14.1.3 Clone the git project
@@ -57,7 +58,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
        [INFO] BUILD SUCCESS
 
 
-14.1.8 Run mvn xap:intellij.
+14.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -106,9 +107,9 @@ Not much editing is required. Find the method you need to annotate.
         Present your proposed modification to the trainer.
 
 ## 14.4	Monitor transactions using gs-ui
-14.4.1	Deploy your space to the grid service.
-14.4.2	Run the AccountFeeder.
-14.4.3	Run the PaymentFeeder.
+14.4.1	Deploy your space to the grid service.<br />
+14.4.2	Run the AccountFeeder.<br />
+14.4.3	Run the PaymentFeeder.<br />
 14.4.4	Go to gs-ui and watch ACTIVE transactions using the transaction operation.
 
 ![Screenshot](./Pictures/Picture2.png)
