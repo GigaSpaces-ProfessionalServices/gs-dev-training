@@ -21,6 +21,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab13-exercise
 
 13.1.2 Navigate to lab13-exercise dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab13-exercise
 
 13.1.3 Clone the git project
