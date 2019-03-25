@@ -21,6 +21,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab11-solution
 
 11.1.2 Navigate to lab11-solution dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab11-solution
 
 11.1.3 Clone the git project
