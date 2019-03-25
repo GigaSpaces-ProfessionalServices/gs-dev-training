@@ -18,6 +18,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab15-exercise
 
 15.1.2 Navigate to lab15-exercise dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab15-exercise
 
 15.1.3 Clone the git project
@@ -56,7 +57,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-15.1.8 Run mvn xap:intellij.
+15.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -125,7 +126,7 @@ You should create a task that returns the sum of all ee amounts in each partitio
 and reduce the result to a total sum which represents the current profit of BillBuddy.
 You can use the previous distributed task example as a reference.  
 
-15.3.1	Expand the BillBuddyCurrentProfitDistributedExecutorproject and examine the files: 
+15.3.1	Expand the BillBuddyCurrentProfitDistributedExecutor project and examine the files: 
 
         ProcessServiceAmountFinder
         ProcessServiceAmountTask
