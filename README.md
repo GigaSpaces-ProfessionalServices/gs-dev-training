@@ -56,7 +56,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-13.1.8 Run mvn xap:intellij.
+13.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -150,7 +150,7 @@ e.	Query ProcessingFee and validate they are written to the space.
 a.	First stop your current BillBuddy_space if you run it in your IDE or gs-ui. <br />
 b.	Hint: Deploy Application at gs-ui (start gs-agent of course). <br /> 
 c.	Run BillBuddyAccountFeeder (from Integrated PU Container in Intellij). <br />
-d.	Run BillBuddyPaymentFeeder (from Integrated PU Container in Eclipse). <br />
+d.	Run BillBuddyPaymentFeeder (from Integrated PU Container in Intellij). <br />
 e.	Monitor Event Containers activity. Open:
     gs-ui -> Deployed Processing Units -> Processing Unit Instances -> 
     any primary partition instance ->BillBuddy_space -> Event Containers 
