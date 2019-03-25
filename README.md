@@ -56,7 +56,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
        [INFO] BUILD SUCCESS
 
 
-11.1.8 Run mvn xap:intellij.
+11.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -88,8 +88,8 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
  2.	Update the Merchant balance in the space (deposit the amount to the receipts property), 
     using the change API in method updateMerchantReceipts.
  3.	Validate the results <br />
- a.	Run BillBuddy_Spacedeploy the space to the Integrated Processing Unit Container using Intellij run configuration. <br />
- b.	Run BillBuddyAccountFeeder and BillBuddyPaymentFeeder using Eclipse run configuration.
+ a.	Run BillBuddy_Space run the space as Integrated Processing Unit Container using Intellij run configuration. <br />
+ b.	Run BillBuddyAccountFeeder and BillBuddyPaymentFeeder using Intellij run configuration.
  
 11.2.3	Validate that Payment Object are written to the space using gs-ui.
 
@@ -102,6 +102,6 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
         make sure payments will stay only 20 seconds in the space (Hint: Lease time) <br />
 11.3.3	Run your new MultiplePaymentFeeder for 30 seconds. <br /> 
 11.3.4	Using gs-ui examine Payments getting evicted from the space 
-        (Hint:UseData Types operation at gs-ui).
+        (Hint: Use Data Types operation at gs-ui).
 
 
