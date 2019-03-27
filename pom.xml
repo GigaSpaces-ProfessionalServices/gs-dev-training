@@ -34,6 +34,7 @@
         <module>BillBuddyCountPaymentsByCategoryDistributedExecutor</module>
         <module>BillBuddyCountPaymentByCategoryRemoteService</module>
         <module>BillBuddyCategoryTop5PaymentRemoteService</module>
+        <module>BillBuddyMerchantProfitRemoteService</module>
     </modules>
     <dependencies>
         <dependency>
