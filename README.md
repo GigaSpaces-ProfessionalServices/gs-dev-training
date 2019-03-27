@@ -18,6 +18,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab16-exercise
 
 16.1.2 Navigate to lab16-exercise dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab16-exercise
 
 16.1.3 Clone the git project
@@ -55,7 +56,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
        [INFO] BUILD SUCCESS
 
 
-15.1.8 Run mvn xap:intellij.
+15.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -116,8 +117,8 @@ d.	Deploy the BillBuddy_Space PU to the Grid Service followed: <br />
 e.	Run AccountFeeder and PaymentFeeder. <br />
 f.	Run the BillBuddyCountPaymentByCategoryRemoteService and examine your results. 
 
-## 16.4	Develop Executor Based Remoting using @routing
-16.4.1	BillBuddy requires a profit report for a random merchant. 
+## 16.3	Develop Executor Based Remoting using @routing
+16.3.1	BillBuddy requires a profit report for a random merchant. 
 A merchant's profit is calculated via the following formula: (receipts – feeAmount). 
 You can use the Top10Payment distributed Executor Based Remoting as a reference. <br />
 16.3.2	We will use the IMerchantProfitService interface. 
