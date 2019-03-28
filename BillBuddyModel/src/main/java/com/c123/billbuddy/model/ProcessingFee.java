@@ -9,17 +9,20 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 
 /** 
 * Payment class is a POJO which has transaction information between merchant and BillBuddy 
 * 
 * @author 123Completed
 */
-
+@Entity
 @SuppressWarnings("serial")
 @SpaceClass
 public class ProcessingFee implements Serializable{
-	
+	@Id
 	private String processingFeeId;
     private Integer payingAccountId;
     private String dependentPaymentId;
