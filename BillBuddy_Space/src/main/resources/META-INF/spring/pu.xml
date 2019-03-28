@@ -33,7 +33,7 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<!-- SPACE CONFIGURATION -->
 	<!-- A bean representing a space (an IJSpace implementation). -->
-	<os-core:embedded-space id="space" name="BillBuddy-space"/>
+	<os-core:embedded-space id="space" name="BillBuddy-space" mirrored="true"/>
 	<!-- OpenSpaces simplified space API built on top of IJSpace/JavaSpace. -->
 	<os-core:giga-space id="gigaSpace" space="space"
 		tx-manager="transactionManager"/>
