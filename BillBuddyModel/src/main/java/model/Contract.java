@@ -1,15 +1,19 @@
-package com.c123.billbuddy.model;
-
-import java.util.Date;
+package model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Date;
 
+@Entity
+@SuppressWarnings("serial")
 @SpaceClass
-public class Contract {
-
+public class Contract implements Serializable {
+	@Id
 	private String id;
 	private Integer merchantAccountId;
 	private Date contractDate;	

@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package model;
 
 /** 
 * CountryNames class is an Enum which has countries name  

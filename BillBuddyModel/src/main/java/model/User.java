@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
@@ -6,19 +6,26 @@ import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
 
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 
 
-/** 
+/**
 * User class is a POJO which has user account information 
 * 
 * @author 123Completed
 */
 
+@Entity
+@SuppressWarnings("serial")
 @SpaceClass
-public class User {
-
+public class User implements Serializable{
+	@Id
 	private Integer userAccountId;
     private String name;
+    @Embedded
     private Address address;
     private Double balance;
     private Double creditLimit;

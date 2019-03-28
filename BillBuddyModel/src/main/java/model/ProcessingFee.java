@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
@@ -6,6 +6,8 @@ import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,11 +17,11 @@ import java.util.Date;
 * 
 * @author 123Completed
 */
-
+@Entity
 @SuppressWarnings("serial")
 @SpaceClass
 public class ProcessingFee implements Serializable{
-	
+	@Id
 	private String processingFeeId;
     private Integer payingAccountId;
     private String dependentPaymentId;

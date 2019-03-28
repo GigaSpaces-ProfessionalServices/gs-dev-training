@@ -1,10 +1,14 @@
-package com.c123.billbuddy.model;
+package model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
 import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.gigaspaces.metadata.index.SpaceIndexType;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 
 
 /** 
@@ -13,9 +17,11 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 * @author 123Completed
 */
 
+@Entity
+@SuppressWarnings("serial")
 @SpaceClass
-public class Merchant {
-
+public class Merchant implements Serializable{
+	@Id
 	private Integer merchantAccountId;
     private String name;
     private Double receipts;

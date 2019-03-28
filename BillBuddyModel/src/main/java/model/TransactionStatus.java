@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package model;
 
 /** 
 * TransactionStatus class is an Enum which indicate transaction status
