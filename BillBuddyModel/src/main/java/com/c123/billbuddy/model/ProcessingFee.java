@@ -1,4 +1,4 @@
-package model;
+package com.c123.billbuddy.model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
@@ -13,42 +13,42 @@ import java.util.Date;
 
 
 /** 
-* Payment class is a POJO which has transaction information between user and merchant 
+* Payment class is a POJO which has transaction information between merchant and BillBuddy 
 * 
 * @author 123Completed
 */
-
 @Entity
 @SuppressWarnings("serial")
 @SpaceClass
-public class Payment implements Serializable{
+public class ProcessingFee implements Serializable{
 	@Id
-    private String paymentId;
+	private String processingFeeId;
     private Integer payingAccountId;
-    private Integer receivingMerchantId;
+    private String dependentPaymentId;
     private String description;
-    private Double paymentAmount;
+    private Double amount;
     private TransactionStatus status;
     private Date createdDate;
     
     
-    public Payment(String paymentId) {
-        this.paymentId = paymentId;
+    public ProcessingFee(String processingFeeId) {
+        this.processingFeeId = processingFeeId;
     }
 
-    public Payment() {
+    public ProcessingFee() {
     }
 
     @SpaceId(autoGenerate = true)
-    public String getPaymentId() {
-        return paymentId;
+    public String getProcessingFeeId() {
+        return processingFeeId;
     }
 
-    public void setPaymentId(String paymentId) {
-        this.paymentId = paymentId;
+    public void setProcessingFeeId(String processingFeeId) {
+        this.processingFeeId = processingFeeId;
     }
 
-    @SpaceIndex(type=SpaceIndexType.BASIC)
+    @SpaceRouting
+	@SpaceIndex(type=SpaceIndexType.BASIC)
 	public Integer getPayingAccountId() {
 		return payingAccountId;
 	}
@@ -57,16 +57,6 @@ public class Payment implements Serializable{
 		this.payingAccountId = payingAccountId;
 	}
 	
-	@SpaceRouting
-	@SpaceIndex(type=SpaceIndexType.BASIC)
-	public Integer getReceivingMerchantId() {
-		return receivingMerchantId;
-	}
-
-	public void setReceivingMerchantId(Integer receivingMerchantId) {
-		this.receivingMerchantId = receivingMerchantId;
-	}
-
 	public String getDescription() {
 		return description;
 	}
@@ -74,6 +64,15 @@ public class Payment implements Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+
 	public TransactionStatus getStatus() {
 		return status;
 	}
@@ -91,12 +90,14 @@ public class Payment implements Serializable{
 		this.createdDate = createdDate;
 	}
 
-	public void setPaymentAmount(Double paymentAmount) {
-		this.paymentAmount = paymentAmount;
+	
+	public void setDependentPaymentId(String dependentPaymentId) {
+		this.dependentPaymentId = dependentPaymentId;
 	}
 
-	public Double getPaymentAmount() {
-		return paymentAmount;
+	@SpaceIndex(type=SpaceIndexType.BASIC)
+	public String getDependentPaymentId() {
+		return dependentPaymentId;
 	}
 	
 }

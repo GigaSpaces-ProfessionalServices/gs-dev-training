@@ -1,4 +1,4 @@
-package model;
+package com.c123.billbuddy.model;
 
 /** 
 * CategoryType class is an Enum which indicate merchant category type 

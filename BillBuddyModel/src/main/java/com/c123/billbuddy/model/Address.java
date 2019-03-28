@@ -1,4 +1,4 @@
-package model;
+package com.c123.billbuddy.model;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;

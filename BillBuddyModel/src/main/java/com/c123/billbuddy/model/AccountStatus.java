@@ -1,4 +1,4 @@
-package model;
+package com.c123.billbuddy.model;
 
 /** 
 * AccountStatus class is an Enum which indicate merchant and user account status 
