@@ -69,7 +69,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] BUILD SUCCESS
     
 ## 17.2	Persistency – Mirror Service Implementation
-####17.2.1	Setup MySQL DB (Windows) for this lesson. <br />
+#### 17.2.1	Setup MySQL DB (Windows) for this lesson. <br />
 SKIP this step if you are using Linux/Mac <br />
 a.	Go to https://dev.mysql.com/downloads/mysql and download aviable GA MySQL Community Server.<br /> 
 b.  Extract it to: c:\mysql <br />
@@ -89,7 +89,7 @@ h.	Run the following command to create BillBuddy database:
 
     mysqladmin.exe --user=root create jbillbuddy
 
-####17.2.2	Setup MySQL DB (Linux) for this lesson. <br />
+#### 17.2.2	Setup MySQL DB (Linux) for this lesson. <br />
 **SKIP this step if you are using Windows/Mac** <br />
 a.	Execute “yum install mysql-server”(downloads and install MySql server) or "sudo apt-get install mysql-server" <br />
 b.	Start MySQL service: <br />
@@ -109,7 +109,7 @@ d.	Validate that your instance has been created:
     d.	Run: show tables;
     e.	Verify no tables exist.
 
-####17.2.3	Setup MySQL DB (Mac) for this lesson. <br />
+#### 17.2.3	Setup MySQL DB (Mac) for this lesson. <br />
 **SKIP this step if you are using Windows/Linux** <br />
 a.	downloads and install MySql server ( download DMG file link: http://dev.mysql.com/downloads/file/?id=462024 ) <br />
 b.	Install MySQL <br />
@@ -137,12 +137,12 @@ e.	Validate that your instance has been created
     e.	Run: show tables;
     f.	Verify no tables exist.
 
-####17.2.4	Configure your space to be mirror service aware. <br />.
+#### 17.2.4	Configure your space to be mirror service aware. <br />.
 a.	Modify your embedded Space Pu.xml. mirrored="true" space element tag (Hint: BillBuddy_space pu.xml) <br />
-####17.2.5	Map the data model to tables (using Hibernate. we will use annotations.) <br />
+#### 17.2.5	Map the data model to tables (using Hibernate. we will use annotations.) <br />
 a.	Search the data model to see which POJOs were chosen for persistency for our demo <br />
 b.	Examine specifically the User and Address relationship and try to figure out the meaning of the hibernate annotations. <br />
-####17.2.6	Configure the mirror service. <br />
+#### 17.2.6	Configure the mirror service. <br />
 The mirror service requires having to be configured appropriately. 
 The lab is already configured correctly for you. 
 Your task is to locate the file in which the configuration is defined.
@@ -159,7 +159,7 @@ Answer:
 
 ![snapshot](Pictures/Picture1.png)]
 
-####17.2.7	The following tasks will make it clearer how to implement a Mirror service. <br />
+#### 17.2.7	The following tasks will make it clearer how to implement a Mirror service. <br />
 Hint: Use slides from the lesson as a reference. Most tasks are already implemented. <br />
 a.	Expand BillBuddyPersisitency and open the pu.xml file. <br />
 b.	Locate the data source bean (DB Connection properties). 
@@ -177,12 +177,12 @@ d.	Specify the mirror to recognize the mirror space (This step is already implem
 1.	Complete the os-core:mirroros-core:source-space
 2.	Use slides from the lesson as a reference. <br />
 
-####17.2.8	Make sure you have a Database ready for use.
+#### 17.2.8	Make sure you have a Database ready for use.
 We will using MySQL db instance. <br />
 a.	Make sure you have the MySQL instance up and running (see section 13.1.1 (e) )
 
-####17.2.9	Jar the BillBuddyPersistency project. Make sure to include the BillBuddyModel in the Jar. <br />
-####17.2.10	Deploy and test the Mirror service (and your space). <br />
+#### 17.2.9	Jar the BillBuddyPersistency project. Make sure to include the BillBuddyModel in the Jar. <br />
+#### 17.2.10	Deploy and test the Mirror service (and your space). <br />
  
 a.	Run gs-agent <br />
 b.	Run gs-ui <br />
@@ -202,7 +202,7 @@ Search for the following message in both GSCs that contain primary space instanc
 g.	Run BillBuddyAccountFeeder <br />
 h.	Run BillBuddyPaymentFeeder <br />
 
-####17.2.11	Only for Windows - Open Relational Database Windows <br />
+#### 17.2.11	Only for Windows - Open Relational Database Windows <br />
 
 a.	Open windows command window
 b.	Navigate Mysql bin directory: 
@@ -224,7 +224,7 @@ f.	Validate the results
 
 ![snapshot](./Pictures/Picture4.png)
 
-####17.2.12	Only for Linux - Open Relational Database <br />
+#### 17.2.12	Only for Linux - Open Relational Database <br />
 a.	For Linux - Validate that your instance has been created. <br />
  
     a.	Open terminal 
@@ -235,7 +235,7 @@ b.	Select the content of any table by issuing the following command:
  
     select * from merchant;
 
-####17.2.13	Only for Mac  - Open Relational Database <br />
+#### 17.2.13	Only for Mac  - Open Relational Database <br />
 a.	For Mac - Validate that your instance has been created:
 
     a.	Open terminal 
@@ -247,13 +247,13 @@ b.	Select the content of any table by issuing the following command:
  
     select * from merchant;
 
-####17.2.14	Monitoring the Mirror service
+#### 17.2.14	Monitoring the Mirror service
 
 ![snapshot](./Pictures/Picture5.png)
 
 ![snapshot](./Pictures/Picture6.png)
 
-####17.2.15	Compare the number of mirror total operations against the overall number of POJOs you have. Count only POJOs you persist. Can you explain why there are many more mirror operations than POJOs?
+#### 17.2.15	Compare the number of mirror total operations against the overall number of POJOs you have. Count only POJOs you persist. Can you explain why there are many more mirror operations than POJOs?
 
 
 
