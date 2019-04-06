@@ -157,7 +157,7 @@ Answer: we will use MySQL DB for demo purposes. <br />
 d.	What are the DB user name, DB password, JDBC URL and JDBC Driver? <br />
 Answer: 
 
-![snapshot](Pictures/Picture1.png)]
+![snapshot](Pictures/Picture1.png)
 
 #### 17.2.7	The following tasks will make it clearer how to implement a Mirror service. <br />
 Hint: Use slides from the lesson as a reference. Most tasks are already implemented. <br />
