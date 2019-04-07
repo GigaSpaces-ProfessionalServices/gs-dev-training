@@ -15,6 +15,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab18-exercise
 
 18.1.2 Navigate to lab18-exercise dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab18-exercise
 
 18.1.3 Clone the git project
@@ -51,7 +52,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-18.1.8 Run mvn xap:intellij.
+18.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
@@ -81,4 +82,4 @@ Is it configured differently in this project than any other feeder project? <br 
 and investigate the DAL (Data Access Layer) classes. <br />
 a.	How does the DAL object get a GigaSpace proxy? <br />
 b.	How do all JSPs get a reference to the DAL? <br />
-18.2.6	Deploy and test your web application(Hint: Go to lab 3 and redo the lab).
+18.2.6	Deploy and test your web application(Hint: Go to lab 5 and redo the lab).
