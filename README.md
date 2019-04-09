@@ -16,6 +16,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     mkdir /Users/yuval/XAPDevTraining/labs/lab17-exercise
 
 17.1.2 Navigate to lab17-exercise dir
+
     cd /Users/yuval/XAPDevTraining/labs/lab17-exercise
 
 17.1.3 Clone the git project
@@ -51,7 +52,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-17.1.8 Run mvn xap:intellij.
+17.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     yuval-pc:xap-dev-training yuval$ mvn xap:intellij
