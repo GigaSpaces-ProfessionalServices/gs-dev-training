@@ -1,21 +1,35 @@
-# xap-dev-training - lab5-solution
+# xap-dev-training - lab2-guide
 
 
-Temp Instructions for testing:
+## 2	XAP Overview
 
-1. open Intelij
+###### Lab Goals
+*   Be introduced and experienced Grid Service Components
 
-2. create new project from existing Version Control. Git Repository URL:https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
+###### Lab Description
+In this lab you will start XAP infrastructure services. Inspect the runtime grid in the GS-UI.
 
-3. Make it maven project by clicking the parent pom.xml
+2.1.1	Start XAP Infrastructure
 
-4. from the project directory run "mvn xap:intellij"
+    a.	Goto %XAP_TRAINING_HOME%\gigaspaces-xap\bin
+    b.	Start gs-agent
+    c.	Start gs-ui
+    d.	Start gs-webui (localhost:8099)
+    
+2.1.2	Examine the running environment
+    
+    a. Examine the ‘gs-agent.log’ Check the GSM and GSCs have started and registered successfully 
 
-5. Set the Project SDK
+![Screenshot](./Pictures/Picture1.png)
 
-6. Set the IDE Profile (Maven Projects -> Profiles)
+    b.	Go to the gs-ui application
+    c.	Press the host tab
+    d.	Press on the gsc processes to see the process information and log.
+    
+![Screenshot](./Pictures/Picture2.png)
 
-7. Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS in the InteliJ path variable.
-
-8. Install BillBuddyCurrentProfit.jar in your local repository by running this command (change <your_user>):
-mvn install:install-file -Dfile=/Users/<your_user>/_XAPDevTraining/labs/Lab_5-BillBuddy_Application/solution/BillBuddyWebApplication/webapp/WEB-INF/lib/BillBuddyCurrentProfit.jar -DgroupId=com.gigaspaces.dev.training -DartifactId=BillBuddyCurrentProfit -Dversion=1.0-SNAPSHOT -Dpackaging=compile
+    e.	Open your browser and got localhost:8099
+    f.	Examine the webui console.
+    g.	You will learn more about it at a later session.
+    
+![Screenshot](./Pictures/Picture3.png)
