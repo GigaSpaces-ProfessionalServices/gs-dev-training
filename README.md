@@ -72,12 +72,16 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
     cd /Users/yuval/XAPDevTraining/gigaspaces-xap/bin
     
-6.2.2 Use XAP CLI to deploy BillBuddy_space
+6.2.2 Raise the service grid:
+
+    ./xap host run-agent --auto --gsc=2
+    
+6.2.3 Use XAP CLI to deploy BillBuddy_space
 
     ./xap space deploy --partitions=2 --ha=true BillBuddy-space
 
 ## 6.3	Run User Feeder Using Configurer
-6.2.1 Examine and run the com.c123.billbuddy.client.SingleUserFeeder file. <br /> 
+6.3.1 Examine and run the com.c123.billbuddy.client.SingleUserFeeder file. <br /> 
 a.	Locate the code fragment in which you get a proxy to the space. <br /> 
 b.	Edit the SingleUserFeedercreatenewSpaceProxyConfigurer to connect to remote space – BillBuddy-space. <br /> 
 ###### HINT: look for the TODO& follow the instructions <br />
@@ -94,4 +98,4 @@ e.	Execute the project in Intellij to run user into the space
 ###### Examine and run the com.c123.billbuddy.client.AccountFeeder. <br />
 6.4.1 Check the UserFeeder.loadData() method. <br />
 6.4.2 Open run configuration options in Intellij. <br />
-6.4.3	Execute the AccountFeeder
+6.4.3 Execute the AccountFeeder
