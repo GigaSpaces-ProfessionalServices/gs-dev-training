@@ -99,11 +99,11 @@ e.	Navigate c:\mysql\bin: <br />
 
      cd C:\mysql\mysql-5.5.48-winx64\bin	
 
- e.	Run the mysql server: 	
+e.	Run the mysql server: 	
 
      mysqld --console	
 
- f.	Open another command window <br/>	
+f.	Open another command window <br/>	
 g.	Navigate to the same Bin directory you navigated to at section (e) <br />	
 h.	Run the following command to create BillBuddy database:	
 
@@ -119,15 +119,15 @@ b.	Start MySQL service: <br />
      /sbin/service mysqld start ( or sudo service mysql start)	    mkdir ~/XAPPersistTraining
 
 
- c.	Open MySQL shell:	2.2.2 Define XAP_TRAINING_HOME
+c.	Open MySQL shell:	2.2.2 Define XAP_TRAINING_HOME
 
 
      a.	Open terminal 	###### Linux
     b.	Run: /usr/bin/mysqladmin --user=root create jbillbuddy	
 
- d.	Validate that your instance has been created: 	
+d.	Validate that your instance has been created: 	
 
-     a.	Open terminal 	
+    a.	Open terminal 	
     b.	Run: /usr/bin/mysql jbillbuddy-u root –p	
     c.	No password is required	
     d.	Run: show tables;	
@@ -142,28 +142,28 @@ b.	Install MySQL <br />
 	Double-click the disk image to open it. <br />	
 c.	Start MySQL service	
 
-     a.	Open terminal 	
+    a.	Open terminal 	
     b.	Run: sudo /usr/local/mysql/support-files/mysql.server start	
 
- c.	if you wish to stop or restart run the same command with stop or restart at the end. <br />	
+c.	if you wish to stop or restart run the same command with stop or restart at the end. <br />	
 d.	Open MySQL shell:	
 
-     a.	Open terminal 	
+    a.	Open terminal 	
     b.	cd /usr/local/mysql/bin	
     c.	Run:  ./mysqladmin --user=root create jbillbuddy	
 
 
- e.	Validate that your instance has been created	    vi ~/.bash_profile
+e.	Validate that your instance has been created	    vi ~/.bash_profile
 
      export XAP_TRAINING_HOME=~/XAPPersistTraining
     a.	Open terminal 	    source ~/.bash_profile
     b.	cd /usr/local/mysql/bin	
-     c.	Run:  ./mysql jbillbuddy -u root	###### Windows
+    c.	Run:  ./mysql jbillbuddy -u root	###### Windows
     d.	No password is required	
     e.	Run: show tables;	
     f.	Verify no tables exist.	
 
- #### 17.2.4	Configure your space to be mirror service aware. <br />.	
+#### 17.2.4	Configure your space to be mirror service aware. <br />.	
 a.	Modify your embedded Space Pu.xml. mirrored="true" space element tag (Hint: BillBuddy_space pu.xml) <br />	
 #### 17.2.5	Map the data model to tables (using Hibernate. we will use annotations.) <br />	
 a.	Search the data model to see which POJOs were chosen for persistency for our demo <br />	
@@ -185,7 +185,7 @@ Answer:
 
  ![snapshot](Pictures/Picture1.png)	
 
- #### 17.2.7	The following tasks will make it clearer how to implement a Mirror service. <br />	
+#### 17.2.7	The following tasks will make it clearer how to implement a Mirror service. <br />	
 Hint: Use slides from the lesson as a reference. Most tasks are already implemented. <br />	
 a.	Expand BillBuddyPersisitency and open the pu.xml file. <br />	
 b.	Locate the data source bean (DB Connection properties). 	
@@ -203,15 +203,15 @@ d.	Specify the mirror to recognize the mirror space (This step is already implem
 1.	Complete the os-core:mirroros-core:source-space	
 2.	Use slides from the lesson as a reference. <br />	
 
- #### 17.2.8	Make sure you have a Database ready for use.	
+#### 17.2.8	Make sure you have a Database ready for use.	
 We will using MySQL db instance. <br />	
 a.	Make sure you have the MySQL instance up and running (see section 13.1.1 (e) )	
 
- #### 17.2.9	Jar the BillBuddyPersistency project. Make sure to include the BillBuddyModel in the Jar. <br />	
+#### 17.2.9	Jar the BillBuddyPersistency project. Make sure to include the BillBuddyModel in the Jar. <br />	
 #### 17.2.10	Deploy and test the Mirror service (and your space). <br />	
 
 
- a.	Run gs-agent <br />	    add XAP_TRAINING_HOME to your system variables
+a.	Run gs-agent <br />	    add XAP_TRAINING_HOME to your system variables
 b.	Run gs-ui <br />	
 c.	Deploy BillBuddy_space to the service grid. <br />	
 d.	Deploy BillBuddPersistency to the service grid (Remember to include BillBuddy model Project. See below) <br />	
@@ -220,7 +220,7 @@ e.	Validate Mirror service deployed using gs-ui <br />
  ![snapshot](./Pictures/Picture2.png)	
 
 
- f.	Locate the GSC your mirror service was deployed to using gs-ui and see the GSC log to validate successful deployment.	2.2.3 Create lab directory:
+f.	Locate the GSC your mirror service was deployed to using gs-ui and see the GSC log to validate successful deployment.	2.2.3 Create lab directory:
 Search for the following message in both GSCs that contain primary space instances:	    mkdir ~/XAPPersistTraining/labs
 
      mkdir ~/XAPPersistTraining/labs/lab5-solution
