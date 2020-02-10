@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+		xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="com.c123.springAnnotations.example" />
+	<context:component-scan base-package="com.c123.springAnnotations.example.DAL" />
+
+	<!-- The Object Write to use. We will use an ObjectFileWriter It is configured in Spring and injected into the service. -->
+
+	<bean id="fileName" class="java.lang.String">
+		<constructor-arg value="TEMP/USER_LIST_FILE.txt"/>
+	</bean>
+
+	<bean id="userNameList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<value>James Johnson</value>
+				<value>Peter Gardener</value>
+				<value>Andrei Saizovsky</value>
+				<value>Petr Kirul</value>
+				<value>Gerard Bourtagne</value>
+				<value>Hans Freihof</value>
+				<value>Sami Filppula</value>
+				<value>Niklas Nilsson</value>
+				<value>Marian Varga</value>
+				<value>Sigur Briem</value>
+				<value>Bill Klien</value>
+				<value>David King</value>
+				<value>Magic Jordan</value>
+				<value>Hana Brill</value>
+				<value>Mustafa Cohen</value>
+				<value>Michel Peet</value>
+				<value>Samnta Gold</value>
+				<value>Snoop Cat</value>
+				<value>Marian Vog</value>
+				<value>Suger Baby</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	<!--  -->
+</beans>
