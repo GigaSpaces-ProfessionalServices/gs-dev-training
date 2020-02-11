@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:os-core="http://www.openspaces.org/schema/core" xmlns:os-jms="http://www.openspaces.org/schema/jms"
+	xmlns:os-events="http://www.openspaces.org/schema/events"
+	xmlns:os-remoting="http://www.openspaces.org/schema/remoting"
+	xmlns:os-sla="http://www.openspaces.org/schema/sla" xmlns:tx="http://www.springframework.org/schema/tx"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+       http://www.openspaces.org/schema/core http://www.openspaces.org/schema/15.0/core/openspaces-core.xsd
+       http://www.openspaces.org/schema/events http://www.openspaces.org/schema/15.0/events/openspaces-events.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+       http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/15.0/remoting/openspaces-remoting.xsd">
+
+		<!-- DATASOURCE CONFIGURATION -->
+		<!-- A JDBC datasource pool that connects to MySQL. -->
+		<bean id="dataSource" 
+		      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		      <property name="url" value="jdbc:mysql://localhost:3306/jbillbuddy"/>
+		      <property name="username" value="root"/>
+		      <property name="password" value=""/>
+		</bean>
+
+	<!-- Hibernate SessionFactory bean. Uses the pooled data source to connect 
+		to the database. -->
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="<//TODO: Fill in the package to be scanned>" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCachingRegionFactory</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.jdbc.batch_size">1</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- An external data source that will be responsible for persisting changes 
+		done on the cluster that connects to this mirror using Hibernate. -->
+	<bean id="hibernateSpaceDataSource" class="org.openspaces.persistency.hibernate.DefaultHibernateSpaceDataSourceFactoryBean">
+	    <property name="sessionFactory" ref="sessionFactory"/>
+	    <property name="initialLoadChunkSize" value="2000"/> 
+	</bean>
+	
+	<bean id="hibernateSpaceSpaceSynchronizationEndpoint" class="org.openspaces.persistency.hibernate.DefaultHibernateSpaceSynchronizationEndpointFactoryBean">
+	    <property name="sessionFactory" ref="sessionFactory"/> 
+	</bean>
+
+	<!-- MIRROR and SPACE CONFIGURATION The mirror space. Uses the Hibernate 
+		hibernateSpace Space Synchronization Endpoint. Persists changes done on the Space that connects to 
+		this mirror space into the database using Hibernate. -->
+	<os-core:mirror id="mirror" url="/./mirror-service"
+		space-sync-endpoint="hibernateSpaceSpaceSynchronizationEndpoint" operation-grouping="group-by-replication-bulk">
+		<os-core:source-space name="BillBuddy-space"
+			partitions="2" backups="1" />
+	</os-core:mirror>
+	
+</beans>
