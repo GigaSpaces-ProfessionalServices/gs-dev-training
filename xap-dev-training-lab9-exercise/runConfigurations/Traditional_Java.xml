@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Traditional_Java" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <option name="MAIN_CLASS_NAME" value="com.c123.nospring.example.TraditionalMain" />
+    <module name="Traditional_Java" />
+    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${XAP_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${XAP_LOOKUP_LOCATORS}" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Traditional_Java" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
