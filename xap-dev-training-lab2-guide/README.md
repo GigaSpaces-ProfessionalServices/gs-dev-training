@@ -1,7 +1,7 @@
 # xap-dev-training - lab2-guide
 
 
-## 2	XAP Overview
+## 	XAP Overview
 
 ###### Lab Goals
 *   Be introduced and experienced Grid Service Components
@@ -9,13 +9,13 @@
 ###### Lab Description
 In this lab you will start XAP infrastructure services. Inspect the runtime grid in the GS-UI.
 
-2.1.1	Start XAP Infrastructure
+##1	Start XAP Infrastructure
 
     a.	Goto %XAP_TRAINING_HOME%\gigaspaces-xap\bin
     b.	./gs.sh host run-agent --auto --gsc=2
     c.	Start gs-ui
     
-2.1.2	Examine the running environment
+##2	Examine the running environment
     
     a. Examine the ‘gigaspaces-manager.log’ Check the GSM and GSCs have started and registered successfully 
 
