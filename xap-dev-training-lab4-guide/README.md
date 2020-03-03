@@ -13,8 +13,8 @@ In this lab you will start XAP infrastructure services. Deploy a Space, perform 
 
 ## 4.1	Start XAP Infrastructure
 
-a.	Go to%XAP_TRAINING_HOME%\gigaspaces-xap\bin <br>
-b.	Start gs-agent <br>
+a.	Go to %XAP_TRAINING_HOME%\gigaspaces-xap\bin <br>
+b.	./gs.sh host run-agent --auto --gsc=4 <br>
 c.	Start gs-ui <br>
 d.	Press on the gsc processes to see the process information and log. <br>
 
@@ -90,7 +90,7 @@ Go to the Data_Types operation select the MessagePOJO data type and press query.
 In this exercise you will be introduced to the self-healing capabilities of the In Memory Data Grid.
 Basically we will ‘kill’ (using task manager or kill -9) a GSC process and see that it restarts automatically by the gs-agent and that new partition are created accordingly <br>
 
-4.4.1	Each process ID (all are JVMS) is shown at the Hosts tab (see red circle). Choose 1 of the GSCs PID and use the Task Manager or (kill -9 for Linux) in order to kill the process. <br>
+4.4.1	Each process ID (all are JVMS) is shown at the Hosts tab (see red circle). Choose 1 of the GSCs PID (with primary space instance on it) and use the Task Manager or (kill -9 for Linux) in order to kill the process. <br>
  
 If PID is not shown at the Task Manager simply choose “viewselect columns” and add the PID column.
 
@@ -104,15 +104,15 @@ If PID is not shown at the Task Manager simply choose “viewselect columns�
 
     a.	A backup turned to Primary
     b.	GSC was re-launched by gs-agent
-    c.	New backup partitions were provisioned
+    c.	New backup partition was provisioned
 
 ![Screenshot](./Pictures/Picture14.png)
 
-4.4.4	Recovery is performed but both primary partitions are located in the same GSC. Is that problematic? The backup partition is now a primary.
+4.4.4	Recovery is performed, the backup partition is now a primary.
 
-4.4.5	Restart a primary partition by selecting the primary partition (red arrow) and right click Restart BillBudy-space.1 [2]. What happens?
+4.4.5	Restart a primary partition by selecting the primary partition and right click Restart BillBudy-space.1 [2]. What happens?
 
-4.4.6	Why is it important to have each primary on a different GSC?
+![Screenshot](./Pictures/Picture15.png)
 
 ## 4.5	Un-deploy a Data Grid
 
@@ -120,11 +120,11 @@ If PID is not shown at the Task Manager simply choose “viewselect columns�
 
 4.5.2	Right click on space and click on “Undeploy”
 
-![Screenshot](./Pictures/Picture15.png)
+![Screenshot](./Pictures/Picture16.png)
 
 4.5.3	The following screen should appear:
 
-![Screenshot](./Pictures/Picture16.png)
+![Screenshot](./Pictures/Picture17.png)
 
 4.5.4	You have Un-deployed the space successfully
 
