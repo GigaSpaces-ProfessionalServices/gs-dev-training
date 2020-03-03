@@ -92,7 +92,7 @@ Basically we will ‘kill’ (using task manager or kill -9) a GSC process and s
 
 4.4.1	Each process ID (all are JVMS) is shown at the Hosts tab (see red circle). Choose 1 of the GSCs PID (with primary space instance on it) and use the Task Manager or (kill -9 for Linux) in order to kill the process. <br>
  
-If PID is not shown at the Task Manager simply choose “viewselect columns” and add the PID column.
+If PID is not shown at the Task Manager simply choose “view -> select columns” and add the PID column.
 
 ![Screenshot](./Pictures/Picture12.png)
 
@@ -110,7 +110,7 @@ If PID is not shown at the Task Manager simply choose “viewselect columns�
 
 4.4.4	Recovery is performed, the backup partition is now a primary.
 
-4.4.5	Restart a primary partition by selecting the primary partition and right click Restart BillBudy-space.1 [2]. What happens?
+4.4.5	Restart a primary partition by selecting the primary partition and right click -> Restart BillBudy-space.1 [2]. What happens?
 
 ![Screenshot](./Pictures/Picture15.png)
 
