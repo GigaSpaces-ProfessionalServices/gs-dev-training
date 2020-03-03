@@ -26,7 +26,7 @@
    If you see the above, you have successfully installed the courseware for our class.
    
 ##### 1.5	Stop processes
-    Stop the gs-agent process:
+    Stop the gs-agent process (2 options):
     1. ctrl+c
     2. ./gs.sh host kill-agent
 
