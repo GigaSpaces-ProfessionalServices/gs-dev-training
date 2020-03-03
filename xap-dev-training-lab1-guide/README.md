@@ -10,7 +10,7 @@
    https://www.jetbrains.com/idea/download
 ##### 1.1.4 Go to `$XAP_HOME/bin` open `setenv-overrides.sh` and set: <br>
    `JAVA_HOME` -> point to you java installation directory <br>
-   `XAP_LOOKUP_GROUPS` -> set any unique identifier
+   `GS_LOOKUP_GROUPS` -> set any unique identifier
    
 ##### 1.1.5 Test your XAP Installation. <br>
    You will start a XAP process (gs-agent) and you will wait to see a message that the gs-agent started successfully with groups [<your user group>]

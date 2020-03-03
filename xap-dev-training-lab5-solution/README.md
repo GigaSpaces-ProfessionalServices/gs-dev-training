@@ -3,19 +3,11 @@
 
 ## 5.1	Start gs-agent and gs-ui 
 
-5.1.1 Find your host name by running "hostname" command.
-
-    yuval-pc:~ yuval$ hostname
-    yuval-pc
-
-5.1.2 Navigate to %XAP_HOME/bin <br />
-5.1.3 Edit setenv-overrides.sh and put your host name as a value for XAP_MANAGER_SERVERS parameter.
-
-    export XAP_MANAGER_SERVERS=yuval-pc
+5.1.1 Navigate to %XAP_HOME/bin <br />
         
-5.1.4 Start gs-agent with one GSM, one LUS and 2 GSCs.
+5.1.2 Start gs-agent with one GSM, one LUS and 2 GSCs.
 
-    ./xap host run-agent --auto --gsc=2
+    ./gs.sh host run-agent --auto --gsc=5
     
 5.1.5 Start gs-ui.
 
@@ -23,22 +15,12 @@
     
 ## 5.2	Deploy BillBuddy_Space
 
-5.2.1 Create dir: %XAP_TRAINING_HOME%/labs/lab5-solution
-
-    mkdir /Users/yuval/XAPDevTraining/labs/lab5-solution
+5.2.1 Go to %XAP_TRAINING_HOME%/xap-dev-training-lab5-solution
     
-5.2.2 Navigate to lab5-solution dir
+5.2.2 Open xap-dev-training-lab5-solution project with intellij (open pom.xml) <br />
+5.2.3 Run mvn install <br />
 
-    cd /Users/yuval/XAPDevTraining/labs/lab5-solution
-    
-5.2.3 Clone the project from git
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git  
-    
-5.2.4 Open xap-dev-training project with intellij <br />
-5.2.5 Run mvn install <br />
-
-    yuval-pc:xap-dev-training yuval$ mvn install
+    Aharons-MBP:xap-dev-training aharonmoll$ mvn install
     
     
     [INFO] ------------------------------------------------------------------------
@@ -54,16 +36,15 @@
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
 
-5.2.6 IntelliJ path Variables
+5.2.4 IntelliJ path Variables
 
-###### Add XAP_LOOKUP_GROUPS & XAP_LOOKUP_LOCATORS
+###### Add GS_LOOKUP_GROUPS & GS_LOOKUP_LOCATORS
 
-
-5.2.7 Run mvn xap:intellij
+5.2.5 Run mvn xap:intellij
 
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    Aharons-MBP:xap-dev-training aharonmoll$ mvn xap:intellij
     
     [INFO] Lab5-solution 1.0-SNAPSHOT ......................... SUCCESS [  0.757 s]
     [INFO] BillBuddyModel ..................................... SKIPPED
@@ -76,11 +57,10 @@
     [INFO] BUILD SUCCESS
 
 
-
-5.2.8 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
-5.2.9 Use XAP CLI to deploy BillBuddy_Space
+5.2.6 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
+5.2.7 Use XAP CLI to deploy BillBuddy_Space
  
-    ./xap pu deploy BillBuddy-Space /Users/yuval/XAPDevTraining/labs/lab5-solution/xap-dev-training/BillBuddy_Space/target/BillBuddy_Space.jar
+    ./gs.sh pu deploy BillBuddy-Space /Users/aharonmoll/xap-dev-training/xap-dev-training-lab5-solution/BillBuddy_Space/target/BillBuddy_Space.jar 
 
 ## 5.3	Run BillBuddyAccountFeeder from Intellij
 
@@ -130,7 +110,7 @@ You might be required to modify the sample rate and start the automatic refresh.
 
 5.5.2 Use XAP CLI to deploy BillBuddyWebApplication
  
-    ./xap pu deploy BillBuddyWebApplication /Users/yuval/_XAPDevTraining/labs/lab5-solution/xap-dev-training/BillBuddyWebApplication/target/BillBuddyWebApplication.war
+    ./gs.sh pu deploy BillBuddyWebApplication /Users/aharonmoll/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyWebApplication/target/BillBuddyWebApplication.war
 
 5.5.3 Validate the application is deployed. 
 Go to Deployed Processing Units tab and expand the BillBuddyWebApplication PU.
