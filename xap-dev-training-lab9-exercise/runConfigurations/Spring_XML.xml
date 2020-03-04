@@ -5,7 +5,7 @@
     <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
     <option name="MAIN_CLASS_NAME" value="com.c123.spring.example.SpringMain" />
     <module name="Spring_XML" />
-    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${XAP_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${XAP_LOOKUP_LOCATORS}" />
+    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${GS_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${GS_LOOKUP_LOCATORS}" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Spring_XML" />
     <method v="2">
       <option name="Make" enabled="true" />

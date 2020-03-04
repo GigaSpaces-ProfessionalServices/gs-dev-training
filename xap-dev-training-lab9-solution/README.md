@@ -10,36 +10,13 @@ This solution will demonstrate the same application developed 3 times each using
 2.	A Spring XML based application
 3.	A Spring Annotations based application
 You will explore the first 2 applications and code the 3rd application.
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
-
-9.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab9-solution
-
-    mkdir /Users/yuval/XAPDevTraining/labs/lab9-solution
-
-9.1.2 Navigate to lab9-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab9-solution
-
-9.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-9.1.4 Checkout lab9-solution
-
-    cd xap-dev-training
-    git checkout lab9-solution
-    
-9.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab9-solution
-      master
                
-9.1.6 Open xap-dev-training project with intellij <br />
-9.1.7 Run mvn install
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab9-solution project with intellij (open pom.xml) <br />
+1.2 Run mvn install
 
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab9-solution$ mvn install
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:
@@ -54,10 +31,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-9.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab9-solution$ mvn xap:intellij
     
       [INFO] Reactor Summary:
       [INFO] 
@@ -73,12 +50,12 @@ In case you do not have it will create the file inside Temp folder in your Tradi
 Notice the 3 projects; each is named according to the method type. <br />
 Use the slides in order to recap the application design.  
 
-## 9.2	Standard Java application
+## 2	Standard Java application
 a.	Examine the classes and code of the application. <br />
     Especially examine the relationship between the classes. <br />
 b.	Run the class com.c123.nospring.example.TraditionalMain in the Traditional_Java folder. <br />
 c.	Check the output file (location is printed in the Intellij console) <br /> 
-## 9.3	Spring XML based application
+## 3	Spring XML based application
 a.	Examine the classes and code of the application in the Spring_Xml folder. <br />
 Validate you understand the wiring code and bean lifecycle processing by Spring. <br />
     Especially examine: <br />
@@ -88,7 +65,7 @@ b.	Run the class com.c123.spring.example.SpringMain <br />
 c.	Check the output file (location is printed in the Intellij console) <br /> 
 d.	If you still feel confused. Use Intellij Debugger to get a better 
     understanding of the application flow. <br />
-## 9.4	Spring Annotations based application
+## 4	Spring Annotations based application
 In this lab you are required to fix several files in the application
 in order to utilize Spring Annotations. <br />
 The following are the list of tasks required for you to do: <br />
