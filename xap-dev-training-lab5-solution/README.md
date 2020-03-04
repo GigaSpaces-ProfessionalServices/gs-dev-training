@@ -14,13 +14,11 @@
     ./gs-ui.sh
     
 ## 2	Deploy BillBuddy_Space
-
-2.1 Go to %XAP_TRAINING_HOME%/xap-dev-training-lab5-solution
     
-2.2 Open xap-dev-training-lab5-solution project with intellij (open pom.xml) <br />
-2.3 Run mvn install <br />
+2.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab5-solution project with intellij (open pom.xml) <br />
+2.2 Run mvn install <br />
 
-    Aharons-MBP:xap-dev-training aharonmoll$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab5-solution$ mvn install
     
     
     [INFO] ------------------------------------------------------------------------
@@ -36,15 +34,15 @@
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
 
-2.4 IntelliJ path Variables
+2.3 IntelliJ path Variables
 
 ###### Add GS_LOOKUP_GROUPS & GS_LOOKUP_LOCATORS
 
-2.5 Run mvn xap:intellij
+2.4 Run mvn xap:intellij
 
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    Aharons-MBP:xap-dev-training aharonmoll$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab5-solution$ mvn xap:intellij
     
     [INFO] Lab5-solution 1.0-SNAPSHOT ......................... SUCCESS [  0.757 s]
     [INFO] BillBuddyModel ..................................... SKIPPED
@@ -57,8 +55,11 @@
     [INFO] BUILD SUCCESS
 
 
-2.6 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
-2.7 Use XAP CLI to deploy BillBuddy_Space
+2.5 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
+
+    cd %XAP_HOME/bin
+           
+2.6 Use XAP CLI to deploy BillBuddy_Space
  
     ./gs.sh pu deploy BillBuddy-Space /Users/aharonmoll/xap-dev-training/xap-dev-training-lab5-solution/BillBuddy_Space/target/BillBuddy_Space.jar 
 

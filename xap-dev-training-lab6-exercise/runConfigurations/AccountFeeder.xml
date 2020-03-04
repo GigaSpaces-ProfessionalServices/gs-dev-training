@@ -12,7 +12,7 @@
     <option name="ENV_VARIABLES" />
     <option name="PASS_PARENT_ENVS" value="true" />
     <module name="BillBuddyUserFeeder" />
-    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${XAP_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${XAP_LOOKUP_LOCATORS}" />
+    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${GS_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${GS_LOOKUP_LOCATORS}" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

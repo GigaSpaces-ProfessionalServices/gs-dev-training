@@ -1,6 +1,6 @@
 # xap-dev-training - lab6-solution
 
-## 6 My First XAP Application
+##  My First XAP Application
 
 ###### Lab Goals
 1.	Experience XAP client code and see how easy it is to develop a XAP simple application
@@ -15,36 +15,13 @@ afterwards you will run the 2 applications and examine the results.
 The first application will connect and write a single users. 
 The second application “AccountFeeder” will create and write multiple user POJOs
 and read all of them in a single readMultiple command.
-###### Lab setup
+###### 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
-
-6.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab6-solution
-
-    mkdir /Users/yuval/XAPDevTraining/labs/lab6-solution
-
-6.1.2 Navigate to lab6-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab6-solution
-
-6.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-6.1.4 Checkout lab6-solution
-
-    cd xap-dev-training
-    git checkout lab6-solution
-    
-6.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab6-solution
-      master
                
-6.1.6 Open xap-dev-training project with intellij <br />
-6.1.7 Run mvn install
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab6-solution project with intellij (open pom.xml)<br />
+1.2 Run mvn install
 
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab6-solution$ mvn install
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -54,10 +31,11 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
 
-6.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
+
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab6-solution$ mvn xap:intellij
     
      ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
@@ -66,18 +44,22 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] Finished at: 2019-03-19T18:42:47+02:00
     ------------------------------------------------------------------------
 
-## 6.2  Deploy BillBuddy_Space
+## 2  Deploy BillBuddy_Space
 
-6.2.1 Open a new Terminal and navigate to %XAP_TRAINING_HOME%/gigaspaces-xap/bin/ <br />
+2.1 Open a new Terminal and navigate to %XAP_HOME/bin <br />
 
-    cd /Users/yuval/XAPDevTraining/gigaspaces-xap/bin
+    cd %XAP_HOME/bin
     
-6.2.2 Use XAP CLI to deploy BillBuddy_space
+2.2 Raise the service grid:
 
-    ./xap space deploy --partitions=2 --ha=true BillBuddy-space
+    ./gs.sh host run-agent --auto --gsc=4
+    
+2.3 Use XAP CLI to deploy BillBuddy_space
 
-## 6.3	Run User Feeder Using Configurer
-6.2.1 Examine and run the com.c123.billbuddy.client.SingleUserFeeder file. <br /> 
+    ./gs.sh space deploy --partitions=2 --ha=true BillBuddy-space
+
+## 3	Run User Feeder Using Configurer
+3.1 Examine and run the com.c123.billbuddy.client.SingleUserFeeder file. <br /> 
 a.	Locate the code fragment in which you get a proxy to the space. <br /> 
 b.	Edit the SingleUserFeedercreatenewSpaceProxyConfigurer to connect to remote space – BillBuddy-space. <br /> 
 ###### HINT: look for the TODO& follow the instructions <br />
@@ -90,8 +72,8 @@ e.	Execute the project in Intellij to run user into the space
 ![Screenshot](./Pictures/Picture1.png)
 ![Screenshot](./Pictures/Picture2.png)
 
-## 6.4	Run User Feeder
+## 4	Run User Feeder
 ###### Examine and run the com.c123.billbuddy.client.AccountFeeder. <br />
-6.4.1 Check the UserFeeder.loadData() method. <br />
-6.4.2 Open run configuration options in Intellij. <br />
-6.4.3	Execute the AccountFeeder
+4.1 Check the UserFeeder.loadData() method. <br />
+4.2 Open run configuration options in Intellij. <br />
+4.3 Execute the AccountFeeder
