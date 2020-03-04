@@ -152,7 +152,7 @@ POJOs are located
 <property name="packagesToScan" value="com.c123.billbuddy.model" />
 2.	Hint: 4 classes only for this demo (but all in same package)
 d.	Specify the mirror to recognize the mirror space (This step is already implemented)
-1.	Complete the os-core:mirroros-core:source-space
+1.	Complete the os-core:mirror -> os-core:source-space
 2.	Use slides from the lesson as a reference. <br />
 
 #### 2.8	Make sure you have a Database ready for use.
@@ -163,9 +163,12 @@ a.	Make sure you have the MySQL instance up and running (see section 13.1.1 (e) 
 #### 2.10	Deploy and test the Mirror service (and your space). <br />
  
 a.	Run gs-agent <br />
+    `./gs.sh host run-agent --auto --gsc=5`
 b.	Run gs-ui <br />
 c.	Deploy BillBuddy_space to the service grid. <br />
+    `./gs.sh pu deploy BillBuddy-Space /Users/aharonmoll/xap-dev-training/xap-dev-training-lab17-exercise/BillBuddy_Space/target/BillBuddy_Space.jar`
 d.	Deploy BillBuddPersistency to the service grid (Remember to include BillBuddy model Project. See below) <br />
+     `./gs.sh pu deploy BillBuddyPersistency /Users/aharonmoll/xap-dev-training/xap-dev-training-lab17-exercise/BillBuddyPersistency/target/BillBuddyPersistency.jar`
 e.	Validate Mirror service deployed using gs-ui <br />
 
 ![snapshot](./Pictures/Picture2.png)
