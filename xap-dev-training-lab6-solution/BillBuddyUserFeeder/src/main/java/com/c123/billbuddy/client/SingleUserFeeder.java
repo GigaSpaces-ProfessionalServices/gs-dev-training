@@ -15,7 +15,7 @@ public class SingleUserFeeder {
 
 		// Get a proxy to the space using a configurer
 		
-		String lookupGroups = System.getenv("XAP_LOOKUP_GROUPS");
+		String lookupGroups = System.getenv("GS_LOOKUP_GROUPS");
 		SpaceProxyConfigurer spaceConfigurer = new SpaceProxyConfigurer("BillBuddy-space");
     	spaceConfigurer.lookupGroups(lookupGroups);
       	IJSpace space = spaceConfigurer.space();

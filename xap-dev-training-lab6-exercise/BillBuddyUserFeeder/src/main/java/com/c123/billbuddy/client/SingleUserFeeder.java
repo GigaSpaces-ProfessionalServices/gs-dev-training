@@ -15,7 +15,7 @@ public class SingleUserFeeder {
 
 		// Get a proxy to the space using a configurer
 		
-		String lookupGroups = System.getenv("XAP_LOOKUP_GROUPS");
+		String lookupGroups = System.getenv("GS_LOOKUP_GROUPS");
 		SpaceProxyConfigurer spaceConfigurer = null;
 		// TODO: initialize spaceConfigurer - create new SpaceProxyConfigurer with the proper the space name in our exercise is BillBuddy-space edit the row below.
 

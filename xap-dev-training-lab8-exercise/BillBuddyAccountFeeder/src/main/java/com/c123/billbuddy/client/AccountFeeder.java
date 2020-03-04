@@ -18,7 +18,7 @@ public class AccountFeeder {
 		SpaceProxyConfigurer spaceConfigurer= null;
 		// Get a proxy to the space using a configurer
 		
-		String lookupGroups = System.getenv("XAP_LOOKUP_GROUPS");
+		String lookupGroups = System.getenv("GS_LOOKUP_GROUPS");
 		
 		
 		// TODO: create space SpaceProxyConfigurer using configurer, HINT: You can look at lab #6.
