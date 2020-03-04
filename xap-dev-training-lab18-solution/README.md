@@ -1,42 +1,19 @@
 # xap-dev-training - lab18-solution
 
-## 18	Web Applications
+## 	Web Applications
 
 ###### Lab Goals
 1.  Implement the required configuration in order to make a web application become a processing unit web application. 
 2.  Deploy the web application to the service grid
 ###### Lab Description
 This lab includes one solution in which you will fix a web application in order for it to connect to the BillBuddy_space and access the space.
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
-18.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab18-solution
+**1.1** Open %XAP_TRAINING_HOME%/xap-dev-training-lab18-solution project with intellij (open pom.xml)<br>
+**1.2** Run mvn install
 
-    mkdir /Users/yuval/XAPDevTraining/labs/lab18-solution
-
-18.1.2 Navigate to lab18-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab18-solution
-
-18.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-18.1.4 Checkout lab18-solution
-
-    cd xap-dev-training
-    git checkout lab18-solution
-    
-18.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab18-solution
-      master
-               
-18.1.6 Open xap-dev-training project with intellij <br />
-18.1.7 Run mvn install
-
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab18-solution$ mvn install
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -52,10 +29,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-18.1.8 Run mvn xap:intellij
+**1.3** Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab18-solution$ mvn xap:intellij
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:
@@ -68,18 +45,18 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
        [INFO] ------------------------------------------------------------------------
        [INFO] BUILD SUCCESS
 
-## 18.2	Fix and deploy a Web Applications
-18.2.1	Expand the BillBuddyWebApplication project. <br />
-18.2.2	Locate the pu.xml file. <br />
+## 2	Fix and deploy a Web Applications
+**2.1**	Expand the BillBuddyWebApplication project. <br />
+**2.2**	Locate the pu.xml file. <br />
 Examine the pu.xml file. Identify the location of the gigaSpace bean. 
 Is it configured differently in this project than any other feeder project? <br /> 
-18.2.3	Locate the web.xml file. <br />
-18.2.4	Fix the web.xml file by adding the following to the listener:
+**2.3**	Locate the web.xml file. <br />
+**2.4**	Fix the web.xml file by adding the following to the listener:
 
 ![snapshot](Pictures/Picture1.png)]
 
-18.2.5	Expand Java resources -> src -> com.c123.billbuddy.dal 
+**2.5**	Expand Java resources -> src -> com.c123.billbuddy.dal 
 and investigate the DAL (Data Access Layer) classes. <br />
 a.	How does the DAL object get a GigaSpace proxy? <br />
 b.	How do all JSPs get a reference to the DAL? <br />
-18.2.6	Deploy and test your web application(Hint: Go to lab 5 and redo the lab).
+**2.6**	Deploy and test your web application(Hint: Go to lab 5 and redo the lab).
