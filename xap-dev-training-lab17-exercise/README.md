@@ -1,6 +1,6 @@
 # xap-dev-training - lab17-exercise
 
-## 17	Persistency – Mirror Service
+## 	Persistency – Mirror Service
 
 ###### Lab Goals
 1.  Understand the tasks involved in implementing a mirror service.
@@ -8,36 +8,13 @@
 ###### Lab Description
 This lab includes1 exercise in which we will perform the tasks required to implement a mirror service. 
 Use the slides from the lesson as a reference.
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
-
-17.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab17-exercise
-
-    mkdir /Users/yuval/XAPDevTraining/labs/lab17-exercise
-
-17.1.2 Navigate to lab17-exercise dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab17-exercise
-
-17.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-17.1.4 Checkout lab17-exercise
-
-    cd xap-dev-training
-    git checkout lab17-exercise
-    
-17.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab17-exercise
-      master
                
-17.1.6 Open xap-dev-training project with intellij <br />
-17.1.7 Run mvn install
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab17-exercise project with intellij (open pom.xml)<br>
+1.2 Run mvn install
 
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab17-exercise$ mvn install
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -52,10 +29,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-17.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab17-exercise$ mvn xap:intellij
     
     [INFO] --- xap-maven-plugin:14.0.1:intellij (default-cli) @ Lab17-exercise ---
     [INFO] ------------------------------------------------------------------------
@@ -69,8 +46,8 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD SUCCESS
     
-## 17.2	Persistency – Mirror Service Implementation
-#### 17.2.1	Setup MySQL DB (Windows) for this lesson. <br />
+## 2	Persistency – Mirror Service Implementation
+#### 2.1	Setup MySQL DB (Windows) for this lesson. <br />
 SKIP this step if you are using Linux/Mac <br />
 a.	Go to https://dev.mysql.com/downloads/mysql and download aviable GA MySQL Community Server.<br /> 
 b.  Extract it to: c:\mysql <br />
@@ -90,7 +67,7 @@ h.	Run the following command to create BillBuddy database:
 
     mysqladmin.exe --user=root create jbillbuddy
 
-#### 17.2.2	Setup MySQL DB (Linux) for this lesson. <br />
+#### 2.2	Setup MySQL DB (Linux) for this lesson. <br />
 **SKIP this step if you are using Windows/Mac** <br />
 a.	Execute “yum install mysql-server”(downloads and install MySql server) or "sudo apt-get install mysql-server" <br />
 b.	Start MySQL service: <br />
@@ -110,7 +87,7 @@ d.	Validate that your instance has been created:
     d.	Run: show tables;
     e.	Verify no tables exist.
 
-#### 17.2.3	Setup MySQL DB (Mac) for this lesson. <br />
+#### 2.3	Setup MySQL DB (Mac) for this lesson. <br />
 **SKIP this step if you are using Windows/Linux** <br />
 a.	downloads and install MySql server ( download DMG file link: http://dev.mysql.com/downloads/file/?id=462024 ) <br />
 b.	Install MySQL <br />
@@ -138,12 +115,12 @@ e.	Validate that your instance has been created
     e.	Run: show tables;
     f.	Verify no tables exist.
 
-#### 17.2.4	Configure your space to be mirror service aware. <br />.
+#### 2.4	Configure your space to be mirror service aware. <br />.
 a.	Modify your embedded Space Pu.xml. mirrored="true" space element tag (Hint: BillBuddy_space pu.xml) <br />
-#### 17.2.5	Map the data model to tables (using Hibernate. we will use annotations.) <br />
+#### 2.5	Map the data model to tables (using Hibernate. we will use annotations.) <br />
 a.	Search the data model to see which POJOs were chosen for persistency for our demo <br />
 b.	Examine specifically the User and Address relationship and try to figure out the meaning of the hibernate annotations. <br />
-#### 17.2.6	Configure the mirror service. <br />
+#### 2.6	Configure the mirror service. <br />
 The mirror service requires having to be configured appropriately. 
 The lab is already configured correctly for you. 
 Your task is to locate the file in which the configuration is defined.
@@ -160,7 +137,7 @@ Answer:
 
 ![snapshot](Pictures/Picture1.png)
 
-#### 17.2.7	The following tasks will make it clearer how to implement a Mirror service. <br />
+#### 2.7	The following tasks will make it clearer how to implement a Mirror service. <br />
 Hint: Use slides from the lesson as a reference. Most tasks are already implemented. <br />
 a.	Expand BillBuddyPersisitency and open the pu.xml file. <br />
 b.	Locate the data source bean (DB Connection properties). 
@@ -178,12 +155,12 @@ d.	Specify the mirror to recognize the mirror space (This step is already implem
 1.	Complete the os-core:mirroros-core:source-space
 2.	Use slides from the lesson as a reference. <br />
 
-#### 17.2.8	Make sure you have a Database ready for use.
+#### 2.8	Make sure you have a Database ready for use.
 We will using MySQL db instance. <br />
 a.	Make sure you have the MySQL instance up and running (see section 13.1.1 (e) )
 
-#### 17.2.9	Jar the BillBuddyPersistency project. Make sure to include the BillBuddyModel in the Jar. <br />
-#### 17.2.10	Deploy and test the Mirror service (and your space). <br />
+#### 2.9	Jar the BillBuddyPersistency project. Make sure to include the BillBuddyModel in the Jar. <br />
+#### 2.10	Deploy and test the Mirror service (and your space). <br />
  
 a.	Run gs-agent <br />
 b.	Run gs-ui <br />
@@ -203,7 +180,7 @@ Search for the following message in both GSCs that contain primary space instanc
 g.	Run BillBuddyAccountFeeder <br />
 h.	Run BillBuddyPaymentFeeder <br />
 
-#### 17.2.11	Only for Windows - Open Relational Database Windows <br />
+#### 2.11	Only for Windows - Open Relational Database Windows <br />
 
 a.	Open windows command window
 b.	Navigate Mysql bin directory: 
@@ -225,7 +202,7 @@ f.	Validate the results
 
 ![snapshot](./Pictures/Picture4.png)
 
-#### 17.2.12	Only for Linux - Open Relational Database <br />
+#### 2.12	Only for Linux - Open Relational Database <br />
 a.	For Linux - Validate that your instance has been created. <br />
  
     a.	Open terminal 
@@ -236,7 +213,7 @@ b.	Select the content of any table by issuing the following command:
  
     select * from merchant;
 
-#### 17.2.13	Only for Mac  - Open Relational Database <br />
+#### 2.13	Only for Mac  - Open Relational Database <br />
 a.	For Mac - Validate that your instance has been created:
 
     a.	Open terminal 
@@ -248,13 +225,13 @@ b.	Select the content of any table by issuing the following command:
  
     select * from merchant;
 
-#### 17.2.14	Monitoring the Mirror service
+#### 2.14	Monitoring the Mirror service
 
 ![snapshot](./Pictures/Picture5.png)
 
 ![snapshot](./Pictures/Picture6.png)
 
-#### 17.2.15	Compare the number of mirror total operations against the overall number of POJOs you have. Count only POJOs you persist. Can you explain why there are many more mirror operations than POJOs?
+#### 2.15	Compare the number of mirror total operations against the overall number of POJOs you have. Count only POJOs you persist. Can you explain why there are many more mirror operations than POJOs?
 
 
 
