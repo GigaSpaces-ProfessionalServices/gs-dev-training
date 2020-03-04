@@ -1,6 +1,6 @@
 # xap-dev-training - lab11-solution
 
-## 11	Advance Space Access API
+## 	Advance Space Access API
 
 ###### Lab Goals
 1. Experience using change API
@@ -13,36 +13,13 @@ This lab includes2 solutions:
 1. 	Space Data Access API: Change the PaymentFeeder PU to use change API.
 2. 	Only if time permits: Bulk operations: you will modify the writing mechanism to write 5 Payments at a time. 
 
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
-11.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab11-solution
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab11-solution project with intellij (open pom.xml) <br />
+1.2 Run mvn install
 
-    mkdir /Users/yuval/XAPDevTraining/labs/lab11-solution
-
-11.1.2 Navigate to lab11-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab11-solution
-
-11.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-11.1.4 Checkout lab11-solution
-
-    cd xap-dev-training
-    git checkout lab11-solution
-    
-11.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab11-solution
-      master
-               
-11.1.6 Open xap-dev-training project with intellij <br />
-11.1.7 Run mvn install
-
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab11-solution$ mvn install
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:
@@ -57,10 +34,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
        [INFO] BUILD SUCCESS
 
 
-11.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab11-solution$ mvn xap:intellij
     
      [INFO] --- xap-maven-plugin:14.0.1:intellij (default-cli) @ Lab11-solution ---
      [INFO] ------------------------------------------------------------------------
@@ -75,10 +52,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
      [INFO] ------------------------------------------------------------------------
      [INFO] BUILD SUCCESS
      
-## 11.2	Advance Space Access API	
- 11.2.1	In this exercise you will change the implementation of the 
+## 2	Advance Space Access API	
+ 2.1	In this exercise you will change the implementation of the 
         Payment Feeder class to use change API. <br />
- 11.2.2	Open the BillBuddyPaymentFeeder project.
+ 2.2	Open the BillBuddyPaymentFeeder project.
         Payment Feeder creates a random payment every 1 second.
         The exercise focuses on space data access advance api.
         the other Java code is already prepared for you. <br /> 
@@ -92,17 +69,17 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
  a.	Run BillBuddy_Space run the space as Integrated Processing Unit Container using Intellij run configuration. <br />
  b.	Run BillBuddyAccountFeeder and BillBuddyPaymentFeeder using Intellij run configuration.
  
-11.2.3	Validate that Payment Object are written to the space using gs-ui.
+2.3	Validate that Payment Object are written to the space using gs-ui.
 
 ![Screenshot](./Pictures/Picture1.png)
 
-## 11.3	Bulk operations (Only if time permits)
-11.3.1	Open project BillBuddyMultiplePaymentFeeder and modify LeasePaymentFeeder 
+## 3	Bulk operations (Only if time permits)
+3.1	Open project BillBuddyMultiplePaymentFeeder and modify LeasePaymentFeeder 
         class to write all 5 Payments in a single writeMultiple command (search for the TODO: ). <br />
-11.3.2	In order to demonstrate objects automatic eviction from the space, 
+3.2	In order to demonstrate objects automatic eviction from the space, 
         make sure payments will stay only 20 seconds in the space (Hint: Lease time) <br />
-11.3.3	Run your new MultiplePaymentFeeder for 30 seconds. <br /> 
-11.3.4	Using gs-ui examine Payments getting evicted from the space 
+3.3	Run your new MultiplePaymentFeeder for 30 seconds. <br /> 
+3.4	Using gs-ui examine Payments getting evicted from the space 
         (Hint: Use Data Types operation at gs-ui).
 
 
