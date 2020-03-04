@@ -13,34 +13,11 @@ This lab includes two exercises:
 
 ###### Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
-
-7.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab7-exercise
-
-    mkdir /Users/yuval/XAPDevTraining/labs/lab7-exercise
-
-7.1.2 Navigate to lab7-exercise dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab7-exercise
-
-7.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-7.1.4 Checkout lab7-exercise
-
-    cd xap-dev-training
-    git checkout lab7-exercise
-    
-7.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab7-exercise
-      master
                
-7.1.6 Open xap-dev-training project with intellij <br />
+7.1.6 Open %XAP_TRAINING_HOME%/xap-dev-training-lab7-exercise project with intellij (open pom.xml) <br />
 7.1.7 Run mvn install
 
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab7-exercise$ mvn install
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -56,7 +33,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 7.1.8 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab7-exercise$ mvn xap:intellij
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
