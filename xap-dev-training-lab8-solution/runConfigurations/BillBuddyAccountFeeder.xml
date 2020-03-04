@@ -2,7 +2,7 @@
   <configuration default="false" name="BillBuddyAccountFeeder" type="Application" factoryName="Application">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     <option name="MAIN_CLASS_NAME" value="com.c123.billbuddy.client.AccountFeeder" />
-    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${XAP_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${XAP_LOOKUP_LOCATORS}" />
+    <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${XAP_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${GS_LOOKUP_LOCATORS}" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

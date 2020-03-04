@@ -11,7 +11,7 @@ This lab includes two exercises:
 1. 	Configure your processing unit space definitions & deployment rules
 2. 	Space Deployment Methods. You will deploy a space Processing Unit via 2 different methods.
 
-###### 1 Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab7-exercise project with intellij (open pom.xml) <br />
