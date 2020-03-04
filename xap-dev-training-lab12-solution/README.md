@@ -1,6 +1,6 @@
 # xap-dev-training - lab12-solution
 
-## 12   Aggregations
+##   Aggregations
 
 ###### Lab Goals
 Experience usage of aggregation functions
@@ -9,36 +9,13 @@ Experience usage of aggregation functions
 This lab includes1 solutions:
 1.	Access data in the space using aggregation functions.
 
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
-12.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab12-solution
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab12-solution project with intellij (open pom.xml) <br />
+1.2 Run mvn install
 
-    mkdir /Users/yuval/XAPDevTraining/labs/lab12-solution
-
-12.1.2 Navigate to lab12-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab12-solution
-
-12.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-12.1.4 Checkout lab12-solution
-
-    cd xap-dev-training
-    git checkout lab12-solution
-    
-12.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab12-solution
-      master
-               
-12.1.6 Open xap-dev-training project with intellij <br />
-12.1.7 Run mvn install
-
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab12-solution$ mvn install
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -54,10 +31,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-12.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab12-solution$ mvn xap:intellij
     
      [INFO] Reactor Summary:
      [INFO] 
@@ -70,13 +47,13 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
      [INFO] ------------------------------------------------------------------------
      [INFO] BUILD SUCCESS
 
-## 12.2	Aggregation Functions (Only if time permits)
-12.2.1	Open project BillBuddyAggregationPayment and modify 
+## 2	Aggregation Functions (Only if time permits)
+2.1	Open project BillBuddyAggregationPayment and modify 
         AggregationPaymentInformation class to retrieve aggregated information 
         like: Maximum, Minimum, Sum, Avarage 
         (search for the TODO: remarks & follow the instructions). <br />
-12.2.2	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
-12.2.3	Run BillBuddyAccountFeeder. <br />
-12.2.4	Run BillBuddyPaymentFeeder (let it run for about 20 second). <br />
-12.2.5	Run your new AggregationPaymentInformation client. <br />
-12.2.6	Examine your results. <br />
+2.2	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
+2.3	Run BillBuddyAccountFeeder. <br />
+2.4	Run BillBuddyPaymentFeeder (let it run for about 20 second). <br />
+2.5	Run your new AggregationPaymentInformation client. <br />
+2.6	Examine your results. <br />
