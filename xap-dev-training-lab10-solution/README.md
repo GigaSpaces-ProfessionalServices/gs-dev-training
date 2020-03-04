@@ -10,36 +10,13 @@ This lab includes3 solutions:
     You will practice using the Wiki for getting useful information that might be needed for this lab. 
 2.	Space Data Access API: Develop the PaymentFeeder processing unit
 3.	Only if time permits: SQL Query operation: You will practice writing a SQL query
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
-10.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab10-solution
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab10-solution project with intellij (open pom.xml) <br />
+1.2 Run mvn install
 
-    mkdir /Users/yuval/XAPDevTraining/labs/lab10-solution
-
-10.1.2 Navigate to lab10-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab10-solution
-
-10.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-10.1.4 Checkout lab10-solution
-
-    cd xap-dev-training
-    git checkout lab10-solution
-    
-10.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab10-solution
-      master
-               
-10.1.6 Open xap-dev-training project with intellij <br />
-10.1.7 Run mvn install
-
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab10-solution$ mvn install
     
       [INFO] Reactor Summary:
       [INFO] 
@@ -52,10 +29,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
       [INFO] ------------------------------------------------------------------------
       [INFO] BUILD SUCCESS
 
-10.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab10-solution$ mvn xap:intellij
     
      [INFO] --- xap-maven-plugin:14.0.1:intellij (default-cli) @ Lab10-solution ---
      [INFO] ------------------------------------------------------------------------
@@ -71,15 +48,15 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
      [INFO] BUILD SUCCESS
 
 
-## 10.2	Docs Search for GigaSpace Interface	
+## 2	Docs Search for GigaSpace Interface	
 Open a browser and go to: http://docs.gigaspaces.com/ <br />
 Search the docs for “API Documentation”. <br />
 Search the Javadoc GigaSpace API for the GigaSpace Interface. <br /> 
 Investigate the different methods and their signatures. 
 
-## 10.3	Space Data Access API	
-10.3.1	In this exercise you will implement the Payment Feeder class. <br />
-10.3.2	Open the BillBuddyPaymentFeeder project. <br />
+## 3	Space Data Access API	
+3.1	In this exercise you will implement the Payment Feeder class. <br />
+3.2	Open the BillBuddyPaymentFeeder project. <br />
         Payment Feeder creates a random payment every 1 second. <br />
         The exercise focuses on space data access API; <br /> 
         the other Java code is already prepared for you. <br /> 
@@ -103,10 +80,10 @@ Hints:
 3.	RunBillBuddy_Space to deploy the space to the Integrated Processing Unit Container using Intellij run configuration.
 4.	RunBillBuddyAccountFeeder and BillBuddyPaymentFeeder using Intellij run configuration.
 
-10.3.3	Validate that Payment Object are written to the space using gs-ui.
+3.3	Validate that Payment Object are written to the space using gs-ui.
 ![Screenshot](./Pictures/Picture1.png) 
 
-10.3.4	Deploy PaymentFeeder and BillBuddySpace to the service grid.
+3.4	Deploy PaymentFeeder and BillBuddySpace to the service grid.
 
 *	Deploy PaymentFeeder to the service grid using gs-ui by following the steps below. <br /> 
     (This means you have to jar your PaymentFeeder project together with the BillBuddyModel project 
@@ -134,12 +111,12 @@ Hints:
 
 ![Screenshot](./Pictures/Picture4.png)
 
-## 10.4	SQL Query(Only if time permits)
-10.4.1	Open project merchantsOfTop5Payments. <br />
-10.4.2	Write query (SQLQuery object) to retrieve top five payments exists in the space. <br />
-10.4.3	For each payment, print the details of the merchant receiving the payment. <br />
-10.4.4	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
-10.4.5	Run BillBuddyAccountFeeder. <br />
-10.4.6	Run BillBuddyPaymentFeeder for 30 seconds. <br />
-10.4.7	Run your new MerchantOfTop5Payments client. <br />
-10.4.8	examine your results. <br />
+## 4	SQL Query(Only if time permits)
+4.1	Open project merchantsOfTop5Payments. <br />
+4.2	Write query (SQLQuery object) to retrieve top five payments exists in the space. <br />
+4.3	For each payment, print the details of the merchant receiving the payment. <br />
+4.4	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
+4.5	Run BillBuddyAccountFeeder. <br />
+4.6	Run BillBuddyPaymentFeeder for 30 seconds. <br />
+4.7	Run your new MerchantOfTop5Payments client. <br />
+4.8	examine your results. <br />
