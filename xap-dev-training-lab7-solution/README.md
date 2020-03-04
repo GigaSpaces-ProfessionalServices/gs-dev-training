@@ -1,6 +1,6 @@
 # xap-dev-training - lab7-solution
 
-## 7 Processing Unit
+## Processing Unit
 
 ###### Lab Goals
 1. Configure your processing unit for space deployment.
@@ -11,11 +11,11 @@ This lab includes two solutions:
 1. 	Configure your processing unit space definitions & deployment rules
 2. 	Space Deployment Methods. You will deploy a space Processing Unit via 2 different methods.
 
-###### Lab setup
+###### 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
-7.1.6 %XAP_TRAINING_HOME%/xap-dev-training-lab7-solution project with intellij (open pom.xml) <br />
-7.1.7 Run mvn install
+1.1 %XAP_TRAINING_HOME%/xap-dev-training-lab7-solution project with intellij (open pom.xml) <br />
+1.2 Run mvn install
 
     ~/xap-dev-training/xap-dev-training-lab7-solution$ mvn install
     
@@ -30,7 +30,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] BUILD SUCCESS
 
 
-7.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     ~/xap-dev-training/xap-dev-training-lab7-solution$ mvn xap:intellij
@@ -46,15 +46,15 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
     [INFO] BUILD SUCCESS
 
 
-## 7.2	Space Topologies
-7.2.1 Configure space in the pu.xml files in BillBuddy_Space project <br />
+## 2	Space Topologies
+2.1 Configure space in the pu.xml files in BillBuddy_Space project <br />
 a. Define embedded space. <br />
 b. Define GigaSapce. <br />
 
-7.2.2	Configure Partitioned Space (2 partitions) in the sla.xml file as 1 backup per each partition in the BillBuddy_Space project. 
+2.2	Configure Partitioned Space (2 partitions) in the sla.xml file as 1 backup per each partition in the BillBuddy_Space project. 
 
-## 7.3  Deploy a PU with Embedded Space – Integrated Processing Unit Container
-7.3.1   The Integrated Processing Unit Container is the preferred way to 
+## 3  Deploy a PU with Embedded Space – Integrated Processing Unit Container
+3.1   The Integrated Processing Unit Container is the preferred way to 
 deploy Processing Unit during development. <br />
 a. Stop gs-agent (you are not deploying to the grid in this lab) if one is running. <br /> 
 This is not a must but it will emphasize the fact 
@@ -81,15 +81,15 @@ g.	Check the “Deployed Processing Unit” tab to see that the Grid does not kn
 
 ![Screenshot](./Pictures/Picture3.png)
 
-7.3.2   Run the BillBuddyAccountFeeder (main class UserFeederActivator) application 
+3.2   Run the BillBuddyAccountFeeder (main class UserFeederActivator) application 
         and check Users are written to the space. 
         
-## 7.4	Deploy a PU with Embedded Space to the Grid
-7.4.1	Deploy the space to the grid service. <br />
+## 4	Deploy a PU with Embedded Space to the Grid
+4.1	Deploy the space to the grid service. <br />
 a.  Start gs-agent and gs-ui (if they are not already running). <br />
-7.4.2	Make sure no Space is deployed (you might need to Un-deploy your pre-deployed space from prior labs).
+4.2	Make sure no Space is deployed (you might need to Un-deploy your pre-deployed space from prior labs).
 
-7.4.3	Deploy the space using gs-ui. <br />
+4.3	Deploy the space using gs-ui. <br />
 a.	Choose “Deploy Application” option:
 
 ![Screenshot](./Pictures/Picture4.png)
