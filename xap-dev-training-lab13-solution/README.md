@@ -1,6 +1,6 @@
 # xap-dev-training - lab13-solution
 
-## 13   Messaging and Event Containers
+##    Messaging and Event Containers
 
 ###### Lab Goals
 1.  Understand the concept of Event Driven Architecture
@@ -13,36 +13,13 @@ Event Driven Architecture and will implement
 the “Processing Fee Polling Container”. 
 In this lab you will have to implement the Processing Fee Event Container. 
 You will monitor events using gs-ui, but first here is a full description of the BillBuddy Event Driven architecture. 
-###### Lab setup
+## 1 Lab setup
 Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
-13.1.1 Create dir: %XAP_TRAINING_HOME%/labs/lab13-solution
+1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab13-solution project with intellij (open pom.xml) <br />
+1.2 Run mvn install
 
-    mkdir /Users/yuval/XAPDevTraining/labs/lab13-solution
-
-13.1.2 Navigate to lab13-solution dir
-
-    cd /Users/yuval/XAPDevTraining/labs/lab13-solution
-
-13.1.3 Clone the git project
-
-    git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git
-
-13.1.4 Checkout lab13-solution
-
-    cd xap-dev-training
-    git checkout lab13-solution
-    
-13.1.5 Verify that the branch has been checked out.
-
-    yuval-pc:xap-dev-training yuval$ git branch
-    * lab13-solution
-      master
-               
-13.1.6 Open xap-dev-training project with intellij <br />
-13.1.7 Run mvn install
-
-    yuval-pc:xap-dev-training yuval$ mvn install
+    ~/xap-dev-training/xap-dev-training-lab13-solution$ mvn install
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:
@@ -57,10 +34,10 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
 
 
 
-13.1.8 Run mvn xap:intellij
+1.3 Run mvn xap:intellij
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
-    yuval-pc:xap-dev-training yuval$ mvn xap:intellij
+    ~/xap-dev-training/xap-dev-training-lab13-solution$ mvn xap:intellij
     
     [INFO] Reactor Summary:
     [INFO] 
@@ -109,22 +86,22 @@ The following is an explanation of the above diagram:
     payment status to “processed”.
 14.	Write the payment back to the space.
 
-## 13.2	Event Driven Architecture
-13.2.1	Why is this architecture named Event Driven Architecture? <br /> 
-13.1.2	Where do you think the code for these event containers will be located
+## 2	Event Driven Architecture
+2.1	Why is this architecture named Event Driven Architecture? <br /> 
+1.2	Where do you think the code for these event containers will be located
         (which Project) and why? <br />
-13.2.3	Can you think of a reason why an event container 
+2.3	Can you think of a reason why an event container 
         will be located in a different location than the space it listens to? <br />
 
-## 13.2	Implement a Processing Fee Polling Container
-13.2.1	In this solution you will implement the Processing Fee Event Container. <br />
+## 3	Implement a Processing Fee Polling Container
+3.1	In this solution you will implement the Processing Fee Event Container. <br />
 
 Expand BillBuddy_Space <br />
 Open com.c123.billbuddy.events.ProcessingFeeEventContainer 
 
-13.2.2	Open pu.xml <br />
+3.2	Open pu.xml <br />
 a.	Add @Polling and @Notify annotations support in the pu.xml file <br />
-13.2.3	Open com.c123.billbuddy.events.ProcessingFeeEventContainer <br />
+3.3	Open com.c123.billbuddy.events.ProcessingFeeEventContainer <br />
 a.	Add Event Container annotation. 
     Which one should be added Polling or Notify container? Why? <br />
 b.	Implement the Event Template (See TODO comments for more information). <br />
@@ -132,7 +109,7 @@ c.	Implement the SpaceDataEvent (See TODO comments for more information). <br />
 a.	Read the Contract data using the projection API to retrieve only 
     “transactionPercentFee” attribute. <br />
 You can refer to the AuditPaymentEventContainerfor an example. <br />
-13.2.4	Test your code. <br />
+3.4	Test your code. <br />
 a.	Run BillBuddy_Space <br />
 b.	Run BillBuddyAccountFeeder <br />
 c.	Run BillBuddyPaymentFeeder <br />
@@ -144,9 +121,9 @@ e.	Query ProcessingFee and validate they are written to the space.
 
 ![Screenshot](./Pictures/Picture4.png)
 
-## 13.3	Monitor Events
+## 4	Monitor Events
 
-13.3.1	Deploy BillBuddy_Space to the service grid and run the Feeders. <br />
+4.1	Deploy BillBuddy_Space to the service grid and run the Feeders. <br />
 
 a.	First stop your current BillBuddy_space if you run it in your IDE or gs-ui. <br />
 b.	Hint: Deploy Application at gs-ui (start gs-agent of course). <br /> 
