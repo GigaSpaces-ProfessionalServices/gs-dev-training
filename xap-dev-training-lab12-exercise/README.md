@@ -52,7 +52,7 @@ Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Un
         AggregationPaymentInformation class to retrieve aggregated information 
         like: Maximum, Minimum, Sum, Avarage 
         (search for the TODO: remarks & follow the instructions). <br />
-2.2	Run BillBuddy-space (use theIntegrated PU Container containers). <br />
+2.2	Run BillBuddy-space (use the Integrated PU Container containers). <br />
 2.3	Run BillBuddyAccountFeeder. <br />
 2.4	Run BillBuddyPaymentFeeder (let it run for about 20 second). <br />
 2.5	Run your new AggregationPaymentInformation client. <br />
