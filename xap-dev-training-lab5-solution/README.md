@@ -1,5 +1,12 @@
 # xap-dev-training - lab5-solution
 
+## Lab Goals
+
+1. Experience an application deployment process. <br />
+2. Get familiar with the BillBuddy application <br />
+
+## Lab Description
+In this lab we will focus on deployment and the application and not be concerned with code, therefore simply focus on the deployment process, you will use this process throughout the labs here on.
 
 ## 1	Start gs-agent and gs-ui 
 
