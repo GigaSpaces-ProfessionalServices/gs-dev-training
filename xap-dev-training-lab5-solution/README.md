@@ -99,8 +99,8 @@ After the payment is initially processed it is written to the space for further 
 You will be further introduced with this application in a later lesson in greater detail. 
 A new Payment is created every second.
  
-4.1 Run the BillBuddyPaymentFeeder using Eclipse: 
-Use the same instructions as used for the BillBuddyAcountFeeder.
+4.1 Run the BillBuddyPaymentFeeder using Intellij: 
+Use the same instructions as used for the BillBuddyAccountFeeder.
 
 4.2 Validate Payments were written to the space using gs-ui. 
 You may choose to view Payment Objects using the Query operation of gs-ui.
