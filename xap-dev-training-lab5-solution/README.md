@@ -12,7 +12,7 @@ In this lab we will focus on deployment and the application and not be concerned
 
 1.1 Navigate to %XAP_HOME/bin <br />
         
-1.2 Start gs-agent with one GSM, one LUS and 2 GSCs.
+1.2 Start gs-agent with local Manager server and 5 GSCs:
 
     ./gs.sh host run-agent --auto --gsc=5
     
@@ -68,7 +68,7 @@ In this lab we will focus on deployment and the application and not be concerned
            
 2.6 Use XAP CLI to deploy BillBuddy_Space
  
-    ./gs.sh pu deploy BillBuddy-Space /Users/aharonmoll/xap-dev-training/xap-dev-training-lab5-solution/BillBuddy_Space/target/BillBuddy_Space.jar 
+    ./gs.sh pu deploy BillBuddy-Space ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddy_Space/target/BillBuddy_Space.jar 
 
 ## 3	Run BillBuddyAccountFeeder from Intellij
 
@@ -118,7 +118,7 @@ You might be required to modify the sample rate and start the automatic refresh.
 
 5.2 Use XAP CLI to deploy BillBuddyWebApplication
  
-    ./gs.sh pu deploy BillBuddyWebApplication /Users/aharonmoll/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyWebApplication/target/BillBuddyWebApplication.war
+    ./gs.sh pu deploy BillBuddyWebApplication ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyWebApplication/target/BillBuddyWebApplication.war
 
 5.3 Validate the application is deployed. 
 Go to Deployed Processing Units tab and expand the BillBuddyWebApplication PU.
