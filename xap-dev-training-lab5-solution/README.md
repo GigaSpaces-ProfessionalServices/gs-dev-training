@@ -72,7 +72,10 @@ In this lab we will focus on deployment and the application and not be concerned
 
 ## 3	Run BillBuddyAccountFeeder from Intellij
 
-3.1 From the Intellij run configuration select BillBuddyAccountFeeder and run it.
+3.1 From the Intellij run configuration select BillBuddyAccountFeeder and run it.<br>
+3.2 Another option is to run it from the maven command line:<br>
+    `cd ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyAccountFeeder`<br>
+    `mvn exec:java  -D"exec.mainClass"="com.c123.billbuddy.client.AccountFeeder" -Dexec.classpathScope=compile -Dcom.gs.jini_lus.locators=localhost`<br>
 
 ###### This application writes Users and Merchants to the Space
  
@@ -100,7 +103,10 @@ You will be further introduced with this application in a later lesson in greate
 A new Payment is created every second.
  
 4.1 Run the BillBuddyPaymentFeeder using Intellij: 
-Use the same instructions as used for the BillBuddyAccountFeeder.
+1.   Use the same instructions as used for the BillBuddyAccountFeeder.
+2.   Another option is to run/deploy it from the GS command line:<br>
+    `cd %XAP_HOME/bin`<br>
+    `./gs.sh pu deploy BillBuddyPaymentFeeder ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyPaymentFeeder/target/BillBuddyPaymentFeeder.jar`<br>
 
 4.2 Validate Payments were written to the space using gs-ui. 
 You may choose to view Payment Objects using the Query operation of gs-ui.
