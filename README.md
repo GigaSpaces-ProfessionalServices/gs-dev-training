@@ -33,3 +33,4 @@ Completing the exercises is with high importance in order to get the relevant kn
 * Lab16 - Space Based Remoting
 * Lab17 - Persistency – Mirror Service
 * Lab18 - Web Applications
+* Lab19 - zipkin

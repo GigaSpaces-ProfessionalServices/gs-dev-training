@@ -1,4 +1,4 @@
-# xap-dev-training - lab-zipkin
+# xap-dev-training - lab19-zipkin
 
 ## 	Distributed Tracing (Zipkin)
 
