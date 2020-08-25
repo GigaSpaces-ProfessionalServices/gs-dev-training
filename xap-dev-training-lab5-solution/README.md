@@ -124,7 +124,7 @@ You might be required to modify the sample rate and start the automatic refresh.
 
 5.2 Use XAP CLI to deploy BillBuddyWebApplication
  
-    ./gs.sh pu deploy BillBuddyWebApplication ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyWebApplication/target/BillBuddyWebApplication.war
+    ./gs.sh pu deploy --property=web.port=8082 BillBuddyWebApplication ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyWebApplication/target/BillBuddyWebApplication.war
 
 5.3 Validate the application is deployed. 
 Go to Deployed Processing Units tab and expand the BillBuddyWebApplication PU.
