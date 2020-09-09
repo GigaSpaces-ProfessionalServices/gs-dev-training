@@ -1,4 +1,4 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
