@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;

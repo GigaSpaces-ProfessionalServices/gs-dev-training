@@ -1,12 +1,11 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 
+import com.gs.billbuddy.model.AccountStatus;
+import com.gs.billbuddy.model.User;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.core.GigaSpaceConfigurer;
 import org.openspaces.core.space.SpaceProxyConfigurer;
-import org.openspaces.core.space.UrlSpaceConfigurer;
 
-import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.User;
 import com.j_spaces.core.IJSpace;
 
 public class SingleUserFeeder {

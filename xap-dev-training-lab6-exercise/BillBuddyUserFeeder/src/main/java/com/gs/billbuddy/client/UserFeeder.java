@@ -1,8 +1,9 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 import java.util.ArrayList;
+
+import com.gs.billbuddy.model.AccountStatus;
+import com.gs.billbuddy.model.User;
 import org.openspaces.core.GigaSpace;
-import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.User;
 
 /** 
  * User Feeder class reads userNameList which is stored in users data member. 
