@@ -25,7 +25,7 @@ Completing the exercises is with high importance in order to get the relevant kn
 * Lab8 - Space Classes and Data Model
 * Lab9 - Spring Introduction
 * Lab10 - Space Access API
-* Lab11 - Advance Space Access API
+* Lab11 - Advance Space Access API (Change API)
 * Lab12 - Aggregations
 * Lab13 - Messaging and Event Containers
 * Lab14 - Transactions
