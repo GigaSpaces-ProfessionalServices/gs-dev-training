@@ -1,4 +1,4 @@
-package com.c123.billbuddy.report;
+package com.gs.billbuddy.report;
 
 
 import java.util.HashSet;
@@ -9,7 +9,7 @@ import org.openspaces.core.GigaSpace;
 import org.openspaces.core.executor.Task;
 import org.openspaces.core.executor.TaskGigaSpace;
 
-import com.c123.billbuddy.model.Payment;
+import com.gs.billbuddy.model.Payment;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
 import com.j_spaces.core.client.SQLQuery;
 

@@ -18,6 +18,12 @@ mv $1/BillBuddyMultiplePaymentFeeder/src/main/java/com/c123 $1/BillBuddyMultiple
 
 mv $1/BillBuddyAggregationPayment/src/main/java/com/c123 $1/BillBuddyAggregationPayment/src/main/java/com/gs
 
+mv $1/BillBuddyCountPaymentsByCategoryDistributedExecutor/src/main/java/com/c123 $1/BillBuddyCountPaymentsByCategoryDistributedExecutor/src/main/java/com/gs
+
+mv $1/BillBuddyCurrentProfitDistributedExecutor/src/main/java/com/c123 $1/cwBillBuddyCurrentProfitDistributedExecutorBillBuddyAggregationPayment/src/main/java/com/gs
+
+mv $1/BillBuddyCountPaymentsByCategoryDistributedExecutor/src/main/java/com/c123 $1/BillBuddyCountPaymentsByCategoryDistributedExecutor/src/main/java/com/gs
+
 #AfterDone the above from the intellij:
 #1. Replace .c123. to .gs.
 #2. Replace 123Completed to gsUniversity

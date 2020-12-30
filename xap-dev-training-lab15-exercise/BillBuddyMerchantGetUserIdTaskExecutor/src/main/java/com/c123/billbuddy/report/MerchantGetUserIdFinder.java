@@ -1,4 +1,4 @@
-package com.c123.billbuddy.report;
+package com.gs.billbuddy.report;
 
 
 import java.util.HashSet;
@@ -12,7 +12,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openspaces.core.GigaSpace;
 import org.springframework.stereotype.Component;
 
-import com.c123.billbuddy.model.Merchant;
+import com.gs.billbuddy.model.Merchant;
 import com.gigaspaces.async.AsyncFuture;
 
 /** 
