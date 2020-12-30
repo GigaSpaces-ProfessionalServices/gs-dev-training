@@ -1,10 +1,10 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 /** 
 * TransactionStatus class is an Enum which indicate transaction status
 * between user and merchant or between merchant to BillBuddy 
 * 
-* @author 123Completed
+* @author gsUniversity
 */
 public enum TransactionStatus {NEW,
 	AUDITED,

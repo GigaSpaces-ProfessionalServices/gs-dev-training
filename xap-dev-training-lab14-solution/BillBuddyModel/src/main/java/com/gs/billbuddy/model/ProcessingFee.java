@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
@@ -13,7 +13,7 @@ import java.util.Date;
 /** 
 * Payment class is a POJO which has transaction information between merchant and BillBuddy 
 * 
-* @author 123Completed
+* @author gsUniversity
 */
 
 @SuppressWarnings("serial")

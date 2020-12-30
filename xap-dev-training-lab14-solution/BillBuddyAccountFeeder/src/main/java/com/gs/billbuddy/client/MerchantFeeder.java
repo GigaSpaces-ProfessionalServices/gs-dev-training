@@ -1,4 +1,4 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 
 
 import java.text.DecimalFormat;
@@ -8,10 +8,10 @@ import java.util.Calendar;
 import org.openspaces.core.GigaSpace;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.CategoryType;
-import com.c123.billbuddy.model.Contract;
-import com.c123.billbuddy.model.Merchant;
+import com.gs.billbuddy.model.AccountStatus;
+import com.gs.billbuddy.model.CategoryType;
+import com.gs.billbuddy.model.Contract;
+import com.gs.billbuddy.model.Merchant;
 
 /** 
  * Merchant Feeder class gets merchant name list which is stored in merchants data member. 
@@ -19,7 +19,7 @@ import com.c123.billbuddy.model.Merchant;
  * 
  * The Class also enables creating one static user & write into the space
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 
