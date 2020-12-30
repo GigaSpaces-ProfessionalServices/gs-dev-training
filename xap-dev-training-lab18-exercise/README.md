@@ -56,7 +56,7 @@ Is it configured differently in this project than any other feeder project? <br 
 
 ![snapshot](Pictures/Picture1.png)]
 
-**2.5**	Expand Java resources -> src -> com.c123.billbuddy.dal 
+**2.5**	Expand Java resources -> src -> com.gs.billbuddy.dal 
 and investigate the DAL (Data Access Layer) classes. <br />
 a.	How does the DAL object get a GigaSpace proxy? <br />
 b.	How do all JSPs get a reference to the DAL? <br />

@@ -1,13 +1,13 @@
-<%@page import="com.c123.billbuddy.model.Merchant"%>
-<%@page import="com.c123.billbuddy.model.User"%>
-<%@page import="com.c123.billbuddy.model.Payment"%>
+<%@page import="com.gs.billbuddy.model.Merchant"%>
+<%@page import="com.gs.billbuddy.model.User"%>
+<%@page import="com.gs.billbuddy.model.Payment"%>
 <%@page import="java.util.Locale"%>
 <%@page import="java.text.NumberFormat"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="java.util.List"%>
-<%@page import="com.c123.billbuddy.dal.MerchantDal"%>
-<%@page import="com.c123.billbuddy.dal.UserDal"%>
+<%@page import="com.gs.billbuddy.dal.MerchantDal"%>
+<%@page import="com.gs.billbuddy.dal.UserDal"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
