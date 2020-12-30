@@ -1,4 +1,4 @@
-package com.c123.billbuddy.events;
+package com.gs.billbuddy.events;
 
 
 import java.util.Calendar;
@@ -13,11 +13,11 @@ import org.openspaces.events.EventTemplate;
 import org.openspaces.events.adapter.SpaceDataEvent;
 import org.openspaces.events.polling.Polling;
 
-import com.c123.billbuddy.model.Contract;
-import com.c123.billbuddy.model.Merchant;
-import com.c123.billbuddy.model.Payment;
-import com.c123.billbuddy.model.ProcessingFee;
-import com.c123.billbuddy.model.TransactionStatus;
+import com.gs.billbuddy.model.Contract;
+import com.gs.billbuddy.model.Merchant;
+import com.gs.billbuddy.model.Payment;
+import com.gs.billbuddy.model.ProcessingFee;
+import com.gs.billbuddy.model.TransactionStatus;
 import com.j_spaces.core.client.SQLQuery;
 
 
@@ -28,7 +28,7 @@ import com.j_spaces.core.client.SQLQuery;
  * SpaceDataEvent reads Merchant by Id, Contract Document and executing Processing Fee 
  * transaction between Merchant and BillBuddy 
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 @EventDriven

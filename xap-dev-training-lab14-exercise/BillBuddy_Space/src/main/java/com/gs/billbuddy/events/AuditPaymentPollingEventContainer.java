@@ -1,4 +1,4 @@
-package com.c123.billbuddy.events;
+package com.gs.billbuddy.events;
 
 
 
@@ -11,8 +11,8 @@ import org.openspaces.events.EventTemplate;
 import org.openspaces.events.adapter.SpaceDataEvent;
 import org.openspaces.events.polling.Polling;
 
-import com.c123.billbuddy.model.Payment;
-import com.c123.billbuddy.model.TransactionStatus;
+import com.gs.billbuddy.model.Payment;
+import com.gs.billbuddy.model.TransactionStatus;
 
 /** 
  * AuditPaymentEventContainer class. 
@@ -20,7 +20,7 @@ import com.c123.billbuddy.model.TransactionStatus;
  * Pooling Event starts when new Payment with Transaction status NEW written into space
  * It takes the Payment object and change it's status to AUDIT and write it into space
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 @EventDriven

@@ -1,4 +1,4 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 
 
 import org.apache.commons.logging.Log;
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * This class been injected by Spring framework and it 
  * performs loop on userNameList creates User class and writes it into space.
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 @Component
