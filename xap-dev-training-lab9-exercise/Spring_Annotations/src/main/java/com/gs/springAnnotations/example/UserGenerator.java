@@ -1,33 +1,39 @@
-package com.c123.nospring.example;
+package com.gs.springAnnotations.example;
+
 
 import java.util.ArrayList;
 
-import com. c123.example.model.User;
-import com.c123.nospring.example.DAL.FileObjectWriter;
+import com.gs.example.model.User;
+import com.gs.springAnnotations.example.DAL.FileObjectWriter;
 
 
+//TODO:
 public class UserGenerator {
-
-	private ArrayList<String> userNameList = null;
-	private FileObjectWriter fileObjectWriter= null;
+	// TODO:
+	private ArrayList<String> userNameList;
+	// TODO:
+	private FileObjectWriter fileObjectWriter;
 	private ArrayList<User> userList = new ArrayList<User>();
-	private String fileName = "c:\\TEMP\\USER_LIST_FILE.txt";
+
 
 	public UserGenerator(ArrayList<String> userNameList) {
 		super();
 		this.userNameList = userNameList;
 	}
+	
+	public UserGenerator() {
+		super();
+	}
 
-		
-	public  void generateUsers(){	
+	// TODO:
+	public void generateUsers(){	
 		System.out.println("Init Users");
 		this.initUsers();
 		System.out.println("Writing Users to File");
-		fileObjectWriter = new FileObjectWriter(this.getFileName());
 		this.printUsers();
 		
-		this.getFileObjectWriter().close();
-		System.out.println("See " + this.getFileName()+" for list of users.");
+		fileObjectWriter.close();
+		System.out.println("See " + fileObjectWriter.getFileName()+" for list of users.");
 		
 	}
 
@@ -53,16 +59,6 @@ public class UserGenerator {
 		}
 	}
 	
-	public String getFileName() {
-		return fileName;
-	}
-
-
-
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
-
 	/**
 	 * @return the userList
 	 */
@@ -70,13 +66,6 @@ public class UserGenerator {
 		return userList;
 	}
 
-
-	/**
-	 * @return the fileObjectWriter
-	 */
-	private FileObjectWriter getFileObjectWriter() {
-		return fileObjectWriter;
-	}
 
 	/**
 	 * @param userNameList the userNameList to set

@@ -1,35 +1,23 @@
-package com.c123.springAnnotations.example.DAL;
+package com.gs.nospring.example.DAL;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-// TODO: 
 public class FileObjectWriter {
-	// TODO:
-	private String fileName; 
 	
-	PrintWriter printWriter;
+	private String fileName; 
+
+	private PrintWriter printWriter = null;
 
 	public FileObjectWriter(String fileName) {
         this.setFileName(fileName);
 
     }
-
+    
 	public FileObjectWriter() {
+
     }
-	
-	// TODO:
-	public void init() {
-	   if (fileName != null) {
-	        try {
-				this.printWriter = new PrintWriter(new FileWriter(fileName), true);
-			} catch (IOException e) {
-				e.printStackTrace();
-			} 
-	   }
-	}
-	
     public void write(Object object){
         try {
 			printWriter.println(""+ object);
@@ -38,7 +26,7 @@ public class FileObjectWriter {
 		} 
   	
     }
-    // TODO:
+    
     public void close(){
         try {
 			printWriter.close();
@@ -54,8 +42,13 @@ public class FileObjectWriter {
 		return fileName;
 	}
 
-	private void setFileName(String fileName) {
-		this.fileName = fileName;
-		
+	public void setFileName(String fileName) {
+	    this.fileName = fileName;
+        try {
+			this.printWriter = new PrintWriter(new FileWriter(fileName), true);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
 	}
+   
 }

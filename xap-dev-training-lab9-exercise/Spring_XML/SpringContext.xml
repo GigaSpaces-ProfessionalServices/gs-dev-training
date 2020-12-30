@@ -10,11 +10,11 @@
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<!-- The Object Write to use. We will use an ObjectFileWriter It is configured in Spring and injected into the service. -->	
-	<bean id="objectWriter" class="com.c123.spring.example.DAL.FileObjectWriter" destroy-method="close">
+	<bean id="objectWriter" class="com.gs.spring.example.DAL.FileObjectWriter" destroy-method="close">
 		<constructor-arg value="Spring_XML/TEMP/USER_LIST_FILE_SPRING_XML.txt"/>
     </bean>
 
-	<bean id="userGenerator" class="com.c123.spring.example.UserGenerator" init-method="generateUsers" >
+	<bean id="userGenerator" class="com.gs.spring.example.UserGenerator" init-method="generateUsers" >
 		<property name="fileObjectWriter" ref="objectWriter"></property>
 		<property name="userNameList" ref="userNameList"></property>
 	</bean>

@@ -1,4 +1,4 @@
-package com.c123.spring.example;
+package com.gs.spring.example;
 
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 

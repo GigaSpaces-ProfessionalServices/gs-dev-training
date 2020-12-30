@@ -53,15 +53,15 @@ Use the slides in order to recap the application design.
 ## 2	Standard Java application
 a.	Examine the classes and code of the application. <br />
     Especially examine the relationship between the classes. <br />
-b.	Run the class com.c123.nospring.example.TraditionalMain in the Traditional_Java folder. <br />
+b.	Run the class com.gs.nospring.example.TraditionalMain in the Traditional_Java folder. <br />
 c.	Check the output file (location is printed in the Intellij console) <br /> 
 ## 3	Spring XML based application
 a.	Examine the classes and code of the application in the Spring_Xml folder. <br />
 Validate you understand the wiring code and bean lifecycle processing by Spring. <br />
     Especially examine: <br />
 a.	springContext.xml <br /> 
-b.	com.c123.spring.example.SpringMain <br />
-b.	Run the class com.c123.spring.example.SpringMain <br />
+b.	com.gs.spring.example.SpringMain <br />
+b.	Run the class com.gs.spring.example.SpringMain <br />
 c.	Check the output file (location is printed in the Intellij console) <br /> 
 d.	If you still feel confused. Use Intellij Debugger to get a better 
     understanding of the application flow. <br />
@@ -71,10 +71,10 @@ in order to utilize Spring Annotations. <br />
 The following are the list of tasks required for you to do: <br />
 a.	Edit the springContextAnnotations.xml file in the Spring Annotations folder and add 
 <context:component-scan…> for required missing packages. <br />
-b.	Edit com.c123.springAnnotations.example.DAL.FileObjectWriter 
+b.	Edit com.gs.springAnnotations.example.DAL.FileObjectWriter 
     and fix all missing annotations (Hint: Search for “//TODO:”) <br />
-c.	Edit com.c123.springAnnotations.example.UserGenerator 
+c.	Edit com.gs.springAnnotations.example.UserGenerator 
     and fix all missing annotations (Hint: Search for “//TODO:” <br />
-d.	Run com.c123.springAnnotations.example.SpringAnnotationsMain <br />
+d.	Run com.gs.springAnnotations.example.SpringAnnotationsMain <br />
 e.	Check the output file (location is printed in the Intellij console) <br />
 f.	You might be required to add import statements for supporting the added annotation.

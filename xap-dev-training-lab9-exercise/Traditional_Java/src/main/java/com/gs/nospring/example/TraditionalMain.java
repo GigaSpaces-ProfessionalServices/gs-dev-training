@@ -1,4 +1,4 @@
-package com.c123.nospring.example;
+package com.gs.nospring.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;

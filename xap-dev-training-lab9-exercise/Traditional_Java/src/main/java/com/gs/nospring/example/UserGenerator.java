@@ -1,36 +1,33 @@
-package com.c123.spring.example;
-
+package com.gs.nospring.example;
 
 import java.util.ArrayList;
 
-import com.c123.example.model.User;
-import com.c123.spring.example.DAL.FileObjectWriter;
+import com..gs.example.model.User;
+import com.gs.nospring.example.DAL.FileObjectWriter;
 
 
 public class UserGenerator {
 
 	private ArrayList<String> userNameList = null;
 	private FileObjectWriter fileObjectWriter= null;
-	private ArrayList<User> userList = null;
-
+	private ArrayList<User> userList = new ArrayList<User>();
+	private String fileName = "c:\\TEMP\\USER_LIST_FILE.txt";
 
 	public UserGenerator(ArrayList<String> userNameList) {
 		super();
 		this.userNameList = userNameList;
 	}
 
-	public UserGenerator() {
-		super();
-	}
 		
 	public  void generateUsers(){	
 		System.out.println("Init Users");
 		this.initUsers();
 		System.out.println("Writing Users to File");
+		fileObjectWriter = new FileObjectWriter(this.getFileName());
 		this.printUsers();
 		
 		this.getFileObjectWriter().close();
-		System.out.println("See " + fileObjectWriter.getFileName()+" for list of users.");
+		System.out.println("See " + this.getFileName()+" for list of users.");
 		
 	}
 
@@ -56,49 +53,42 @@ public class UserGenerator {
 		}
 	}
 	
-
-	/**
-	 * @param userList the userList to set
-	 */
-	public void setUserList(ArrayList<User> userList) {
-		this.userList =  userList;
+	public String getFileName() {
+		return fileName;
 	}
 
+
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 
 	/**
 	 * @return the userList
 	 */
-	public ArrayList<User> getUserList() {
+	private ArrayList<User> getUserList() {
 		return userList;
-	}
-
-
-	/**
-	 * @param fileObjectWriter the fileObjectWriter to set
-	 */
-	public void setFileObjectWriter(FileObjectWriter fileObjectWriter) {
-		this.fileObjectWriter = fileObjectWriter;
 	}
 
 
 	/**
 	 * @return the fileObjectWriter
 	 */
-	public FileObjectWriter getFileObjectWriter() {
+	private FileObjectWriter getFileObjectWriter() {
 		return fileObjectWriter;
 	}
 
 	/**
 	 * @param userNameList the userNameList to set
 	 */
-	public void setUserNameList(ArrayList<String> userNameList) {
+	void setUserNameList(ArrayList<String> userNameList) {
 		this.userNameList = userNameList;
 	}
 
 	/**
 	 * @return the userNameList
 	 */
-	public ArrayList<String> getUserNameList() {
+	ArrayList<String> getUserNameList() {
 		return userNameList;
 	}
 }

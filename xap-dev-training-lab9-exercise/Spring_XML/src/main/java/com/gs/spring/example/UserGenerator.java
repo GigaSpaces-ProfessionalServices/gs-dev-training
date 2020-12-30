@@ -1,38 +1,35 @@
-package com.c123.springAnnotations.example;
+package com.gs.spring.example;
 
 
 import java.util.ArrayList;
 
-import com.c123.example.model.User;
-import com.c123.springAnnotations.example.DAL.FileObjectWriter;
+import com.gs.example.model.User;
+import com.gs.spring.example.DAL.FileObjectWriter;
 
 
-//TODO:
 public class UserGenerator {
-	// TODO:
-	private ArrayList<String> userNameList;
-	// TODO:
-	private FileObjectWriter fileObjectWriter;
-	private ArrayList<User> userList = new ArrayList<User>();
+
+	private ArrayList<String> userNameList = null;
+	private FileObjectWriter fileObjectWriter= null;
+	private ArrayList<User> userList = null;
 
 
 	public UserGenerator(ArrayList<String> userNameList) {
 		super();
 		this.userNameList = userNameList;
 	}
-	
+
 	public UserGenerator() {
 		super();
 	}
-
-	// TODO:
-	public void generateUsers(){	
+		
+	public  void generateUsers(){	
 		System.out.println("Init Users");
 		this.initUsers();
 		System.out.println("Writing Users to File");
 		this.printUsers();
 		
-		fileObjectWriter.close();
+		this.getFileObjectWriter().close();
 		System.out.println("See " + fileObjectWriter.getFileName()+" for list of users.");
 		
 	}
@@ -59,25 +56,49 @@ public class UserGenerator {
 		}
 	}
 	
+
+	/**
+	 * @param userList the userList to set
+	 */
+	public void setUserList(ArrayList<User> userList) {
+		this.userList =  userList;
+	}
+
+
 	/**
 	 * @return the userList
 	 */
-	private ArrayList<User> getUserList() {
+	public ArrayList<User> getUserList() {
 		return userList;
 	}
 
 
 	/**
+	 * @param fileObjectWriter the fileObjectWriter to set
+	 */
+	public void setFileObjectWriter(FileObjectWriter fileObjectWriter) {
+		this.fileObjectWriter = fileObjectWriter;
+	}
+
+
+	/**
+	 * @return the fileObjectWriter
+	 */
+	public FileObjectWriter getFileObjectWriter() {
+		return fileObjectWriter;
+	}
+
+	/**
 	 * @param userNameList the userNameList to set
 	 */
-	void setUserNameList(ArrayList<String> userNameList) {
+	public void setUserNameList(ArrayList<String> userNameList) {
 		this.userNameList = userNameList;
 	}
 
 	/**
 	 * @return the userNameList
 	 */
-	ArrayList<String> getUserNameList() {
+	public ArrayList<String> getUserNameList() {
 		return userNameList;
 	}
 }

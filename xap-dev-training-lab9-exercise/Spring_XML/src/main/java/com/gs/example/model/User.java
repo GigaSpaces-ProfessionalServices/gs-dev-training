@@ -1,4 +1,4 @@
-package com.c123.example.model;
+package com.gs.example.model;
 
 import java.io.Serializable;
 
