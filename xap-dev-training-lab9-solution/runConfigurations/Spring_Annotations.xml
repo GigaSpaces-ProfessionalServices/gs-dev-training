@@ -3,7 +3,7 @@
     <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-    <option name="MAIN_CLASS_NAME" value="com.c123.springAnnotations.example.SpringAnnotationsMain" />
+    <option name="MAIN_CLASS_NAME" value="com.gs.springAnnotations.example.SpringAnnotationsMain" />
     <module name="Spring_Annotations" />
     <option name="VM_PARAMETERS" value="-Dcom.gs.jini_lus.groups=${GS_LOOKUP_GROUPS} -Dcom.gs.jini_lus.locators=${GS_LOOKUP_LOCATORS}" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Spring_Annotations" />

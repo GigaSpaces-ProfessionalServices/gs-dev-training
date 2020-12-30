@@ -1,10 +1,10 @@
-package com.c123.spring.example;
+package com.gs.spring.example;
 
 
 import java.util.ArrayList;
 
-import com.c123.example.model.User;
-import com.c123.spring.example.DAL.FileObjectWriter;
+import com.gs.example.model.User;
+import com.gs.spring.example.DAL.FileObjectWriter;
 
 
 public class UserGenerator {

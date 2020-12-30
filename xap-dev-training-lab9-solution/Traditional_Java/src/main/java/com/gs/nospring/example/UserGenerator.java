@@ -1,44 +1,33 @@
-package com.c123.springAnnotations.example;
-
+package com.gs.nospring.example;
 
 import java.util.ArrayList;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Component;
-
-import com.c123.example.model.User;
-import com.c123.springAnnotations.example.DAL.FileObjectWriter;
+import com..gs.example.model.User;
+import com.gs.nospring.example.DAL.FileObjectWriter;
 
 
-@Component
 public class UserGenerator {
-	@Resource
-	private ArrayList<String> userNameList;
-	@Resource
-	private FileObjectWriter fileObjectWriter;
-	private ArrayList<User> userList = new ArrayList<User>();
 
+	private ArrayList<String> userNameList = null;
+	private FileObjectWriter fileObjectWriter= null;
+	private ArrayList<User> userList = new ArrayList<User>();
+	private String fileName = "TEMP/USER_LIST_FILE.txt";
 
 	public UserGenerator(ArrayList<String> userNameList) {
 		super();
 		this.userNameList = userNameList;
 	}
-	
-	public UserGenerator() {
-		super();
-	}
 
-	@PostConstruct
-	public void generateUsers(){	
+		
+	public  void generateUsers(){	
 		System.out.println("Init Users");
 		this.initUsers();
 		System.out.println("Writing Users to File");
+		fileObjectWriter = new FileObjectWriter(this.getFileName());
 		this.printUsers();
 		
-		fileObjectWriter.close();
-		System.out.println("See " + fileObjectWriter.getFileName()+" for list of users.");
+		this.getFileObjectWriter().close();
+		System.out.println("See " + this.getFileName()+" for list of users.");
 		
 	}
 
@@ -64,6 +53,16 @@ public class UserGenerator {
 		}
 	}
 	
+	public String getFileName() {
+		return fileName;
+	}
+
+
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
 	/**
 	 * @return the userList
 	 */
@@ -71,6 +70,13 @@ public class UserGenerator {
 		return userList;
 	}
 
+
+	/**
+	 * @return the fileObjectWriter
+	 */
+	private FileObjectWriter getFileObjectWriter() {
+		return fileObjectWriter;
+	}
 
 	/**
 	 * @param userNameList the userNameList to set

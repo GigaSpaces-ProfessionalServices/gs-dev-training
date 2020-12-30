@@ -1,4 +1,4 @@
-package com.c123.spring.example.DAL;
+package com.gs.spring.example.DAL;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.c123.springAnnotations.example;
+package com.gs.springAnnotations.example;
 
 
 

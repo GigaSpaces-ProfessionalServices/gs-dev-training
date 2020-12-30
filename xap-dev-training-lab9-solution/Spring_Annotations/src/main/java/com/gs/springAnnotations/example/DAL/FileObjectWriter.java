@@ -1,23 +1,40 @@
-package com.c123.nospring.example.DAL;
+package com.gs.springAnnotations.example.DAL;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class FileObjectWriter {
-	
-	private String fileName; 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
-	private PrintWriter printWriter = null;
+import org.springframework.stereotype.Component;
+@Component
+public class FileObjectWriter {
+	@Resource
+	private String fileName; 
+	
+	PrintWriter printWriter;
 
 	public FileObjectWriter(String fileName) {
         this.setFileName(fileName);
 
     }
-    
-	public FileObjectWriter() {
 
+	public FileObjectWriter() {
     }
+	
+	@PostConstruct
+	public void init() {
+	   if (fileName != null) {
+	        try {
+				this.printWriter = new PrintWriter(new FileWriter(fileName), true);
+			} catch (IOException e) {
+				e.printStackTrace();
+			} 
+	   }
+	}
+	
     public void write(Object object){
         try {
 			printWriter.println(""+ object);
@@ -26,7 +43,7 @@ public class FileObjectWriter {
 		} 
   	
     }
-    
+    @PreDestroy
     public void close(){
         try {
 			printWriter.close();
@@ -42,13 +59,8 @@ public class FileObjectWriter {
 		return fileName;
 	}
 
-	public void setFileName(String fileName) {
-	    this.fileName = fileName;
-        try {
-			this.printWriter = new PrintWriter(new FileWriter(fileName), true);
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
+	private void setFileName(String fileName) {
+		this.fileName = fileName;
+		
 	}
-   
 }

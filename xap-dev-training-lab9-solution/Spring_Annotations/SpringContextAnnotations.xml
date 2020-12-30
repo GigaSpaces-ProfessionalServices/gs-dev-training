@@ -9,8 +9,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<context:component-scan base-package="com.c123.springAnnotations.example" />
-	<context:component-scan base-package="com.c123.springAnnotations.example.DAL" />
+	<context:component-scan base-package="com.gs.springAnnotations.example" />
+	<context:component-scan base-package="com.gs.springAnnotations.example.DAL" />
 
 	<!-- The Object Write to use. We will use an ObjectFileWriter It is configured in Spring and injected into the service. -->
 
