@@ -1,4 +1,4 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -8,8 +8,8 @@ import org.apache.commons.logging.LogFactory;
 import org.openspaces.core.GigaSpace;
 import org.springframework.stereotype.Component;
 
-import com.c123.billbuddy.model.Merchant;
-import com.c123.billbuddy.model.Payment;
+import com.gs.billbuddy.model.Merchant;
+import com.gs.billbuddy.model.Payment;
 
 @Component
 @SuppressWarnings({"unused" ,"null"})

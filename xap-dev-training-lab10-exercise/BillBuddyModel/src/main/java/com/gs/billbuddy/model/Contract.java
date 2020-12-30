@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 import java.util.Date;
 

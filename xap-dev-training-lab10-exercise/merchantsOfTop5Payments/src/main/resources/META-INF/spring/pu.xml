@@ -15,7 +15,7 @@
 	
 	<!-- ANNOTATION AND COMPONENT SCAN CONFIGURATION -->
 	<!-- Enable scan for OpenSpaces and Spring components -->
-	<context:component-scan base-package="com.c123.billbuddy.client" />
+	<context:component-scan base-package="com.gs.billbuddy.client" />
 	<!-- Enables the usage of @GigaSpaceContext annotation based injection. -->
 	<os-core:giga-space-context />
 	<!-- Enables Spring Annotation configuration -->

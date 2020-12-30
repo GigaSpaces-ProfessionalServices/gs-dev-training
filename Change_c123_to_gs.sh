@@ -12,6 +12,8 @@ mv $1/BillBuddy_Space/src/main/java/com/c123 $1/BillBuddy_Space/src/main/java/co
 
 mv $1/BillBuddyPersistency/src/main/java/com/c123 $1/BillBuddyPersistency/src/main/java/com/gs
 
+mv $1/merchantsOfTop5Payments/src/main/java/com/c123 $1/merchantsOfTop5Payments/src/main/java/com/gs
+
 #AfterDone the above from the intellij:
 #1. Replace .c123. to .gs.
 #2. Replace 123Completed to gsUniversity
