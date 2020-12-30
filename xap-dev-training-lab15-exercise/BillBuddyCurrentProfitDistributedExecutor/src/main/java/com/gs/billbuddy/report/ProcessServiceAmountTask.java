@@ -19,7 +19,7 @@ import com.gigaspaces.async.AsyncResult;
 *  and gets all Processing Fee amounts
 * 
 *  
-* @author 123Completed
+* @author gsUniversity
 */
 
 @SuppressWarnings("serial")
