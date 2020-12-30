@@ -1,4 +1,4 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,11 +11,11 @@ import org.openspaces.core.GigaSpace;
 import org.openspaces.core.SpaceInterruptedException;
 import org.springframework.stereotype.Component;
 
-import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.Merchant;
-import com.c123.billbuddy.model.Payment;
-import com.c123.billbuddy.model.TransactionStatus;
-import com.c123.billbuddy.model.User;
+import com.gs.billbuddy.model.AccountStatus;
+import com.gs.billbuddy.model.Merchant;
+import com.gs.billbuddy.model.Payment;
+import com.gs.billbuddy.model.TransactionStatus;
+import com.gs.billbuddy.model.User;
 
 @Component
 public class LeasePaymentFeeder {

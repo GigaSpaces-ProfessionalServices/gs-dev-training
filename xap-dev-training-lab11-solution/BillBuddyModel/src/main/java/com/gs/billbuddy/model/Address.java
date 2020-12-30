@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ import java.io.Serializable;
 /** 
 * Address class is a POJO which has user address information 
 * 
-* @author 123Completed
+* @author gsUniversity
 */ 
 
 @SuppressWarnings("serial")
