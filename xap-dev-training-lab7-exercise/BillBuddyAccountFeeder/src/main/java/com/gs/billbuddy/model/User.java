@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
@@ -11,7 +11,7 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 /** 
  * User class is a POJO which has user account information 
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 @SpaceClass
