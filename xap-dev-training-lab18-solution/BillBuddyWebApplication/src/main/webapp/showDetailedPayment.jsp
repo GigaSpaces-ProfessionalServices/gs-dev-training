@@ -1,7 +1,7 @@
-<%@page import="com.c123.billbuddy.model.Payment"%>
+<%@page import="com.gs.billbuddy.model.Payment"%>
 <%@page import="java.util.Locale"%>
 <%@page import="java.text.NumberFormat"%>
-<%@page import="com.c123.billbuddy.dal.BillBuddyDal"%>
+<%@page import="com.gs.billbuddy.dal.BillBuddyDal"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="com.j_spaces.core.client.SQLQuery"%>
