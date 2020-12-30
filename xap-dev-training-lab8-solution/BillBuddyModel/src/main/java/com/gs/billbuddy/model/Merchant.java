@@ -1,4 +1,4 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
@@ -10,7 +10,7 @@ import com.gigaspaces.metadata.index.SpaceIndexType;
 /** 
 * Merchant class is a POJO which has merchant account information 
 * 
-* @author 123Completed
+* @author gsUniversity
 */
 
 @SpaceClass

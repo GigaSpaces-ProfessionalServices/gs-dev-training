@@ -1,9 +1,9 @@
-package com.c123.billbuddy.model;
+package com.gs.billbuddy.model;
 
 /** 
 * CountryNames class is an Enum which has countries name  
 * 
-* @author 123Completed
+* @author gsUniversity
 */
 public enum CountryNames {USA,
     UNITED_KINGDOM,
