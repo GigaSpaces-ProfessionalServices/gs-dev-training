@@ -1,12 +1,12 @@
-package com.c123.billbuddy.client;
+package com.gs.billbuddy.client;
 import java.util.ArrayList;
 import java.util.Random;
 
 import org.openspaces.core.GigaSpace;
-import com.c123.billbuddy.model.AccountStatus;
-import com.c123.billbuddy.model.Address;
-import com.c123.billbuddy.model.CountryNames;
-import com.c123.billbuddy.model.User;
+import com.gs.billbuddy.model.AccountStatus;
+import com.gs.billbuddy.model.Address;
+import com.gs.billbuddy.model.CountryNames;
+import com.gs.billbuddy.model.User;
 
 /** 
  * User Feeder class reads userNameList which is stored in users data member. 
@@ -14,7 +14,7 @@ import com.c123.billbuddy.model.User;
  * 
  * The Class also enables creating one static user & write into the space
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 
@@ -68,7 +68,7 @@ public class UserFeeder {
                 
                 Address tempAddress = new Address();
             	tempAddress.setCountry(CountryNames.values()[new Random().nextInt(CountryNames.values().length)]);
-            	tempAddress.setCity("123Completed.com");
+            	tempAddress.setCity("gsUniversity.com");
             	tempAddress.setState("GIGASPACES");
             	tempAddress.setStreet("Here and There");
             	tempAddress.setZipCode(new Random().nextInt());
