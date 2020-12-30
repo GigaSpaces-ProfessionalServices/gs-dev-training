@@ -1,8 +1,12 @@
 mv $1/BillBuddyAccountFeeder/src/main/java/com/c123 $1/BillBuddyAccountFeeder/src/main/java/com/gs 
 
+mv $1/BillBuddyCategoryTop5PaymentRemoteService/src/main/java/com/c123 $1/BillBuddyCategoryTop5PaymentRemoteService/src/main/java/com/gs 
+
 mv $1/BillBuddyCurrentProfitDistributedExecutor/src/main/java/com/c123 $1/BillBuddyCurrentProfitDistributedExecutor/src/main/java/com/gs
 
 mv $1/BillBuddyModel/src/main/java/com/c123 $1/BillBuddyModel/src/main/java/com/gs
+
+mv $1/BillBuddyCountPaymentByCategoryRemoteService/src/main/java/com/c123 $1/BillBuddyCountPaymentByCategoryRemoteService/src/main/java/com/gs
 
 mv $1/BillBuddyPaymentFeeder/src/main/java/com/c123 $1/BillBuddyPaymentFeeder/src/main/java/com/gs
 
@@ -20,7 +24,9 @@ mv $1/BillBuddyAggregationPayment/src/main/java/com/c123 $1/BillBuddyAggregation
 
 mv $1/BillBuddyCountPaymentsByCategoryDistributedExecutor/src/main/java/com/c123 $1/BillBuddyCountPaymentsByCategoryDistributedExecutor/src/main/java/com/gs
 
-mv $1/BillBuddyCurrentProfitDistributedExecutor/src/main/java/com/c123 $1/cwBillBuddyCurrentProfitDistributedExecutorBillBuddyAggregationPayment/src/main/java/com/gs
+mv $1/BillBuddyCurrentProfitDistributedExecutor/src/main/java/com/c123 $1/BillBuddyCurrentProfitDistributedExecutorBillBuddyAggregationPayment/src/main/java/com/gs
+
+mv $1/BillBuddyMerchantProfitRemoteService/src/main/java/com/c123 $1/BillBuddyMerchantProfitRemoteService/src/main/java/com/gs
 
 mv $1/BillBuddyMerchantGetUserIdTaskExecutor/src/main/java/com/c123 $1/BillBuddyMerchantGetUserIdTaskExecutor/src/main/java/com/gs
 
