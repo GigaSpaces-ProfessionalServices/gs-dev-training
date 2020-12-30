@@ -74,24 +74,24 @@ and now you will refactor it to be a Space Based Remoting deployment in the spac
 The BillBuddyCountPaymentByCategoryDistributedExecutor project is provided as part of the Lab. 
 You can use it in order to complete any coding gaps you might have. <br />
 **3.2**	 Expand the BillBuddyModelproject. <br /> 
-**3.3**	 Add the required method in the Interface com.c123.billbuddy.remoting.ICountPaymentsByCategoryService <br />
+**3.3**	 Add the required method in the Interface com.gs.billbuddy.remoting.ICountPaymentsByCategoryService <br />
 
 >a.	Declare a method named findPaymentCountByCategory that will retrieve a count of all payments made in a specific category. <br /> 
 
 **3.4**	 Implement the Service as follows: <br />
->a.	Locate the com.c123.billbuddy.remoting.CountPaymentByCategoryService (Hint: BillBuddy_space). <br />
+>a.	Locate the com.gs.billbuddy.remoting.CountPaymentByCategoryService (Hint: BillBuddy_space). <br />
 b.	Follow the //TO DO comments in the file. <br />
 
 **3.5**	 Implement the Reducer class as follows: <br />
 >a.	Expand the BillBuddyCountPaymentByCategoryRemoteService project. <br />
-b.	Locate the com.c123.billbuddy.report.CountPaymentByCategoryReducer. <br />
+b.	Locate the com.gs.billbuddy.report.CountPaymentByCategoryReducer. <br />
 c.	Follow the //TO DO comments in the file. 
 You only have to add all results to a single list. 
 The reducer class is almost fully implemented. <br />
 
 **3.6**	 Implement the Client as follows: <br />
 >a.	Expand the BillBuddyCountPaymentByCategoryRemoteService project. <br />
-b.	Locate the com.c123.billbuddy.report.CountPaymentByCategoryReport. <br />
+b.	Locate the com.gs.billbuddy.report.CountPaymentByCategoryReport. <br />
 c.	Follow the //TO DO comments in the file. <br />
 d.	Deploy the BillBuddy_Space PU to the Grid Service followed: <br /> 
 e.	Run AccountFeeder and PaymentFeeder. <br />
