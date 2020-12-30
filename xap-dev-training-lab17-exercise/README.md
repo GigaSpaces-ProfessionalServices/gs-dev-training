@@ -129,7 +129,7 @@ a.	What space am I Mirroring? <br />
 Answer: BillBuddy-space <br />
 b.	Which POJOs am I to persist? <br />
 Answer: In this lab we will persist: User, Merchant, Payment, ProcessingFee and Contract
-Package Name: com.c123.billbuddy.model <br />
+Package Name: com.gs.billbuddy.model <br />
 c.	What is the database (in most cases) that I am persisting to? <br /> 
 Answer: we will use MySQL DB for demo purposes. <br />		
 d.	What are the DB user name, DB password, JDBC URL and JDBC Driver? <br />
@@ -149,7 +149,7 @@ Configure spring to locate your hibernate annotated classes. <br />
 1.	Fill in the package to be scanned where your persistent 
 POJOs are located 
 (Search the POJOs in the model that were annotated with @Entity and write their full name in the SessionFactory bean). 
-<property name="packagesToScan" value="com.c123.billbuddy.model" />
+<property name="packagesToScan" value="com.gs.billbuddy.model" />
 2.	Hint: 4 classes only for this demo (but all in same package)
 d.	Specify the mirror to recognize the mirror space (This step is already implemented)
 1.	Complete the os-core:mirror -> os-core:source-space
