@@ -53,7 +53,7 @@ The BillBuddy application is managing the lifecycle of a Payment POJO.
 A Payment POJO has 3 statuses (in real payment processing applications there 
 are many more statuses or, as they are usually called: Payment States). 
 The 3 Payment Statuses are:
-(see also com.c123.billbuddy.model.TransactionSatus and flow diagram in next page)
+(see also com.gs.billbuddy.model.TransactionSatus and flow diagram in next page)
 
 ![Screenshot](./Pictures/Picture1.png)
 
@@ -97,11 +97,11 @@ The following is an explanation of the above diagram:
 3.1	In this exercise you will implement the Processing Fee Event Container. <br />
 
 Expand BillBuddy_Space <br />
-Open com.c123.billbuddy.events.ProcessingFeeEventContainer 
+Open com.gs.billbuddy.events.ProcessingFeeEventContainer 
 
 3.2	Open pu.xml <br />
 a.	Add @Polling and @Notify annotations support in the pu.xml file <br />
-3.3	Open com.c123.billbuddy.events.ProcessingFeeEventContainer <br />
+3.3	Open com.gs.billbuddy.events.ProcessingFeeEventContainer <br />
 a.	Add Event Container annotation. 
     Which one should be added Polling or Notify container? Why? <br />
 b.	Implement the Event Template (See TODO comments for more information). <br />
