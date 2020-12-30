@@ -75,7 +75,7 @@ In this lab we will focus on deployment and the application and not be concerned
 3.1 From the Intellij run configuration select BillBuddyAccountFeeder and run it.<br>
 3.2 Another option is to run it from the maven command line:<br>
     `cd ~/xap-dev-training/xap-dev-training-lab5-solution/BillBuddyAccountFeeder`<br>
-    `mvn exec:java  -D"exec.mainClass"="com.c123.billbuddy.client.AccountFeeder" -Dexec.classpathScope=compile -Dcom.gs.jini_lus.locators=localhost`<br>
+    `mvn exec:java  -D"exec.mainClass"="com.gs.billbuddy.client.AccountFeeder" -Dexec.classpathScope=compile -Dcom.gs.jini_lus.locators=localhost`<br>
 
 ###### This application writes Users and Merchants to the Space
  
@@ -88,7 +88,7 @@ In this lab we will focus on deployment and the application and not be concerned
 3.3 Query the list of Users by executing the following SQL: <br />
 Choose the query option and copy the following SQL command to the SQL area: <br />
 
-    SELECT * FROM com.c123.billbuddy.model.User
+    SELECT * FROM com.gs.billbuddy.model.User
     
 ###### Note: Fully qualified class name is required. (You can use copy paste in the gs-ui)
 

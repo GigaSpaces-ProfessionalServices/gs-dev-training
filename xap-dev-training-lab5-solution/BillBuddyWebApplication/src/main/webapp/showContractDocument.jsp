@@ -1,5 +1,5 @@
-<%@page import="com.c123.billbuddy.model.Contract"%>
-<%@page import="com.c123.billbuddy.dal.BillBuddyDal"%>
+<%@page import="com.gs.billbuddy.model.Contract"%>
+<%@page import="com.gs.billbuddy.dal.BillBuddyDal"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
