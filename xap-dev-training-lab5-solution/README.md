@@ -12,7 +12,7 @@ In this lab we will focus on deployment and the application and not be concerned
 
 1.1 Navigate to %XAP_HOME/bin <br />
         
-1.2 Start gs-agent with local Manager server and 5 GSCs:
+1.2 Start gs-agent with local Manager server and 6 GSCs:
 
     ./gs.sh host run-agent --auto --gsc=6
     
