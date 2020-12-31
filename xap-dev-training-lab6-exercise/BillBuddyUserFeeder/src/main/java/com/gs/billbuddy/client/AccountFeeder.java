@@ -10,23 +10,16 @@ import com.j_spaces.core.IJSpace;
 /** 
  * UserFeederActivator class create a standalone proxy connection to the space using configurer.
  * The class then activates the UserFeeder to write all user into the space.
- * @author 123Completed
+ * @author gsUniversity
  */
 
 public class AccountFeeder {
 
 	public static void main(String[] args) {
-    	
+
 		// Get a proxy to the space using a configurer
-		
-		String lookupGroups = System.getenv("GS_LOOKUP_GROUPS");
-		SpaceProxyConfigurer spaceConfigurer = new SpaceProxyConfigurer("BillBuddy-space");
-		spaceConfigurer.lookupGroups(lookupGroups);
-	  	IJSpace space = spaceConfigurer.space();
-	  	
-	  	// Create a space proxy
-	  	
-	  	GigaSpace gigaSpace = new GigaSpaceConfigurer(space).gigaSpace();
+		String spaceName = "BillBuddy-space";
+		GigaSpace gigaSpace = new GigaSpaceConfigurer(new SpaceProxyConfigurer(spaceName)).create();
     	
     	try {
     		

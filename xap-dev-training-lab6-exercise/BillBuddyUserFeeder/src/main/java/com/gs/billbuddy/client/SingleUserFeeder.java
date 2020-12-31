@@ -12,16 +12,14 @@ public class SingleUserFeeder {
 
 	public static void main(String[] args) {
 
-		// Get a proxy to the space using a configurer
-		
-		String lookupGroups = System.getenv("GS_LOOKUP_GROUPS");
-		SpaceProxyConfigurer spaceConfigurer = null;
-		// TODO: initialize spaceConfigurer - create new SpaceProxyConfigurer with the proper the space name in our exercise is BillBuddy-space edit the row below.
+		// TODO: initialize SpaceProxyConfigurer
+		// TODO: create new GigaSpaceConfigurer
+		// TODO: edit the gigaSpace row below.
 
-		spaceConfigurer.lookupGroups(lookupGroups);
-      	IJSpace space = spaceConfigurer.space();
-    	GigaSpace gigaSpace = new GigaSpaceConfigurer(space).gigaSpace();
-    	
+		// Get a proxy to the space using a configurer
+		String spaceName = "BillBuddy-space";
+		GigaSpace gigaSpace = null;
+
 
     	try {
     		

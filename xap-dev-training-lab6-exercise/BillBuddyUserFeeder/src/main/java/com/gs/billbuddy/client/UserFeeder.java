@@ -11,7 +11,7 @@ import org.openspaces.core.GigaSpace;
  * 
  * The Class also enables creating one static user & write into the space
  * 
- * @author 123Completed
+ * @author gsUniversity
  */
 
 
