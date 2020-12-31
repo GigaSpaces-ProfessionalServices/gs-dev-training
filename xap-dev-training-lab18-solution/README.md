@@ -53,7 +53,7 @@ Is it configured differently in this project than any other feeder project? <br 
 **2.3**	Locate the web.xml file. <br />
 **2.4**	Fix the web.xml file by adding the following to the listener:
 
-![snapshot](Pictures/Picture1.png)]
+![snapshot](Pictures/Picture1.png)
 
 **2.5**	Expand Java resources -> src -> com.gs.billbuddy.dal 
 and investigate the DAL (Data Access Layer) classes. <br />
