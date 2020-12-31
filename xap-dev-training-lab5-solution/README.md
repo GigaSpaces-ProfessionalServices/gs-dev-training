@@ -14,7 +14,7 @@ In this lab we will focus on deployment and the application and not be concerned
         
 1.2 Start gs-agent with local Manager server and 5 GSCs:
 
-    ./gs.sh host run-agent --auto --gsc=5
+    ./gs.sh host run-agent --auto --gsc=6
     
 1.3 Start gs-ui.
 
