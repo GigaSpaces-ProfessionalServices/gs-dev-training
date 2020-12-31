@@ -4,7 +4,7 @@
 
 #### 1 setup
 
-##### 1.1 Download 15.0.0 XAP Commercial Edition and extract it on you machine.
+##### 1.1 Download 15.5.1 XAP Commercial Edition and extract it on you machine.
 ##### 1.2 Put `tryme` license to `gs-license.txt` file located at the root of xap installation directory.
 ##### 1.3 Download and install IntelliJ IDEA Community:
    https://www.jetbrains.com/idea/download

@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gigaspaces.dev.training</groupId>
     <artifactId>BillBuddyWebApplication</artifactId>
-    <version>15.0.0</version>
+    <version>15.5.1</version>
     <packaging>war</packaging>
     <repositories>
         <repository>
