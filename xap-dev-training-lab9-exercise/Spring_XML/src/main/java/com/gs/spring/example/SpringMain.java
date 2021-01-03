@@ -9,7 +9,7 @@ public class SpringMain {
      {
 	    // Load the Spring context. After initialization the
 	    // afterPropertiesSet() method is called.
-	    new FileSystemXmlApplicationContext("Spring_XML/SpringContext.xml");
+	    new FileSystemXmlApplicationContext("SpringContext.xml");
 	    
 
      }

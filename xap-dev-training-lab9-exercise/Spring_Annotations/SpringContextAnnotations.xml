@@ -16,7 +16,7 @@
 	<!-- The Object Write to use. We will use an ObjectFileWriter It is configured in Spring and injected into the service. -->	
 
 	<bean id="fileName" class="java.lang.String">
-		<constructor-arg value="Spring_Annotations/TEMP/USER_LIST_FILE_SPRING_ANNOTATIONS.txt"/>
+		<constructor-arg value="TEMP/USER_LIST_FILE_SPRING_ANNOTATIONS.txt"/>
     </bean>
 
 	<bean id="userNameList" class="java.util.ArrayList">

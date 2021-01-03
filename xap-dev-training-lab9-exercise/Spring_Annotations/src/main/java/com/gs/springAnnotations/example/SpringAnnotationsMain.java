@@ -10,6 +10,6 @@ public class SpringAnnotationsMain {
      {
     // Load the Spring context. After initialization the
     // afterPropertiesSet() method is called.
-    new FileSystemXmlApplicationContext("Spring_Annotations/SpringContextAnnotations.xml");
+    new FileSystemXmlApplicationContext("SpringContextAnnotations.xml");
 }
 }

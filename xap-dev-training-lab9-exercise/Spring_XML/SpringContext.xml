@@ -11,7 +11,7 @@
 
 	<!-- The Object Write to use. We will use an ObjectFileWriter It is configured in Spring and injected into the service. -->	
 	<bean id="objectWriter" class="com.gs.spring.example.DAL.FileObjectWriter" destroy-method="close">
-		<constructor-arg value="Spring_XML/TEMP/USER_LIST_FILE_SPRING_XML.txt"/>
+		<constructor-arg value="TEMP/USER_LIST_FILE_SPRING_XML.txt"/>
     </bean>
 
 	<bean id="userGenerator" class="com.gs.spring.example.UserGenerator" init-method="generateUsers" >
