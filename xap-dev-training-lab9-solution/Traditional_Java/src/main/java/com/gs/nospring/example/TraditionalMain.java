@@ -23,7 +23,7 @@ public class TraditionalMain {
 			
 	public static void main(String args[]){
 		UserGenerator userGenerator = new UserGenerator(USER_NAME_LIST);
-		userGenerator.setFileName("Traditional_Java/TEMP/USER_LIST_FILE_TRADITIONAL_JAVA.txt");
+		userGenerator.setFileName("TEMP/USER_LIST_FILE_TRADITIONAL_JAVA.txt");
 		userGenerator.generateUsers();
 	}
 
