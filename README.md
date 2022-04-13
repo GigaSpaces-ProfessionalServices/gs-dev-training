@@ -34,3 +34,20 @@ Completing the exercises is with high importance in order to get the relevant kn
 * Lab17 - Persistency – Mirror Service
 * Lab18 - Web Applications
 * Lab19 - zipkin
+
+Note on Maven:
+
+Maven versions &gt; 3.8 won't connect to non-https repos by default. Below is a workaround.
+
+In ~/.m2/settings.xml, (if it doesn't exist, copy it from &lt;maven install directory&gt;/conf/settings.xml)
+
+Add:
+```xml
+<mirror>
+  <id>maven-default-http-blocker</id>
+  <mirrorOf>external:http:*</mirrorOf>
+  <name>Pseudo repository to mirror external repositories intially using HTTP.</name>
+  <url>http://maven-repository.openspaces.org</url>
+</mirror>
+```
+(There is already a section mirror. Modify the url and and comment out or remove blocked=true)
