@@ -2,7 +2,7 @@ package com.gs.nospring.example;
 
 import java.util.ArrayList;
 
-import com..gs.example.model.User;
+import com.gs.example.model.User;
 import com.gs.nospring.example.DAL.FileObjectWriter;
 
 
