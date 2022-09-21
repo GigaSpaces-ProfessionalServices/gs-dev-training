@@ -46,7 +46,7 @@ public class PaymentFeederGenerator {
 		private long defaultDelay = 1000;
 	    public void run() {
 	        try {
-	        	log.info("PaymentFeeder.PaymentCreatorExecuter thread has start");
+				System.out.println("PaymentFeeder.PaymentCreatorExecuter thread has start");
 	        	while (true){
 	        		
 	        		// Create a payment 

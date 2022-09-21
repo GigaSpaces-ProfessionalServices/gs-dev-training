@@ -27,7 +27,7 @@ public class PaymentFeederGenerator {
  
     @PostConstruct
     public void construct() throws Exception {
-        log.info("Starting PaymentFeeder");
+		System.out.println("Starting PaymentFeeder");
         
         // Create a new Thread to handle writing a new payments
         
@@ -46,7 +46,7 @@ public class PaymentFeederGenerator {
 		private long defaultDelay = 1000;
 	    public void run() {
 	        try {
-	        	log.info("PaymentFeeder.PaymentCreatorExecuter thread has start");
+				System.out.println("PaymentFeeder.PaymentCreatorExecuter thread has start");
 	        	while (true){
 	        		
 	        		// Create a payment 
@@ -58,7 +58,7 @@ public class PaymentFeederGenerator {
 	        		Thread.sleep(defaultDelay);
 	        	}
 	        } catch (InterruptedException e) {
-	        	log.error("PaymentFeeder.PaymentCreatorExecuter has failed");
+				System.out.println("PaymentFeeder.PaymentCreatorExecuter has failed");
 	        }
 	    }
     }

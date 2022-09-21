@@ -38,14 +38,14 @@ public class PaymentFeeder  {
 
         userCount = gigaSpace.count(new User());
         if (userCount == 0) {
-            log.info("Could not find users, did you write any?");
+			System.out.println("Could not find users, did you write any?");
             System.exit(-1);
         }
         
 
         merchantCount = gigaSpace.count(new Merchant());
         if (merchantCount == 0) {
-            log.info("Could not find merchants, did you write any?");
+			System.out.println("Could not find merchants, did you write any?");
             System.exit(-1);
         }
        
@@ -71,15 +71,15 @@ public class PaymentFeeder  {
         	
         	// Check If user valid and have credit limit
         	if (user.getStatus() != AccountStatus.ACTIVE){
-        		log.info("User: " + user.getName() + " status is " + user.getStatus());
+				System.out.println("User: " + user.getName() + " status is " + user.getStatus());
         	}
         	else if (user.getBalance() - paymentAmount < user.getCreditLimit()){
-        		log.info("User: " + user.getName() + " doesn't have credit.");
+				System.out.println("User: " + user.getName() + " doesn't have credit.");
         		
         		Double addUserBalance = Double.valueOf(Math.random()*1000);
         		addUserBalance = Math.round(addUserBalance*100.0)/100.0;
-        		
-        		log.info("Add " + addUserBalance + " to user balance");
+
+				System.out.println("Add " + addUserBalance + " to user balance");
         		
         		user.setBalance(user.getBalance()+ addUserBalance);
             	gigaSpace.write(user);
@@ -105,16 +105,16 @@ public class PaymentFeeder  {
                 
                 // Write the payment object
                 gigaSpace.write(payment);
-                
-                log.info("TransactionWriterTask wrote new transaction between user: " + user.getName() + 
+
+				System.out.println("TransactionWriterTask wrote new transaction between user: " + user.getName() +
                 		" and merchant: " + merchant.getName());
         	}
         	}		
 	}
 
 	private void updateUserBalance(User user, Double paymentAmount) {
-    	
-		log.info("TransactionWriterTask withdraw " + paymentAmount + 
+
+		System.out.println("TransactionWriterTask withdraw " + paymentAmount +
     			" from user: " + user.getName());
 
     	// Subtract paymentAmount from user balance using Change API   	
@@ -125,8 +125,8 @@ public class PaymentFeeder  {
     }
     
     private void updateMerchantReceipts(Merchant merchant, Double paymentAmount) {
-    	
-    	log.info("TransactionWriterTask deposit " + paymentAmount + 
+
+		System.out.println("TransactionWriterTask deposit " + paymentAmount +
     			" to merchant: " + merchant.getName());
     	   	
     	// Add paymentAmount to Merchant receipts using Change API
