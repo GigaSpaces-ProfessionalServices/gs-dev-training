@@ -47,11 +47,11 @@ public class AggregationPaymentInformation {
 		//TODO: 7. Use aggregation to retrieve the Payment object with minimum paymentAmount value.
 		// Retrieve the Payment object with the lowest value for the field "paymentAmount".
 		Payment paymentWithMinAmount=null;
-		
-		log.info("Max payment is: "+ maxPayment.doubleValue() + " Payment was made at:" + paymentWithMaxAmount.getCreatedDate());
-		log.info("Min payment is: "+ minPayment.doubleValue() + " Payment was made at:" + paymentWithMinAmount.getCreatedDate());
-		log.info("Sum of all payments is: "+ sumPayment.doubleValue());
-		log.info("Avarage of all payments is: "+ averagePayment.doubleValue());
+
+		System.out.println("Max payment is: "+ maxPayment.doubleValue() + " Payment was made at:" + paymentWithMaxAmount.getCreatedDate());
+		System.out.println("Min payment is: "+ minPayment.doubleValue() + " Payment was made at:" + paymentWithMinAmount.getCreatedDate());
+		System.out.println("Sum of all payments is: "+ sumPayment.doubleValue());
+		System.out.println("Avarage of all payments is: "+ averagePayment.doubleValue());
 
 	}
 }

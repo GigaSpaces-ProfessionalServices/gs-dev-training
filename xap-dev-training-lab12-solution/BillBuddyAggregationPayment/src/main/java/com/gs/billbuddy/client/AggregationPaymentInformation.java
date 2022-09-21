@@ -36,10 +36,10 @@ public class AggregationPaymentInformation {
 		/// Retrieve the Payment object with the lowest value for the field "paymentAmount".
 		Payment paymentWithMinAmount = minEntry(gigaSpace, query, "paymentAmount");
 
-		log.info("Max payment is: "+ maxPayment.doubleValue() + " Payment was made at:" + paymentWithMaxAmount.getCreatedDate());
-		log.info("Min payment is: "+ minPayment.doubleValue() + " Payment was made at:" + paymentWithMinAmount.getCreatedDate());
-		log.info("Sum of all payments is: "+ sumPayment.doubleValue());
-		log.info("Average of all payments is: "+ averagePayment.doubleValue());
+		System.out.println("Max payment is: "+ maxPayment.doubleValue() + " Payment was made at:" + paymentWithMaxAmount.getCreatedDate());
+		System.out.println("Min payment is: "+ minPayment.doubleValue() + " Payment was made at:" + paymentWithMinAmount.getCreatedDate());
+		System.out.println("Sum of all payments is: "+ sumPayment.doubleValue());
+		System.out.println("Average of all payments is: "+ averagePayment.doubleValue());
 
 	}
 }
