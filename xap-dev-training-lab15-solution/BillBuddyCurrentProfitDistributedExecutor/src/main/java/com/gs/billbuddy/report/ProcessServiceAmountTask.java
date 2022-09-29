@@ -43,9 +43,9 @@ public class ProcessServiceAmountTask implements
             processingFeesTotal+=merchants[i].getFeeAmount();
          }}
 
-      log.info("Number of Merchants found: " + merchants.length);
-      log.info("Total Fee Amount for current partition: " + processingFeesTotal);
-      log.info("ProcessServiceAmountTask- End Execute.");
+      log.info("ProcessServiceAmountTask - Number of Merchants found: " + merchants.length);
+      log.info("ProcessServiceAmountTask - Total Fee Amount for current partition: " + processingFeesTotal);
+      log.info("ProcessServiceAmountTask - End Execute.");
 
       return processingFeesTotal;
    }

@@ -66,11 +66,11 @@ Our distributed task will:
     total count of payments in a specific category.
     
 **2.1**	Deploy your space to the grid service. 
-        Start gs-agent and use gs-ui to deploy your Space PU Jar. <br />
+        Start gs.sh host run-agent --auto --gsc=4 and use ui tools or cmd to deploy your Space PU Jar. <br />
 **2.2**	Run the AccountFeeder. <br />
 **2.3**	Run the PaymentFeeder. <br />
 **2.4**	Examine each partition of the space and see the Merchants POJO distribution. <br /> 
-Hint: use the Space Browser tab of gs-ui. 
+Hint: use web-ui or Space Browser tab of gs-ui. 
 Notice how we examine a specific partition in the snapshot below.
 Specifically notice how the Merchant Categories are distributed.
 

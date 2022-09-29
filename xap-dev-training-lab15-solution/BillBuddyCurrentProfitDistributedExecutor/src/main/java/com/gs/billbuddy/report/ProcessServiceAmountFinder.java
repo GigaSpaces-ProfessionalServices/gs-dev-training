@@ -33,9 +33,9 @@ public class ProcessServiceAmountFinder {
 		AsyncFuture<Double> future = gigaSpace.execute(new ProcessServiceAmountTask());
 		Double processingFeeAmount = future.get();
 		if(processingFeeAmount > 0.0){
-			log.info("Processing Fee Amount is: " + processingFeeAmount);
+			log.info("==========ProcessServiceAmountTask : Processing Fee Amount is: " + processingFeeAmount);
 		}else if(processingFeeAmount == 0.0){
-			log.info("BillBuddy profit is 0 (ZERO), Please run the PaymentFeeder project.");
+			log.info("==========ProcessServiceAmountTask : BillBuddy profit is 0 (ZERO), Please run the PaymentFeeder project.");
 		}
 
 	}
