@@ -19,7 +19,7 @@
         </pluginRepository>
     </pluginRepositories>
     <properties>
-        <gsVersion>16.1.1</gsVersion>
+        <gsVersion>16.2.0</gsVersion>
         <gsVersionPlugin>14.0.1</gsVersionPlugin>
         <spring.version>5.3.19</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

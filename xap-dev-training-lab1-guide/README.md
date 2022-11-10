@@ -2,9 +2,9 @@
 
 ## 	Introduction
 
-#### 1 setup
+#### 1 Setup
 
-##### 1.1 Download 16.1.1 InsightEdge Commercial Edition and extract it on you machine.
+##### 1.1 Download 16.2.0 GigaSpaces Enterprise Edition and extract it on your machine.
 ##### 1.2 Put `tryme` license to `gs-license.txt` file located at the root of xap installation directory.
 ##### 1.3 Download and install IntelliJ IDEA Community:
    https://www.jetbrains.com/idea/download
@@ -13,7 +13,7 @@
    `GS_LOOKUP_GROUPS` -> set any unique identifier
    
 ##### 1.5 Test your XAP Installation. <br>
-   You will start a XAP process (gs-agent) and you will wait to see a message that the gs-agent started successfully with groups [xap-15.5.1]
+   You will start a XAP process (gs-agent) and you will wait to see a message that the gs-agent started successfully with groups [xap-16.2.0]
    
    `$GS_HOME/bin/gs.sh host run-agent --auto --gsc=2`
    
