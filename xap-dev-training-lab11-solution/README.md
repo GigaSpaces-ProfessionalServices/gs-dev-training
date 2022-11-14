@@ -14,7 +14,7 @@ This lab includes2 solutions:
 2. 	Only if time permits: Bulk operations: you will modify the writing mechanism to write 5 Payments at a time. 
 
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab11-solution project with intellij (open pom.xml) <br />
 1.2 Run mvn install

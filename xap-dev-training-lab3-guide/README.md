@@ -30,7 +30,7 @@ In this lab you will start XAP infrastructure services. Inspect the runtime grid
 ## 3	Self-Healing
 
 In this exercise you will be introduced to the self-healing capabilities of the In Memory Data Grid. <br>
-Basically we will ‘kill’ (using task manager or kill -9) a GSC process and see that it restarts automatically by the gs-agent and that new partition are created accordingly <br>
+Basically we will ‘kill’ (using task manager or kill -9) a GSC process and see that it restarts automatically by the GSA and that new partition are created accordingly <br>
 
 3.1	Kill a GSC <br>
 
@@ -45,7 +45,7 @@ For Linux use: kill -9 <PID>
 
 3.3	The following is the Self-Healing processes <br>
 
-    a. GSC was re-launched by gs-agent
+    a. GSC was re-launched by the GSA
     
 ![Screenshot](./Pictures/Picture4.png) 
 

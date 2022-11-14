@@ -13,7 +13,7 @@
    `GS_LOOKUP_GROUPS` -> set any unique identifier
    
 ##### 1.5 Test your XAP Installation. <br>
-   You will start a XAP process (gs-agent) and you will wait to see a message that the gs-agent started successfully with groups [xap-16.2.0]
+   You will start a service grid and you will wait to see the processes started successfully with group [your unique group identifier]
    
    `$GS_HOME/bin/gs.sh host run-agent --auto --gsc=2`
    
@@ -25,7 +25,7 @@
    If you see the above, you have successfully installed the courseware for our class.
    
 ##### 1.5	Stop processes
-    Stop the gs-agent process (2 options):
+    Stop the GSA process (2 options):
     1. ctrl+c
     2. ./gs.sh host kill-agent
 

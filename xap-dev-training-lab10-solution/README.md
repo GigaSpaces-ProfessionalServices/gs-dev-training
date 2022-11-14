@@ -11,7 +11,7 @@ This lab includes3 solutions:
 2.	Space Data Access API: Develop the PaymentFeeder processing unit
 3.	Only if time permits: SQL Query operation: You will practice writing a SQL query
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab10-solution project with intellij (open pom.xml) <br />
 1.2 Run mvn install
@@ -90,7 +90,7 @@ Hints:
     like you did for the BillBuddySpace). <br />
     Follow these steps: <br />
         *   Stop all Integrated PU Container in your IDE.<br />
-        *   Restart gs-agent.<br />
+        *   Restart the service grid.<br />
         *   Restart gs-ui.<br />
         *   Deploy BillBuddy-space to the service grid (if not already deployed).<br />
         *   Run AccountFeeder from your IDE.<br />

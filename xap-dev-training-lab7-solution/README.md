@@ -12,7 +12,7 @@ This lab includes two solutions:
 2. 	Space Deployment Methods. You will deploy a space Processing Unit via 2 different methods.
 
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab7-solution project with intellij (open pom.xml) <br />
 1.2 Run mvn install
@@ -56,7 +56,7 @@ b. Define GigaSapce. <br />
 ## 3  Deploy a PU with Embedded Space – Integrated Processing Unit Container
 3.1   The Integrated Processing Unit Container is the preferred way to 
 deploy Processing Unit during development. <br />
-a. Stop gs-agent (you are not deploying to the grid in this lab) if one is running. <br /> 
+a. Stop the service grid (you are not deploying to the grid in this lab) if one is running. <br /> 
 This is not a must but it will emphasize the fact 
 that you are running your PU without the need of the GRID. <br />
 b.	Re-open gs-ui (close if it is running and start again). 
@@ -86,7 +86,7 @@ g.	Check the “Deployed Processing Unit” tab to see that the Grid does not kn
         
 ## 4	Deploy a PU with Embedded Space to the Grid
 4.1	Deploy the space to the grid service. <br />
-a.  Start gs-agent and gs-ui (if they are not already running). <br />
+a.  Start the service grid and gs-ui (if they are not already running). <br />
 4.2	Make sure no Space is deployed (you might need to Un-deploy your pre-deployed space from prior labs).
 
 4.3	Deploy the space using gs-ui. <br />

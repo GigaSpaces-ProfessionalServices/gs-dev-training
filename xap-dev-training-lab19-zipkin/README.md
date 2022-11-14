@@ -12,7 +12,7 @@ This lab includes the needed instructions and code for activate and use zipkin (
 
 
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 **1.1** Open %XAP_TRAINING_HOME%/xap-dev-training-lab-zipkin project with intellij (open pom.xml)<br>
 **1.2** Run mvn install

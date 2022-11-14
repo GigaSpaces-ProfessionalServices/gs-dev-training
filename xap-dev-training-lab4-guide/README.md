@@ -88,7 +88,7 @@ Go to the Data_Types operation select the MessagePOJO data type and press query.
 ## 4	Self-Healing
 
 In this exercise you will be introduced to the self-healing capabilities of the In Memory Data Grid.
-Basically we will ‘kill’ (using task manager or kill -9) a GSC process and see that it restarts automatically by the gs-agent and that new partition are created accordingly <br>
+Basically we will ‘kill’ (using task manager or kill -9) a GSC process and see that it restarts automatically by the GSA and that new partition are created accordingly <br>
 
 4.1	Each process ID (all are JVMS) is shown at the Hosts tab (see red circle). Choose 1 of the GSCs PID (with primary space instance on it) and use the Task Manager or (kill -9 for Linux) in order to kill the process. <br>
  
@@ -103,7 +103,7 @@ If PID is not shown at the Task Manager simply choose “view -> select columns�
 4.3	The following is the Self Healing processes
 
     a.	A backup turned to Primary
-    b.	GSC was re-launched by gs-agent
+    b.	GSC was re-launched by GSA 
     c.	New backup partition was provisioned
 
 ![Screenshot](./Pictures/Picture14.png)
