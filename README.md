@@ -60,3 +60,9 @@ Some corporate networks do not allow connecting directly to external Maven repos
 `$GS_HOME/bin/gs maven install`
 
 This will copy the GigaSpaces jars (bundled with your installation) to your local .m2 Maven repository.
+
+##### Note 3 - runConfigurations
+
+Many labs will have an instruction to 'Copy the runConfigurations directory to the .idea folder to enable the Java Application configurations.'
+
+The accompanying lab folder will have a runConfigurations directory containing xml files. These are example configurations to run a Java Program from within Intellij. Copy the entire runConfigurations folder into the Intellij .idea folder (the .idea folder gets created when you open the Maven project in Intellj). You will then need to restart Intellij. 
