@@ -14,7 +14,7 @@ Use the slides from the lesson as a reference.
 
 ## 1 Lab setup
 
-Make sure you restart gs-agent and gs-ui (*or at least undeploy all Processing Units using gs-ui*)
+Make sure you restart the service grid and gs-ui (*or at least undeploy all Processing Units using gs-ui*)
 
 1. Open %XAP_TRAINING_HOME%/xap-dev-training-lab17-solution project with Intellij (*open the pom.xml file*)
 2. Run `mvn install`
@@ -161,7 +161,7 @@ We will using MySQL db instance.
 
 #### 2.11 Deploy and test the Mirror service (and your space). <br />
 
-1. Run gs-agent
+1. Run the service grid 
     `./gs.sh host run-agent --auto --gsc=5`
 2. Run gs-ui
 3. Deploy BillBuddy_space to the service grid.  

@@ -8,11 +8,11 @@
 ## Lab Description
 In this lab we will focus on deployment and the application and not be concerned with code, therefore simply focus on the deployment process, you will use this process throughout the labs here on.
 
-## 1	Start gs-agent and gs-ui 
+## 1	Start the service grid and gs-ui 
 
 1.1 Navigate to %XAP_HOME/bin <br />
         
-1.2 Start gs-agent with local Manager server and 6 GSCs:
+1.2 Start the service grid with local Manager server and 6 GSCs:
 
     ./gs.sh host run-agent --auto --gsc=6
     

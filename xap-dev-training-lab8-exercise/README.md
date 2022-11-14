@@ -16,7 +16,7 @@ This lab includes4 exercises:
 4.	Data partitioning consideration exercise in which you will have to determine how it is best to partition your data model given several requirements (Your trainer will lead a discussion about this exercise)
 
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 **1.1** Open %XAP_TRAINING_HOME%/xap-dev-training-lab8-exercise project with intellij (open pom.xml) <br />
 **1.2** Run mvn install
@@ -113,7 +113,7 @@ An enumeration for the use in Address class.
 ***c.***	Implement a toString() method in the Address class. <br /> 
     This will be useful when querying Users via the gs-ui. <br />
 ***d.***	Hint: class Address should implement something… why? <br />
-**3.3**	Make sure you do not have gs-agent running. <br /> 
+**3.3**	Make sure you do not have the service grid running. <br /> 
         You are using only gs-ui and Intellij in this Lab 
         which is the way developers should work while developing functionality. <br /> 
 **3.4**	Run the BillBuddy-space project using the IntegratedProcessingUnitContainer <br />

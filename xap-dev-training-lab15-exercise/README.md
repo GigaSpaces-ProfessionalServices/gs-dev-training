@@ -11,7 +11,7 @@ This lab includes3 exercises:
 2.	Develop a Distributed Task Executor
 3. 	Implement Routing for a Task Executor
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 **1.1** Open %XAP_TRAINING_HOME%/xap-dev-training-lab15-exercise project with intellij (open pom.xml)<br>
 **1.2** Run mvn install
@@ -66,7 +66,7 @@ Our distributed task will:
     total count of payments in a specific category.
     
 **2.1**	Deploy your space to the grid service. 
-        Start gs-agent and use gs-ui to deploy your Space PU Jar. <br />
+        Start the service grid and use gs-ui to deploy your Space PU Jar. <br />
 **2.2**	Run the AccountFeeder. <br />
 **2.3**	Run the PaymentFeeder. <br />
 **2.4**	Examine each partition of the space and see the Merchants POJO distribution. <br /> 
@@ -119,7 +119,7 @@ a.	Deploy your space to the grid service. <br />
 b.	Run the AccountFeeder. <br />
 c.	Run the PaymentFeeder. <br />
 d.	Run BillBuddyCurrentProfitDistributedExecutor. <br />
-e.	Check the gs-agent log at the console (Hint: gs-ui hosts tab) 
+e.	Check the console log of the service grid or the gsc logs of the partitions (Hint: gs-ui hosts tab) 
     to see your message “Hello” is printed in both partitions and 
     ensure that the task is actually being distributed to multiple partitions.
 

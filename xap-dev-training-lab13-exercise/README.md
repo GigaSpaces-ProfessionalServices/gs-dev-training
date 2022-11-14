@@ -14,7 +14,7 @@ the “Processing Fee Polling Container”.
 In this lab you will have to implement the Processing Fee Event Container. 
 You will monitor events using gs-ui, but first here is a full description of the BillBuddy Event Driven architecture. 
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab13-exercise project with intellij (open pom.xml) <br />
 1.2 Run mvn install
@@ -126,7 +126,7 @@ e.	Query ProcessingFee and validate they are written to the space.
 4.1	Deploy BillBuddy_Space to the service grid and run the Feeders. <br />
 
 a.	First stop your current BillBuddy_space if you run it in your IDE or gs-ui. <br />
-b.	Hint: Deploy Application at gs-ui (start gs-agent of course). <br /> 
+b.	Hint: Deploy Application at gs-ui (start the service grid of course). <br /> 
 c.	Run BillBuddyAccountFeeder (from Integrated PU Container in Intellij). <br />
 d.	Run BillBuddyPaymentFeeder (from Integrated PU Container in Intellij). <br />
 e.	Monitor Event Containers activity. Open:

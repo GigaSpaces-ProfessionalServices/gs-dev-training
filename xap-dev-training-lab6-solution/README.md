@@ -16,7 +16,7 @@ The first application will connect and write a single users.
 The second application “AccountFeeder” will create and write multiple user POJOs
 and read all of them in a single readMultiple command.
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open %XAP_TRAINING_HOME%/xap-dev-training-lab6-solution project with intellij (open pom.xml)<br />
 1.2 Run mvn install

@@ -8,7 +8,7 @@
 ###### Lab Description
 This lab includes one exercise in which you will fix a web application in order for it to connect to the BillBuddy_space and access the space.
 ## 1 Lab setup
-Make sure you restart gs-agent and gs-ui (or at least undeploy all Processing Units using gs-ui)
+Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 
 **1.1** Open %XAP_TRAINING_HOME%/xap-dev-training-lab18-exercise project with intellij (open pom.xml)<br>
