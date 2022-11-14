@@ -1,8 +1,9 @@
 # xap-dev-training
 
 Before you start please verify that you have on your machine the following:<br>
-1. `Git`<br>
-2. `Maven`<br>
+1. `Git`
+2. `Maven`
+3. `Intellij`
 
 If you don't have please install.
 
@@ -35,7 +36,7 @@ Completing the exercises is with high importance in order to get the relevant kn
 * Lab18 - Web Applications
 * Lab19 - zipkin
 
-Note on Maven:
+##### Note 1 - Maven:
 
 Maven versions &gt; 3.8 won't connect to non-https repos by default. Below is a workaround.
 
@@ -51,3 +52,11 @@ Add:
 </mirror>
 ```
 (There is already a section mirror. Modify the url and and comment out or remove blocked=true)
+
+##### Note 2 - Downloading Gigaspaces jars:
+
+Some corporate networks do not allow connecting directly to external Maven repositories. In this case, run:
+
+`$GS_HOME/bin/gs maven install`
+
+This will copy the GigaSpaces jars (bundled with your installation) to your local .m2 Maven repository.
