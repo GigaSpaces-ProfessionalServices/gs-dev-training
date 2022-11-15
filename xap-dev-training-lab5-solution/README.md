@@ -45,7 +45,7 @@ In this lab we will focus on deployment and the application and not be concerned
 
 ###### Add GS_LOOKUP_GROUPS & GS_LOOKUP_LOCATORS
 
-2.4 Run mvn xap:intellij
+2.4 Copy the runConfigurations directory to the Intellij .idea directory to enable the Java Application configurations. Restart Intellij.
 
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
