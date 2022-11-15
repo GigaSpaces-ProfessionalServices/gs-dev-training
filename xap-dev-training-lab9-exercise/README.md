@@ -31,7 +31,7 @@ Make sure you restart the service grid and gs-ui (or at least undeploy all Proce
 
 
 
-1.3 Run mvn xap:intellij
+1.3 Copy the runConfigurations directory to the Intellij .idea directory to enable the Java Application configurations. Restart Intellij.
 ###### This will add the predefined Run Configuration Application to your Intellij IDE.
 
     ~/xap-dev-training/xap-dev-training-lab9-exercise$ mvn xap:intellij
