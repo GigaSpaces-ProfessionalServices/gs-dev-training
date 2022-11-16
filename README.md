@@ -19,7 +19,7 @@ Download the zip frem this repository and extract it, preferably to your home di
 
 In general the course is based on hands-on exercises/labs which you will need to perform one by one according to their order. Completing the exercises is of high importance in order to get the relevant knowledge and experience with Gigaspaces.
  
-## The following are the list of labs:
+## Labs
 
  * Lab 00 Setup
  * Lab 01 Intro to ui
@@ -39,7 +39,7 @@ In general the course is based on hands-on exercises/labs which you will need to
  * Lab 16 Persistency
  * Lab 17 Web App
 
-##### Note 1 - Maven:
+##### Note 1 - Maven
 
 Maven versions &gt; 3.8 won't connect to non-https repos by default. Below is a workaround.
 
@@ -56,7 +56,7 @@ Add:
 ```
 (There is already a section mirror. Modify the url and and comment out or remove blocked=true)
 
-##### Note 2 - Downloading Gigaspaces jars:
+##### Note 2 - Downloading Gigaspaces jars
 
 Some corporate networks do not allow connecting directly to external Maven repositories. In this case, run:
 
