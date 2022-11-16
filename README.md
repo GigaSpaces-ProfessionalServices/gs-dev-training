@@ -1,40 +1,43 @@
-# xap-dev-training
+# gs-dev-training
 
-Before you start please verify that you have on your machine the following:<br>
-1. `Git`
-2. `Maven`
-3. `Intellij`
+Before you start please verify that you have on your machine the following:
+
+1. `JDK` - Oracle JDK or OpenJDK, preferably version 11.
+1. `Maven`
+1. `Intellij` - this is the preferred Java IDE, although other IDEs will work.
+1. `Git` (optional)
 
 If you don't have please install.
 
-Go to the location where you want xap dev content to be stored and perform the following:<br>
+Go to the location where you want lab content to be stored and perform the following:
+
 `git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git`
 
-From here forward please follow the trainer instructions.<br>
-In general the course is based on hands-on (exercise labs) which you need to perform one by one according to their order. <br>
-Completing the exercises is with high importance in order to get the relevant knowledge and experience to be able to use XAP.
- 
-## Following are the list of labs:
+Or:
 
-* Lab1 - Introduction
-* Lab2 - XAP Overview
-* Lab3 - Grid Service Components
-* Lab4 - Application Level Components
-* Lab5 - The Bill Buddy Application
-* Lab6 - My First XAP Application
-* Lab7 - Processing Unit
-* Lab8 - Space Classes and Data Model
-* Lab9 - Spring Introduction
-* Lab10 - Space Access API
-* Lab11 - Advance Space Access API (Change API)
-* Lab12 - Aggregations
-* Lab13 - Messaging and Event Containers
-* Lab14 - Transactions
-* Lab15 - Task Executors
-* Lab16 - Space Based Remoting
-* Lab17 - Persistency – Mirror Service
-* Lab18 - Web Applications
-* Lab19 - zipkin
+Download the zip frem this repository and extract it, preferably to your home directory.
+
+In general the course is based on hands-on exercises/labs which you will need to perform one by one according to their order. Completing the exercises is of high importance in order to get the relevant knowledge and experience with Gigaspaces.
+ 
+## The following are the list of labs:
+
+ * Lab 00 Setup
+ * Lab 01 Intro to ui
+ * Lab 03 Intro to deployment
+ * Lab 04 Deploy Complete Example
+ * Lab 05 First GS Application
+ * Lab 06 Processing Unit Intro
+ * Lab 07 Spaceclass Intro
+ * Lab 08 Spring Intro
+ * Lab 09 Gigaspaces Core Api
+ * Lab 10 Additional Api
+ * Lab 11 Aggregations
+ * Lab 12 Event Processing
+ * Lab 13 Transactions
+ * Lab 14 Task Executor
+ * Lab 15 Space Based Remoting
+ * Lab 16 Persistency
+ * Lab 17 Web App
 
 ##### Note 1 - Maven:
 
