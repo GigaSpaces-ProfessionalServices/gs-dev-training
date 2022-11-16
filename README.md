@@ -22,8 +22,8 @@ In general the course is based on hands-on exercises/labs which you will need to
 ## Labs
 
  * Lab 00 Setup
- * Lab 01 Intro to ui
- * Lab 03 Intro to deployment
+ * Lab 01 Intro to UI
+ * Lab 03 Intro to Deployment
  * Lab 04 Deploy Complete Example
  * Lab 05 First GS Application
  * Lab 06 Processing Unit Intro
