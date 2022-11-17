@@ -57,7 +57,7 @@ import java.util.concurrent.Callable;
     public static void main(String[] args) throws Exception {
         TraceHelper helper = TraceHelper.getInstance();
         Tracer tracer = GlobalTracer.get();
-        gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-15.5.0")).create();
+        gs = new GigaSpaceConfigurer(new SpaceProxyConfigurer("demo").lookupGroups("xap-16.2.0")).create();
         wrap("write", () -> {
             write();
             return 0;
