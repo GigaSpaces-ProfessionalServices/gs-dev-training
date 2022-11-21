@@ -11,7 +11,7 @@ If you don't have please install.
 
 Go to the location where you want lab content to be stored and perform the following:
 
-`git clone https://github.com/GigaSpaces-ProfessionalServices/xap-dev-training.git`
+`git clone https://github.com/GigaSpaces-ProfessionalServices/gs-dev-training.git`
 
 Or:
 
