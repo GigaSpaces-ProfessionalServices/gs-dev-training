@@ -55,13 +55,13 @@ In this lab we will show 'the big picture'. It will introduce the BillBuddy appl
            
 2.6 Use Gigaspaces CLI to deploy BillBuddy_Space
  
-    ./gs.sh pu deploy BillBuddy-Space ~/gs-dev-training/lab04-complete_example-guide/BillBuddy_Space/target/BillBuddy_Space.jar 
+    ./gs.sh pu deploy BillBuddy-Space ~/gs-dev-training/lab04-deploy_complete_example-guide/BillBuddy_Space/target/BillBuddy_Space.jar 
 
 ## 3	Run BillBuddyAccountFeeder from Intellij
 
 3.1 From the Intellij run configuration select BillBuddyAccountFeeder and run it.<br>
 3.2 Another option is to run it from the maven command line:<br>
-    `cd ~/gs-dev-training/lab04-deploy_complete_solution-guide/BillBuddyAccountFeeder`<br>
+    `cd ~/gs-dev-training/lab04-deploy_complete_example-guide/BillBuddyAccountFeeder`<br>
     `mvn exec:java  -D"exec.mainClass"="com.gs.billbuddy.client.AccountFeeder" -Dexec.classpathScope=compile -Dcom.gs.jini_lus.locators=localhost`<br>
 
 ###### This application writes Users and Merchants to the Space
@@ -93,7 +93,7 @@ A new Payment is created every second.
 1.   Use the same instructions as used for the BillBuddyAccountFeeder.
 2.   Another option is to run/deploy it from the GS command line:<br>
     `cd $GS_HOME/bin`<br>
-    `./gs.sh pu deploy BillBuddyPaymentFeeder ~/gs-dev-training/lab04-deploy_complete_solution-guide/BillBuddyPaymentFeeder/target/BillBuddyPaymentFeeder.jar`<br>
+    `./gs.sh pu deploy BillBuddyPaymentFeeder ~/gs-dev-training/lab04-deploy_complete_example-guide/BillBuddyPaymentFeeder/target/BillBuddyPaymentFeeder.jar`<br>
 
 4.2 Validate Payments were written to the space using gs-ui. 
 You may choose to view Payment Objects using the Query operation of gs-ui.
@@ -111,7 +111,7 @@ You might be required to modify the sample rate and start the automatic refresh.
 
 5.2 Use the Gigaspaces CLI to deploy BillBuddyWebApplication
  
-    ./gs.sh pu deploy --property=web.port=8082 BillBuddyWebApplication ~/gs-dev-training/lab04-complete_example-guide/BillBuddyWebApplication/target/BillBuddyWebApplication.war
+    ./gs.sh pu deploy --property=web.port=8082 BillBuddyWebApplication ~/gs-dev-training/lab04-deploy_complete_example-guide/BillBuddyWebApplication/target/BillBuddyWebApplication.war
 
 5.3 Validate the application is deployed. 
 Go to Deployed Processing Units tab and expand the BillBuddyWebApplication PU.
