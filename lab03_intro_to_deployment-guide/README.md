@@ -63,7 +63,7 @@ The benchmark tool allows you to perform operations against the space. You can m
 ![Screenshot](./Pictures/Picture8.png)
 
 3.2	Perform a write and read 10,000 POJOs 
-(Simply press start but examine the tool input data prior to activating it) <br>
+(Simply press start but examine the tool's input data prior to submitting) <br>
 
 3.3	While the benchmark is executing go to the statistics operation and check the statistics <br>
 
