@@ -14,9 +14,9 @@ You will explore the first 2 applications and code the 3rd application.
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open gs-dev-training/lab08-spring_intro-solution project with intellij (open pom.xml) <br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab08-spring_intro-solution$ mvn install
+    ~/gs-dev-training/lab08-spring_intro-solution$ mvn package
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:

@@ -14,9 +14,9 @@ This lab includes3 exercises:
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 **1.1** Open gs-dev-training/lab14-task_executor-exercise project with intellij (open pom.xml)<br>
-**1.2** Run mvn install
+**1.2** Run mvn package
 
-    ~/gs-dev-training/lab14-task_executor-exercise$ mvn install
+    ~/gs-dev-training/lab14-task_executor-exercise$ mvn package
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:

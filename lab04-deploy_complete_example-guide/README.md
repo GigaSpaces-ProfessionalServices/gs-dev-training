@@ -23,9 +23,9 @@ In this lab we will show 'the big picture'. It will introduce the BillBuddy appl
 ## 2	Deploy BillBuddy_Space
     
 2.1 Open $GS_TRAINING_HOME/lab04-deploy_complete_solution-guide project with Intellij (open pom.xml) <br />
-2.2 Run mvn install <br />
+2.2 Run mvn package <br />
 
-    ~/gs-dev-training/lab04-deploy_complete_solution-guide$ mvn install
+    ~/gs-dev-training/lab04-deploy_complete_solution-guide$ mvn package
     
     
     [INFO] ------------------------------------------------------------------------

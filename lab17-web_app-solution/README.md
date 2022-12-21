@@ -11,9 +11,9 @@ This lab includes one solution in which you will fix a web application in order 
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 **1.1** Open gs-dev-training/lab17-web_app-solution project with intellij (open pom.xml)<br>
-**1.2** Run mvn install
+**1.2** Run mvn package
 
-    ~/gs-dev-training/lab17-web_app-solution$ mvn install
+    ~/gs-dev-training/lab17-web_app-solution$ mvn package
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:

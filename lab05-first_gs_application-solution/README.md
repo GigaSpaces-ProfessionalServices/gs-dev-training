@@ -19,9 +19,9 @@ and read all of them in a single readMultiple command.
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open gs-dev-training/lab05-first_gs_application-solution project with intellij (open pom.xml)<br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab05-first_gs_application-solution$ mvn install
+    ~/gs-dev-training/lab05-first_gs_application-solution$ mvn package
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
