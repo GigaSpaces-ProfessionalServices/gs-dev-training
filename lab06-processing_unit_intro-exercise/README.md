@@ -15,9 +15,9 @@ This lab includes two exercises:
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open gs-dev-training/lab06-processing_unit_intro-exercise project with intellij (open pom.xml) <br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab06-processing_unit_intro-exercise$ mvn install
+    ~/gs-dev-training/lab06-processing_unit_intro-exercise$ mvn package
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
@@ -72,7 +72,7 @@ Make sure no Space is deployed (you might need to Un-deploy your previously depl
         and check Users are written to the space. 
         
 ## 4	Deploy a PU with Embedded Space to the Grid
-**4.1** Run mvn install <br />
+**4.1** Run mvn package <br />
 **4.2**	Deploy the space to the grid service. <br />
 **a.**  Start the service grid and gs-ui (if they are not already running). <br />
 **4.3**	Make sure no Space is deployed (you might need to Un-deploy your pre-deployed space from prior labs).

@@ -17,9 +17,9 @@ You will monitor events using gs-ui, but first here is a full description of the
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 1.1 Open gs-dev-training/lab12-event_processing-solution project with intellij (open pom.xml) <br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab12-event_processing_solution$ mvn install
+    ~/gs-dev-training/lab12-event_processing_solution$ mvn package
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:

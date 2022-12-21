@@ -19,9 +19,9 @@ This lab includes 4 exercises:
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 1.1 Open gs-dev-training/lab13-transactions-exercise project with intellij (open pom.xml) <br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab13-transactions-exercise$ mvn install
+    ~/gs-dev-training/lab13-transactions-exercise$ mvn package
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:

@@ -17,9 +17,9 @@ Use the slides from the lesson as a reference.
 Make sure you restart the service grid and gs-ui (*or at least undeploy all Processing Units using gs-ui*)
 
 1. Open gs-dev-training/lab16-persistency-solution project with Intellij (*open the pom.xml file*)
-2. Run `mvn install`
+2. Run `mvn package`
 ```
-    ~/gs-dev-training/lab16-persistency-solution$ mvn install  
+    ~/gs-dev-training/lab16-persistency-solution$ mvn package  
   
     [INFO] ------------------------------------------------------------------------  
     [INFO] Reactor Summary:  

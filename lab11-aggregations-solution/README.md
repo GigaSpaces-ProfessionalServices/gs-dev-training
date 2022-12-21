@@ -13,9 +13,9 @@ This lab includes1 solutions:
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
 
 1.1 Open gs-dev-training/lab11-aggregations-solution project with intellij (open pom.xml) <br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab11-aggregations-solution$ mvn install
+    ~/gs-dev-training/lab11-aggregations-solution$ mvn package
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:

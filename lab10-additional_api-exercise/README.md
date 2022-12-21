@@ -17,9 +17,9 @@ This lab includes2 exercises:
 Make sure you restart the service grid and gs-ui (or at least undeploy all Processing Units using gs-ui)
                
 1.1 Open gs-dev-training/lab10-additional_api-exercise project with intellij (open pom.xml) <br />
-1.2 Run mvn install
+1.2 Run mvn package
 
-    ~/gs-dev-training/lab10-additional_api-exercise$ mvn install
+    ~/gs-dev-training/lab10-additional_api-exercise$ mvn package
     
        [INFO] ------------------------------------------------------------------------
        [INFO] Reactor Summary:

@@ -12,9 +12,9 @@ Make sure you restart the service grid and gs-ui (or at least undeploy all Proce
 
 
 **1.1** Open gs-dev-training/lab17-web_app-exercise project with intellij (open pom.xml)<br>
-**1.2** Run mvn install
+**1.2** Run mvn package
 
-    ~/gs-dev-training/lab17-web_app-exercise$ mvn install
+    ~/gs-dev-training/lab17-web_app-exercise$ mvn package
     
     [INFO] ------------------------------------------------------------------------
     [INFO] Reactor Summary:
