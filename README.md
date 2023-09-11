@@ -54,7 +54,7 @@ Add:
   <url>http://maven-repository.openspaces.org</url>
 </mirror>
 ```
-(There is already a section mirror. Modify the url and and comment out or remove blocked=true)
+(There is already a section mirror. Modify the url and comment out or remove blocked=true)
 
 ##### Note 2 - Downloading Gigaspaces jars
 
