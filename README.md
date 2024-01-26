@@ -81,4 +81,4 @@ If Oshi related errors prevent Gigaspaces from starting, you can disable Oshi by
 In the `bin/setenv-overrides, export GS_OPTIONS_EXT="-Djava.net.preferIPv4Stack=true"`
 
 ##### Note 6 - java.lang.UnsatisfiedLinkError with JNA on Mac
-java.lang.UnsatisfiedLinkError on Mac with JNA error. Download the latest jna jar. Replace the lib/optional/oshi/jna.jar with the new jar (remove version from jna.jar).
+java.lang.UnsatisfiedLinkError on Mac with JNA error. Download the latest jna jar. Replace the lib/optional/oshi/jna.jar with the new jar (remove version from jna.jar). JNA is used to provide host machine information displayed in GigaSpaces.
