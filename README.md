@@ -5,17 +5,13 @@ Before you start please verify that you have on your machine the following:
 1. `JDK` - Oracle JDK or OpenJDK, preferably version 11.
 1. `Maven`
 1. `Intellij` - this is the preferred Java IDE, although other IDEs will work.
-1. `Git` (optional)
 
-If you don't have please install.
 
 Go to the location where you want lab content to be stored and perform the following:
 
-`git clone https://github.com/GigaSpaces-ProfessionalServices/gs-dev-training.git`
-
 Or:
 
-Download the zip frem this repository and extract it, preferably to your home directory.
+Download the zip from this repository and extract it, preferably to your home directory.
 
 In general the course is based on hands-on exercises/labs which you will need to perform one by one according to their order. Completing the exercises is of high importance in order to get the relevant knowledge and experience with Gigaspaces.
  
